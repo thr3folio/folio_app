@@ -1,0 +1,21 @@
+<h1>Editing Candidate Company #<%= @candidate_company.id %></h1>
+
+
+<%= form_tag(candidate_company_url(@candidate_company), method: 'put') do %>
+
+  <div>
+    <%= label_tag :candidate_id %><br />
+    <%= number_field_tag :candidate_id, @candidate_company.candidate_id %>
+  </div>
+
+  <div>
+    <%= label_tag :company_id %><br />
+    <%= number_field_tag :company_id, @candidate_company.company_id %>
+  </div>
+
+  
+  <div>
+    <%= submit_tag "Update Candidate Company" %>
+  </div>
+
+<% end %>

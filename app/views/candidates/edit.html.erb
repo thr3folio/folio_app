@@ -1,0 +1,51 @@
+<h1>Editing Candidate #<%= @candidate.id %></h1>
+
+
+<%= form_tag(candidate_url(@candidate), method: 'put') do %>
+
+  <div>
+    <%= label_tag :first_name %><br />
+    <%= text_field_tag :first_name, @candidate.first_name %>
+  </div>
+
+  <div>
+    <%= label_tag :last_name %><br />
+    <%= text_field_tag :last_name, @candidate.last_name %>
+  </div>
+
+  <div>
+    <%= label_tag :title %><br />
+    <%= text_field_tag :title, @candidate.title %>
+  </div>
+
+  <div>
+    <%= label_tag :industry %><br />
+    <%= text_field_tag :industry, @candidate.industry %>
+  </div>
+
+  <div>
+    <%= label_tag :years_experience %><br />
+    <%= number_field_tag :years_experience, @candidate.years_experience %>
+  </div>
+
+  <div>
+    <%= label_tag :email %><br />
+    <%= text_field_tag :email, @candidate.email %>
+  </div>
+
+  <div>
+    <%= label_tag :bio %><br />
+    <%= text_area_tag :bio, @candidate.bio %>
+  </div>
+
+  <div>
+    <%= label_tag :company_id %><br />
+    <%= number_field_tag :company_id, @candidate.company_id %>
+  </div>
+
+  
+  <div>
+    <%= submit_tag "Update Candidate" %>
+  </div>
+
+<% end %>

@@ -1,0 +1,30 @@
+<h1>Hiring manager jobs</h1>
+
+<p><%= link_to 'Add a New Hiring Manager Job', new_hiring_manager_job_url %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Hiring manager</th>
+      <th>Job</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @hiring_manager_jobs.each do |hiring_manager_job| %>
+    <tr>
+      <td><%= hiring_manager_job.hiring_manager_id %></td>
+      <td><%= hiring_manager_job.job_id %></td>
+  
+      <td><%= link_to 'Show', hiring_manager_job_url(hiring_manager_job) %></td>
+      <td><%= link_to 'Edit', edit_hiring_manager_job_url(hiring_manager_job) %></td>
+      <td><%= link_to 'Destroy', hiring_manager_job_url(hiring_manager_job), method: 'delete', data: { confirm: "Do you really want to delete this hiring_manager_job?" } %></td>
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

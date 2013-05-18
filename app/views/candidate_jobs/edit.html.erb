@@ -1,0 +1,21 @@
+<h1>Editing Candidate Job #<%= @candidate_job.id %></h1>
+
+
+<%= form_tag(candidate_job_url(@candidate_job), method: 'put') do %>
+
+  <div>
+    <%= label_tag :candidate_id %><br />
+    <%= number_field_tag :candidate_id, @candidate_job.candidate_id %>
+  </div>
+
+  <div>
+    <%= label_tag :job_id %><br />
+    <%= number_field_tag :job_id, @candidate_job.job_id %>
+  </div>
+
+  
+  <div>
+    <%= submit_tag "Update Candidate Job" %>
+  </div>
+
+<% end %>

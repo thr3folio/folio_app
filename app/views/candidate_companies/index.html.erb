@@ -1,0 +1,30 @@
+<h1>Candidate companies</h1>
+
+<p><%= link_to 'Add a New Candidate Company', new_candidate_company_url %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Candidate</th>
+      <th>Company</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @candidate_companies.each do |candidate_company| %>
+    <tr>
+      <td><%= candidate_company.candidate_id %></td>
+      <td><%= candidate_company.company_id %></td>
+  
+      <td><%= link_to 'Show', candidate_company_url(candidate_company) %></td>
+      <td><%= link_to 'Edit', edit_candidate_company_url(candidate_company) %></td>
+      <td><%= link_to 'Destroy', candidate_company_url(candidate_company), method: 'delete', data: { confirm: "Do you really want to delete this candidate_company?" } %></td>
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

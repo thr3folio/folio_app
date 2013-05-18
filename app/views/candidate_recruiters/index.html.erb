@@ -1,0 +1,30 @@
+<h1>Candidate recruiters</h1>
+
+<p><%= link_to 'Add a New Candidate Recruiter', new_candidate_recruiter_url %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Candidate</th>
+      <th>Recruiters</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @candidate_recruiters.each do |candidate_recruiter| %>
+    <tr>
+      <td><%= candidate_recruiter.candidate_id %></td>
+      <td><%= candidate_recruiter.recruiters_id %></td>
+  
+      <td><%= link_to 'Show', candidate_recruiter_url(candidate_recruiter) %></td>
+      <td><%= link_to 'Edit', edit_candidate_recruiter_url(candidate_recruiter) %></td>
+      <td><%= link_to 'Destroy', candidate_recruiter_url(candidate_recruiter), method: 'delete', data: { confirm: "Do you really want to delete this candidate_recruiter?" } %></td>
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

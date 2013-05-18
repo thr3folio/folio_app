@@ -1,0 +1,32 @@
+<h1>Hiring manager notes</h1>
+
+<p><%= link_to 'Add a New Hiring Manager Note', new_hiring_manager_note_url %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Candidate</th>
+      <th>Note</th>
+      <th>Hiring manager</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @hiring_manager_notes.each do |hiring_manager_note| %>
+    <tr>
+      <td><%= hiring_manager_note.candidate_id %></td>
+      <td><%= hiring_manager_note.note_id %></td>
+      <td><%= hiring_manager_note.hiring_manager_id %></td>
+  
+      <td><%= link_to 'Show', hiring_manager_note_url(hiring_manager_note) %></td>
+      <td><%= link_to 'Edit', edit_hiring_manager_note_url(hiring_manager_note) %></td>
+      <td><%= link_to 'Destroy', hiring_manager_note_url(hiring_manager_note), method: 'delete', data: { confirm: "Do you really want to delete this hiring_manager_note?" } %></td>
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

@@ -1,0 +1,30 @@
+<h1>Job companies</h1>
+
+<p><%= link_to 'Add a New Job Company', new_job_company_url %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Job</th>
+      <th>Company</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @job_companies.each do |job_company| %>
+    <tr>
+      <td><%= job_company.job_id %></td>
+      <td><%= job_company.company_id %></td>
+  
+      <td><%= link_to 'Show', job_company_url(job_company) %></td>
+      <td><%= link_to 'Edit', edit_job_company_url(job_company) %></td>
+      <td><%= link_to 'Destroy', job_company_url(job_company), method: 'delete', data: { confirm: "Do you really want to delete this job_company?" } %></td>
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
