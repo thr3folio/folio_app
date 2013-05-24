@@ -1,0 +1,25 @@
+<%= form_for(@client_job) do |f| %>
+  <% if @client_job.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@client_job.errors.count, "error") %> prohibited this client_job from being saved:</h2>
+
+      <ul>
+      <% @client_job.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :client_id %><br />
+    <%= f.number_field :client_id %>
+  </div>
+  <div class="field">
+    <%= f.label :job_id %><br />
+    <%= f.number_field :job_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
