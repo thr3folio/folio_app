@@ -1,4 +1,7 @@
 FolioApp::Application.routes.draw do
+  resources :agency_clients
+
+
   resources :client_jobs
 
 

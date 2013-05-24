@@ -1,0 +1,25 @@
+<%= form_for(@agency_client) do |f| %>
+  <% if @agency_client.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@agency_client.errors.count, "error") %> prohibited this agency_client from being saved:</h2>
+
+      <ul>
+      <% @agency_client.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :agency_id %><br />
+    <%= f.number_field :agency_id %>
+  </div>
+  <div class="field">
+    <%= f.label :client_id %><br />
+    <%= f.number_field :client_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
