@@ -105,23 +105,6 @@ FolioApp::Application.routes.draw do
   delete '/candidate_recruiters/:id', controller: 'candidate_recruiters', action: 'destroy'
   #------------------------------
 
-  # Routes for the Job_company resource:
-  # CREATE
-  get '/job_companies/new', controller: 'job_companies', action: 'new', as: 'new_job_company'
-  post '/job_companies', controller: 'job_companies', action: 'create'
-
-  # READ
-  get '/job_companies', controller: 'job_companies', action: 'index', as: 'job_companies'
-  get '/job_companies/:id', controller: 'job_companies', action: 'show', as: 'job_company'
-
-  # UPDATE
-  get '/job_companies/:id/edit', controller: 'job_companies', action: 'edit', as: 'edit_job_company'
-  put '/job_companies/:id', controller: 'job_companies', action: 'update'
-
-  # DELETE
-  delete '/job_companies/:id', controller: 'job_companies', action: 'destroy'
-  #------------------------------
-
   # Routes for the Candidate_company resource:
   # CREATE
   get '/candidate_companies/new', controller: 'candidate_companies', action: 'new', as: 'new_candidate_company'
