@@ -1,0 +1,33 @@
+<%= form_for(@external_job) do |f| %>
+  <% if @external_job.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@external_job.errors.count, "error") %> prohibited this external_job from being saved:</h2>
+
+      <ul>
+      <% @external_job.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :contact %><br />
+    <%= f.text_field :contact %>
+  </div>
+  <div class="field">
+    <%= f.label :hiring_manager_id %><br />
+    <%= f.number_field :hiring_manager_id %>
+  </div>
+  <div class="field">
+    <%= f.label :job_id %><br />
+    <%= f.number_field :job_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

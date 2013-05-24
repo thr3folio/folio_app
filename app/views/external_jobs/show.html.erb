@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Description:</b>
+  <%= @external_job.description %>
+</p>
+
+<p>
+  <b>Contact:</b>
+  <%= @external_job.contact %>
+</p>
+
+<p>
+  <b>Hiring manager:</b>
+  <%= @external_job.hiring_manager_id %>
+</p>
+
+<p>
+  <b>Job:</b>
+  <%= @external_job.job_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_external_job_path(@external_job) %> |
+<%= link_to 'Back', external_jobs_path %>

@@ -1,0 +1,29 @@
+<h1>Listing external_jobs</h1>
+
+<table>
+  <tr>
+    <th>Description</th>
+    <th>Contact</th>
+    <th>Hiring manager</th>
+    <th>Job</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @external_jobs.each do |external_job| %>
+  <tr>
+    <td><%= external_job.description %></td>
+    <td><%= external_job.contact %></td>
+    <td><%= external_job.hiring_manager_id %></td>
+    <td><%= external_job.job_id %></td>
+    <td><%= link_to 'Show', external_job %></td>
+    <td><%= link_to 'Edit', edit_external_job_path(external_job) %></td>
+    <td><%= link_to 'Destroy', external_job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New External job', new_external_job_path %>

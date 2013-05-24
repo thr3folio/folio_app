@@ -1,4 +1,7 @@
 FolioApp::Application.routes.draw do
+  resources :external_jobs
+
+
   resources :clients
 
 
