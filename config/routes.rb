@@ -1,4 +1,7 @@
 FolioApp::Application.routes.draw do
+  resources :agencies
+
+
   # Set Root route
   root to: 'Candidates#index'
 
