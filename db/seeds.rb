@@ -5,6 +5,15 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Company.destroy_all
+
+company1 = Company.create(name: 'Google')
+company2 = Company.create(name: 'Amazon')
+company3 = Company.create(name: 'Groupon')
+company4 = Company.create(name: 'PerfectHire')
+company5 = Company.create(name: '37Signals')
+
+puts "There are #{Company.count} in the company table"
 
 Candidate.destroy_all
 
@@ -16,7 +25,7 @@ c1.industry = "Animation"
 c1.years_experience = "7"
 c1.email = "jonkap1@mail.com"
 c1.bio = "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-c1.company_id = "1"
+c1.company = company1
 c1.save
 
 c2 = Candidate.new
@@ -27,7 +36,7 @@ c2.industry = "Architecture"
 c2.years_experience = "5"
 c2.email = "jaggoda@mail.com"
 c2.bio = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-c2.company_id = "2"
+c2.company = company2
 c2.save
 
 
@@ -39,7 +48,7 @@ c3.industry = "Digital Art"
 c3.years_experience = "8"
 c3.email = "conorbryce@mail.com"
 c3.bio = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-c3.company_id = "3"
+c3.company = company3
 c3.save
 
 c4 = Candidate.new
@@ -50,55 +59,10 @@ c4.industry = "Digital Art"
 c4.years_experience = "4"
 c4.email = "davidmcleod@mail.com"
 c4.bio = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-c4.company_id = "4"
+c4.company = company4
 c4.save
 
 puts "There are #{Candidate.count} rows in the candidates table"
-
-Company.destroy_all
-
-company1 = Company.create(name: 'Google')
-company2 = Company.create(name: 'Amazon')
-company3 = Company.create(name: 'Groupon')
-company4 = Company.create(name: 'PerfectHire')
-company5 = Company.create(name: '37Signals')
-
-puts "There are #{Company.count} in the company table"
-
-Note.destroy_all
-
-n1 = Note.new
-n1.description = "This is a note."
-n1.date = "01/04/2013"
-n1.job_id = "1"
-n1.save
-
-n2 = Note.new
-n2.description = "This is a note."
-n2.date = "01/04/2013"
-n2.job_id = "1"
-n2.save
-
-n3 = Note.new
-n3.description = "This is a note."
-n3.date = "01/04/2013"
-n3.job_id = "2"
-n3.save
-
-
-n4 = Note.new
-n4.description = "This is another note."
-n4.date = "01/04/2013"
-n4.job_id = "3"
-n4.save
-
-n5 = Note.new
-n5.description = "This is another note."
-n5.date = "01/04/2013"
-n5.job_id = "5"
-n5.save
-
-puts "There are #{Note.count} rows in the notes table"
 
 Job.destroy_all
 
@@ -153,13 +117,48 @@ j6.save
 
 puts "There are #{Job.count} rows in the jobs table."
 
+Note.destroy_all
+
+n1 = Note.new
+n1.description = "This is a note for job1."
+n1.date = "01/04/2013"
+n1.job = j1
+n1.save
+
+n2 = Note.new
+n2.description = "This is another note for job1."
+n2.date = "01/04/2013"
+n2.job = j1
+n2.save
+
+n3 = Note.new
+n3.description = "This is a note for job2."
+n3.date = "01/04/2013"
+n3.job = j2
+n3.save
+
+
+n4 = Note.new
+n4.description = "This is another note for job3."
+n4.date = "01/04/2013"
+n4.job = j3
+n4.save
+
+n5 = Note.new
+n5.description = "This is another note for job5."
+n5.date = "01/04/2013"
+n5.job = j5
+n5.save
+
+puts "There are #{Note.count} rows in the notes table"
+
 Recruiter.destroy_all
 
 r1 = Recruiter.new
 r1.first_name = "Pat"
 r1.last_name = "Riley"
 r1.title = "Senior Recruiter"
-r1.company_id = "1"
+r1.company = company1
 r1.email = "recruiter@mail.com"
 r1.save
 
@@ -167,7 +166,7 @@ r2 = Recruiter.new
 r2.first_name = "George"
 r2.last_name = "Hill"
 r2.title = "Jnr Recruiter"
-r2.company_id = "1"
+r2.company = company1
 r2.email = "recruiter@mail.com"
 r2.save
 
@@ -175,7 +174,7 @@ r3 = Recruiter.new
 r3.first_name = "Larry"
 r3.last_name = "Bird"
 r3.title = "Freelance Recruiter"
-r3.company_id = "1"
+r3.company = company1
 r3.email = "recruiter@mail.com"
 r3.save
 
@@ -187,7 +186,7 @@ hm1 = HiringManager.new
 hm1.first_name = "William"
 hm1.last_name = "Adams"
 hm1.title = "Hiring Manager"
-hm1.company_id = "1"
+hm1.company = company1
 hm1.email = "recruiter@mail.com"
 hm1.save
 
@@ -195,7 +194,7 @@ hm2 = HiringManager.new
 hm2.first_name = "William"
 hm2.last_name = "Wallace"
 hm2.title = "Jnr HR Manager"
-hm2.company_id = "2"
+hm2.company = company2
 hm2.email = "recruiter@mail.com"
 hm2.save
 
@@ -203,7 +202,7 @@ hm3 = HiringManager.new
 hm3.first_name = "Nerlens"
 hm3.last_name = "Noel"
 hm3.title = "Executive HR Manager"
-hm3.company_id = "3"
+hm3.company = company3
 hm3.email = "recruiter@mail.com"
 hm3.save
 
@@ -211,7 +210,7 @@ hm4 = HiringManager.new
 hm4.first_name = "The"
 hm4.last_name = "Special One"
 hm4.title = "Assistant HR clerk"
-hm4.company_id = "3"
+hm4.company = company3
 hm4.email = "recruiter@mail.com"
 hm4.save
 
@@ -220,33 +219,33 @@ puts "There are #{HiringManager.count} rows in the hiring managers table"
 HiringManagerNote.destroy_all
 
 hm_note1 = HiringManagerNote.new
-hm_note1.candidate_id = c1.id
-hm_note1.note_id = n1.id
-hm_note1.hiring_manager_id = hm1.id
+hm_note1.candidate = c1
+hm_note1.note = n1
+hm_note1.hiring_manager = hm1
 hm_note1.save
 
 hm_note2 = HiringManagerNote.new
-hm_note2.candidate_id = c1.id
-hm_note2.note_id = n2.id
-hm_note2.hiring_manager_id = hm1.id
+hm_note2.candidate = c1
+hm_note2.note = n2
+hm_note2.hiring_manager = hm1
 hm_note2.save
 
 hm_note3 = HiringManagerNote.new
-hm_note3.candidate_id = c2.id
-hm_note3.note_id = n3.id
-hm_note3.hiring_manager_id = hm1.id
+hm_note3.candidate = c2
+hm_note3.note = n3
+hm_note3.hiring_manager = hm1
 hm_note3.save
 
 hm_note4 = HiringManagerNote.new
-hm_note4.candidate_id = c3.id
-hm_note4.note_id = n4.id
-hm_note4.hiring_manager_id = hm2.id
+hm_note4.candidate = c3
+hm_note4.note = n4
+hm_note4.hiring_manager = hm2
 hm_note4.save
 
 hm_note5 = HiringManagerNote.new
-hm_note5.candidate_id = c3.id
-hm_note5.note_id = n4.id
-hm_note5.hiring_manager_id = hm2.id
+hm_note5.candidate = c3
+hm_note5.note = n4
+hm_note5.hiring_manager = hm2
 hm_note5.save
 
 puts "There are #{HiringManagerNote.count} rows in the hiring_manger_note table."
@@ -254,34 +253,34 @@ puts "There are #{HiringManagerNote.count} rows in the hiring_manger_note table.
 RecruiterNote.destroy_all
 
 rm_note1 = RecruiterNote.new
-rm_note1.candidate_id = c3.id
-rm_note1.note_id = n4.id
-rm_note1.recruiter_id = r1.id
+rm_note1.candidate = c3
+rm_note1.note = n4
+rm_note1.recruiter = r1
 rm_note1.save
 
 rm_note2 = RecruiterNote.new
-rm_note2.candidate_id = c3.id
-rm_note2.note_id = n1.id
-rm_note2.recruiter_id = r1.id
+rm_note2.candidate = c3
+rm_note2.note = n1
+rm_note2.recruiter = r1
 rm_note2.save
 
 
 rm_note3 = RecruiterNote.new
-rm_note3.candidate_id = c2.id
-rm_note3.note_id = n1.id
-rm_note3.recruiter_id = r2.id
+rm_note3.candidate = c2
+rm_note3.note = n1
+rm_note3.recruiter = r2
 rm_note3.save
 
 rm_note4 = RecruiterNote.new
-rm_note4.candidate_id = c1.id
-rm_note4.note_id = n3.id
-rm_note4.recruiter_id = r3.id
+rm_note4.candidate = c1
+rm_note4.note = n3
+rm_note4.recruiter = r3
 rm_note4.save
 
 rm_note5 = RecruiterNote.new
-rm_note5.candidate_id = c2.id
-rm_note5.note_id = n3.id
-rm_note5.recruiter_id = r3.id
+rm_note5.candidate = c2
+rm_note5.note = n3
+rm_note5.recruiter = r3
 rm_note5.save
 
 puts "There are #{RecruiterNote.count} rows in the recruiter_note table."
