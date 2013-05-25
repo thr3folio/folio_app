@@ -43,7 +43,7 @@
 <p>
   <b>Notes by recruiter(s):</b>
   <% @candidate.recruiter_notes.each do |recruiter_note| %>
-  <p> <%= "#{recruiter_note.recruiter.full_name} said: \"#{recruiter_note.note.description}\" inconnection with the "%><strong><%= "#{recruiter_note.note.job.title} " %></strong>position.</p>
+  <p> <%= "#{recruiter_note.recruiter.full_name} said: \"#{recruiter_note.note.description}\" in connection with the "%><strong><%= "#{recruiter_note.note.job.title} " %></strong>position.</p>
   <% end %>
 </p>
 
