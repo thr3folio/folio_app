@@ -1,4 +1,12 @@
 FolioApp::Application.routes.draw do
+
+  get '/sessions/new' => 'Sessions#new'
+  post '/sessions' => 'Sessions#create'
+  delete '/sessions' => 'Sessions#destroy'
+
+  resources :users
+
+
   resources :job_recruiters
 
 
