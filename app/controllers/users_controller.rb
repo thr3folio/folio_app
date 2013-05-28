@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   def authorize_user
     @user = User.find(params[:id])
     if @user != current_user
-      redirect_to users_url, notice: "Nice try."
+      redirect_to users_url, notice: 'Try again.'
     end
   end
 
