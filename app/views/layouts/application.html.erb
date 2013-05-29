@@ -45,7 +45,7 @@
 <div class="container">
 
   <% if session[:user_id].present? %>
-    <p>Welcome back, <%= User.find(session[:user_id]).email %> | <%= link_to "Sign Out", '/sessions', method: 'delete' %></p>
+    <p>Welcome back, <%= User.find(session[:user_id]).email %>.</p>
   <% end %>
 
     <% if notice.present? %>
