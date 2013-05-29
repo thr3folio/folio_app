@@ -10,12 +10,12 @@ class SessionsController < ApplicationController
       session[:user_id] = @user.id
       redirect_to @user, notice: 'Sign-in successful.'
     else
-      redirect_to sessions_new_url, notice: "Sign-in unsuccessful."
+      render 'new'
     end
   end
 
   def destroy
     reset_session
-    redirect_to sessions_new_url, notice: "Signed-out successful."
+    redirect_to signin_url, notice: "Sign-out successful."
   end
 end

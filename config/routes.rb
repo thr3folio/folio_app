@@ -1,8 +1,8 @@
 FolioApp::Application.routes.draw do
 
-  get '/sessions/new' => 'Sessions#new'
-  post '/sessions' => 'Sessions#create'
-  delete '/sessions' => 'Sessions#destroy'
+  get '/signin' => 'Sessions#new', as: 'signin'
+  post '/sessions' => 'Sessions#create', as: 'sessions'
+  delete '/signout' => 'Sessions#destroy', as: 'signout'
 
   resources :users
 
