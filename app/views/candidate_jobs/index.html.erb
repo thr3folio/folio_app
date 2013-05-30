@@ -16,9 +16,9 @@
   <tbody>
   <% @candidate_jobs.each do |candidate_job| %>
     <tr>
-      <td><%= candidate_job.candidate_id %></td>
-      <td><%= candidate_job.job_id %></td>
-  
+      <td><%= candidate_job.candidate.try(:full_name) %></td>
+      <td><%= candidate_job.job.try(:title) %></td>
+
       <td><%= link_to 'Show', candidate_job_url(candidate_job) %></td>
       <td><%= link_to 'Edit', edit_candidate_job_url(candidate_job) %></td>
       <td><%= link_to 'Destroy', candidate_job_url(candidate_job), method: 'delete', data: { confirm: "Do you really want to delete this candidate_job?" } %></td>

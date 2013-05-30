@@ -13,10 +13,8 @@ class CandidateRecruitersController < ApplicationController
   end
 
   def create
-    @candidate_recruiter = CandidateRecruiter.new
-    @candidate_recruiter.candidate_id = params[:candidate_id]
-    @candidate_recruiter.recruiters_id = params[:recruiters_id]
-    
+    @candidate_recruiter = CandidateRecruiter.new(params[:candidate_recruiter])
+
     if @candidate_recruiter.save
             redirect_to candidate_recruiters_url
           else
@@ -30,12 +28,10 @@ class CandidateRecruitersController < ApplicationController
 
   def update
     @candidate_recruiter = CandidateRecruiter.find_by_id(params[:id])
-    @candidate_recruiter.candidate_id = params[:candidate_id]
-    @candidate_recruiter.recruiters_id = params[:recruiters_id]
-    
-    if @candidate_recruiter.save
-            redirect_to candidate_recruiters_url
-          else
+
+    if @candidate_recruiter.update_attributes(params[:candidate_recruiter])
+      redirect_to candidate_recruiters_url
+    else
       render 'edit'
     end
   end
@@ -43,6 +39,6 @@ class CandidateRecruitersController < ApplicationController
   def destroy
     @candidate_recruiter = CandidateRecruiter.find_by_id(params[:id])
     @candidate_recruiter.destroy
-        redirect_to candidate_recruiters_url
-      end
+    redirect_to candidate_recruiters_url
+  end
 end

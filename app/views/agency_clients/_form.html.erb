@@ -13,11 +13,11 @@
 
   <div class="field">
     <%= f.label :agency_id %><br />
-    <%= f.number_field :agency_id %>
+    <%= f.collection_select :agency_id, Agency.all, :id, :name %>
   </div>
   <div class="field">
     <%= f.label :client_id %><br />
-    <%= f.number_field :client_id %>
+    <%= f.collection_select :client_id, Client.all, :id, :name %>
   </div>
   <div class="actions">
     <%= f.submit %>

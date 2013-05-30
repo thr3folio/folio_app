@@ -1,0 +1,54 @@
+<% if @candidate.errors.any? %>
+  <ul>
+    <% @candidate.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for @candidate do |f| %>
+
+  <div>
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div>
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+
+  <div>
+    <%= f.label :industry %><br />
+    <%= f.text_field :industry %>
+  </div>
+
+  <div>
+    <%= f.label :years_experience %><br />
+    <%= f.number_field :years_experience %>
+  </div>
+
+  <div>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+
+  <div>
+    <%= f.label :bio %><br />
+    <%= f.text_area :bio %>
+  </div>
+
+  <div>
+    <%= f.label :company_id %><br />
+    <%= f.collection_select :company_id, Company.all, :id, :name %>
+  </div>
+
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>

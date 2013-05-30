@@ -1,0 +1,26 @@
+<% if @candidate_job.errors.any? %>
+  <ul>
+    <% @candidate_job.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for @candidate_job do |f| %>
+
+  <div>
+    <%= f.label :candidate_id %><br />
+    <%= f.collection_select :candidate_id, Candidate.all, :id, :full_name %>
+  </div>
+
+  <div>
+    <%= f.label :job_id %><br />
+    <%= f.collection_select :job_id, Job.all, :id, :title %>
+  </div>
+
+
+  <div>
+    <%= submit_tag %>
+  </div>
+
+<% end %>

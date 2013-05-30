@@ -16,7 +16,7 @@ class CandidateJobsController < ApplicationController
     @candidate_job = CandidateJob.new
     @candidate_job.candidate_id = params[:candidate_id]
     @candidate_job.job_id = params[:job_id]
-    
+
     if @candidate_job.save
             redirect_to candidate_jobs_url
           else
@@ -30,11 +30,9 @@ class CandidateJobsController < ApplicationController
 
   def update
     @candidate_job = CandidateJob.find_by_id(params[:id])
-    @candidate_job.candidate_id = params[:candidate_id]
-    @candidate_job.job_id = params[:job_id]
-    
-    if @candidate_job.save
-            redirect_to candidate_jobs_url
+
+    if @candidate_job.update_attributes(params[:candidate_job])
+            redirect_to @candidate_job
           else
       render 'edit'
     end
@@ -43,6 +41,6 @@ class CandidateJobsController < ApplicationController
   def destroy
     @candidate_job = CandidateJob.find_by_id(params[:id])
     @candidate_job.destroy
-        redirect_to candidate_jobs_url
-      end
+    redirect_to candidate_jobs_url
+  end
 end

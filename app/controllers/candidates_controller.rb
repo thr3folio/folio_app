@@ -13,15 +13,7 @@ class CandidatesController < ApplicationController
   end
 
   def create
-    @candidate = Candidate.new
-    @candidate.first_name = params[:first_name]
-    @candidate.last_name = params[:last_name]
-    @candidate.title = params[:title]
-    @candidate.industry = params[:industry]
-    @candidate.years_experience = params[:years_experience]
-    @candidate.email = params[:email]
-    @candidate.bio = params[:bio]
-    @candidate.company_id = params[:company_id]
+    @candidate = Candidate.new(params[:candidate])
 
     if @candidate.save
             redirect_to candidates_url
@@ -36,18 +28,11 @@ class CandidatesController < ApplicationController
 
   def update
     @candidate = Candidate.find_by_id(params[:id])
-    @candidate.first_name = params[:first_name]
-    @candidate.last_name = params[:last_name]
-    @candidate.title = params[:title]
-    @candidate.industry = params[:industry]
-    @candidate.years_experience = params[:years_experience]
-    @candidate.email = params[:email]
-    @candidate.bio = params[:bio]
-    @candidate.company_id = params[:company_id]
 
-    if @candidate.save
-            redirect_to candidates_url
-          else
+
+    if @candidate.update_attributes(params[:candidate])
+      redirect_to candidates_url
+    else
       render 'edit'
     end
   end
@@ -55,6 +40,6 @@ class CandidatesController < ApplicationController
   def destroy
     @candidate = Candidate.find_by_id(params[:id])
     @candidate.destroy
-        redirect_to candidates_url
-      end
+    redirect_to candidates_url
+  end
 end
