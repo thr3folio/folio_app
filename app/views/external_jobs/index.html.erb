@@ -3,9 +3,10 @@
 <table>
   <tr>
     <th>Description</th>
-    <th>Contact</th>
     <th>Hiring manager</th>
     <th>Job</th>
+    <th>Email</th>
+    <th>Telephone</th>
     <th></th>
     <th></th>
     <th></th>
@@ -14,9 +15,10 @@
 <% @external_jobs.each do |external_job| %>
   <tr>
     <td><%= external_job.description %></td>
-    <td><%= external_job.contact %></td>
-    <td><%= external_job.hiring_manager_id %></td>
-    <td><%= external_job.job_id %></td>
+    <td><%= external_job.hiring_manager.try(:first_name) %></td>
+    <td><%= external_job.job.title %></td>
+    <td><%= external_job.email %></td>
+    <td><%= external_job.telephone %></td>
     <td><%= link_to 'Show', external_job %></td>
     <td><%= link_to 'Edit', edit_external_job_path(external_job) %></td>
     <td><%= link_to 'Destroy', external_job, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -13,13 +13,11 @@ class HiringManagerJobsController < ApplicationController
   end
 
   def create
-    @hiring_manager_job = HiringManagerJob.new
-    @hiring_manager_job.hiring_manager_id = params[:hiring_manager_id]
-    @hiring_manager_job.job_id = params[:job_id]
-    
+    @hiring_manager_job = HiringManagerJob.new(params[:hiring_manager])
+
     if @hiring_manager_job.save
-            redirect_to hiring_manager_jobs_url
-          else
+     redirect_to hiring_manager_jobs_url
+    else
       render 'new'
     end
   end
@@ -30,10 +28,8 @@ class HiringManagerJobsController < ApplicationController
 
   def update
     @hiring_manager_job = HiringManagerJob.find_by_id(params[:id])
-    @hiring_manager_job.hiring_manager_id = params[:hiring_manager_id]
-    @hiring_manager_job.job_id = params[:job_id]
-    
-    if @hiring_manager_job.save
+
+    if @hiring_manager_job.update_attributes(params[:hiring_manager_job])
             redirect_to hiring_manager_jobs_url
           else
       render 'edit'

@@ -13,14 +13,11 @@ class HiringManagerNotesController < ApplicationController
   end
 
   def create
-    @hiring_manager_note = HiringManagerNote.new
-    @hiring_manager_note.candidate_id = params[:candidate_id]
-    @hiring_manager_note.note_id = params[:note_id]
-    @hiring_manager_note.hiring_manager_id = params[:hiring_manager_id]
-    
+    @hiring_manager_note = HiringManagerNote.new(params[:hiring_manager_note])
+
     if @hiring_manager_note.save
-            redirect_to hiring_manager_notes_url
-          else
+      redirect_to hiring_manager_notes_url
+    else
       render 'new'
     end
   end
@@ -31,11 +28,8 @@ class HiringManagerNotesController < ApplicationController
 
   def update
     @hiring_manager_note = HiringManagerNote.find_by_id(params[:id])
-    @hiring_manager_note.candidate_id = params[:candidate_id]
-    @hiring_manager_note.note_id = params[:note_id]
-    @hiring_manager_note.hiring_manager_id = params[:hiring_manager_id]
-    
-    if @hiring_manager_note.save
+
+    if @hiring_manager_note.update_attributes(params[:hiring_manager_note])
             redirect_to hiring_manager_notes_url
           else
       render 'edit'
@@ -45,6 +39,6 @@ class HiringManagerNotesController < ApplicationController
   def destroy
     @hiring_manager_note = HiringManagerNote.find_by_id(params[:id])
     @hiring_manager_note.destroy
-        redirect_to hiring_manager_notes_url
-      end
+    redirect_to hiring_manager_notes_url
+  end
 end

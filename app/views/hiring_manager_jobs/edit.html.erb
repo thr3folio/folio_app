@@ -1,21 +1,3 @@
 <h1>Editing Hiring Manager Job #<%= @hiring_manager_job.id %></h1>
 
-
-<%= form_tag(hiring_manager_job_url(@hiring_manager_job), method: 'put') do %>
-
-  <div>
-    <%= label_tag :hiring_manager_id %><br />
-    <%= number_field_tag :hiring_manager_id, @hiring_manager_job.hiring_manager_id %>
-  </div>
-
-  <div>
-    <%= label_tag :job_id %><br />
-    <%= number_field_tag :job_id, @hiring_manager_job.job_id %>
-  </div>
-
-  
-  <div>
-    <%= submit_tag "Update Hiring Manager Job" %>
-  </div>
-
-<% end %>
+<%= render 'form' %>

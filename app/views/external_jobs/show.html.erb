@@ -1,21 +1,31 @@
 <p>
+  <b>Contact:</b>
+  <%= @external_job.external_code %>
+</p>
+
+<p>
   <b>Description:</b>
   <%= @external_job.description %>
 </p>
 
 <p>
-  <b>Contact:</b>
-  <%= @external_job.contact %>
-</p>
-
-<p>
   <b>Hiring manager:</b>
-  <%= @external_job.hiring_manager_id %>
+  <%= @external_job.hiring_manager.full_name %>
 </p>
 
 <p>
   <b>Job:</b>
-  <%= @external_job.job_id %>
+  <%= @external_job.job.title %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @external_job.email %>
+</p>
+
+<p>
+  <b>Telephone:</b>
+  <%= @external_job.telephone %>
 </p>
 
 

@@ -12,20 +12,28 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :external_code %><br />
+    <%= f.text_field :external_code %>
+  </div>
+  <div class="field">
     <%= f.label :description %><br />
     <%= f.text_field :description %>
   </div>
   <div class="field">
-    <%= f.label :contact %><br />
-    <%= f.text_field :contact %>
-  </div>
-  <div class="field">
     <%= f.label :hiring_manager_id %><br />
-    <%= f.number_field :hiring_manager_id %>
+    <%= f.collection_select :hiring_manager_id, HiringManager.all, :id, :full_name %>
   </div>
   <div class="field">
     <%= f.label :job_id %><br />
-    <%= f.number_field :job_id %>
+    <%= f.collection_select :job_id, Job.all, :id, :title %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+  <%= f.label :telephone %><br />
+  <%= f.text_field :telephone %>
   </div>
   <div class="actions">
     <%= f.submit %>

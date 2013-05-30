@@ -1,5 +1,5 @@
 class HiringManager < ActiveRecord::Base
-
+  attr_accessible :first_name, :last_name, :title, :company_id, :email
   belongs_to :client
   has_many :hiring_manager_notes
   has_many :jobs

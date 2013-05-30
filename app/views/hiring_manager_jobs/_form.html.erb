@@ -1,0 +1,25 @@
+<%= form_for(@hiring_manager_job) do |f| %>
+  <% if @hiring_manager_job.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hiring_manager_job.errors.count, "error") %> prohibited this hiring_manager_job from being saved:</h2>
+
+      <ul>
+      <% @hiring_manager_job.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :hiring_manager_id %><br />
+    <%= f.collection_select :hiring_manager_id, HiringManager.all, :id, :full_name %>
+  </div>
+  <div class="field">
+    <%= f.label :job_id %><br />
+    <%= f.collection_select :job_id, Job.all, :id, :title %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

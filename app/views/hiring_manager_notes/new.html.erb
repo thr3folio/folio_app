@@ -1,26 +1,3 @@
 <h1>New Hiring Manager Note</h1>
 
-
-<%= form_tag(hiring_manager_notes_url, method: 'post') do %>
-
-
-  <div>
-    <%= label_tag :candidate_id %><br />
-    <%= number_field_tag :candidate_id %>
-  </div>
-
-    <div>
-    <%= label_tag :note_id %><br />
-    <%= number_field_tag :note_id %>
-  </div>
-
-    <div>
-    <%= label_tag :hiring_manager_id %><br />
-    <%= number_field_tag :hiring_manager_id %>
-  </div>
-
-  
-  <div>
-    <%= submit_tag "Create Hiring Manager Note" %>
-  </div>
-<% end %>
+<%= render 'form' %>

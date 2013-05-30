@@ -16,9 +16,9 @@
   <tbody>
   <% @hiring_manager_jobs.each do |hiring_manager_job| %>
     <tr>
-      <td><%= hiring_manager_job.hiring_manager_id %></td>
-      <td><%= hiring_manager_job.job_id %></td>
-  
+      <td><%= hiring_manager_job.hiring_manager.full_name %></td>
+      <td><%= hiring_manager_job.job.title %></td>
+
       <td><%= link_to 'Show', hiring_manager_job_url(hiring_manager_job) %></td>
       <td><%= link_to 'Edit', edit_hiring_manager_job_url(hiring_manager_job) %></td>
       <td><%= link_to 'Destroy', hiring_manager_job_url(hiring_manager_job), method: 'delete', data: { confirm: "Do you really want to delete this hiring_manager_job?" } %></td>

@@ -1,26 +1,3 @@
 <h1>Editing Hiring Manager Note #<%= @hiring_manager_note.id %></h1>
 
-
-<%= form_tag(hiring_manager_note_url(@hiring_manager_note), method: 'put') do %>
-
-  <div>
-    <%= label_tag :candidate_id %><br />
-    <%= number_field_tag :candidate_id, @hiring_manager_note.candidate_id %>
-  </div>
-
-  <div>
-    <%= label_tag :note_id %><br />
-    <%= number_field_tag :note_id, @hiring_manager_note.note_id %>
-  </div>
-
-  <div>
-    <%= label_tag :hiring_manager_id %><br />
-    <%= number_field_tag :hiring_manager_id, @hiring_manager_note.hiring_manager_id %>
-  </div>
-
-  
-  <div>
-    <%= submit_tag "Update Hiring Manager Note" %>
-  </div>
-
-<% end %>
+<%= render 'form' %>

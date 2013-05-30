@@ -11,8 +11,8 @@
 
 <% @client_jobs.each do |client_job| %>
   <tr>
-    <td><%= client_job.client_id %></td>
-    <td><%= client_job.job_id %></td>
+    <td><%= client_job.client.name %></td>
+    <td><%= client_job.job.title %></td>
     <td><%= link_to 'Show', client_job %></td>
     <td><%= link_to 'Edit', edit_client_job_path(client_job) %></td>
     <td><%= link_to 'Destroy', client_job, method: :delete, data: { confirm: 'Are you sure?' } %></td>

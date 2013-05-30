@@ -17,10 +17,10 @@
   <tbody>
   <% @hiring_manager_notes.each do |hiring_manager_note| %>
     <tr>
-      <td><%= hiring_manager_note.candidate_id %></td>
-      <td><%= hiring_manager_note.note_id %></td>
-      <td><%= hiring_manager_note.hiring_manager_id %></td>
-  
+      <td><%= hiring_manager_note.candidate.full_name %></td>
+      <td><%= hiring_manager_note.note.description %></td>
+      <td><%= hiring_manager_note.hiring_manager.full_name %></td>
+
       <td><%= link_to 'Show', hiring_manager_note_url(hiring_manager_note) %></td>
       <td><%= link_to 'Edit', edit_hiring_manager_note_url(hiring_manager_note) %></td>
       <td><%= link_to 'Destroy', hiring_manager_note_url(hiring_manager_note), method: 'delete', data: { confirm: "Do you really want to delete this hiring_manager_note?" } %></td>

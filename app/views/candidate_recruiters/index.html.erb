@@ -17,7 +17,7 @@
   <% @candidate_recruiters.each do |candidate_recruiter| %>
     <tr>
       <td><%= candidate_recruiter.candidate.try(:full_name) %></td>
-      <td><%= candidate_recruiter.recruiter.try(:first_name) %></td>
+      <td><%= candidate_recruiter.recruiter.try(:full_name) %></td>
 
       <td><%= link_to 'Show', candidate_recruiter_url(candidate_recruiter) %></td>
       <td><%= link_to 'Edit', edit_candidate_recruiter_url(candidate_recruiter) %></td>
