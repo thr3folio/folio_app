@@ -1,36 +1,6 @@
 <h1>Editing Recruiter #<%= @recruiter.id %></h1>
 
+<%= render 'form' %>
 
-<%= form_tag(recruiter_url(@recruiter), method: 'put') do %>
-
-  <div>
-    <%= label_tag :first_name %><br />
-    <%= text_field_tag :first_name, @recruiter.first_name %>
-  </div>
-
-  <div>
-    <%= label_tag :last_name %><br />
-    <%= text_field_tag :last_name, @recruiter.last_name %>
-  </div>
-
-  <div>
-    <%= label_tag :title %><br />
-    <%= text_field_tag :title, @recruiter.title %>
-  </div>
-
-  <div>
-    <%= label_tag :company_id %><br />
-    <%= number_field_tag :company_id, @recruiter.company_id %>
-  </div>
-
-  <div>
-    <%= label_tag :email %><br />
-    <%= text_field_tag :email, @recruiter.email %>
-  </div>
-
-  
-  <div>
-    <%= submit_tag "Update Recruiter" %>
-  </div>
-
-<% end %>
+<%= link_to 'Show', @recruiter %> |
+<%= link_to 'Back', recruiters_path %>

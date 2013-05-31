@@ -13,13 +13,8 @@ class RecruitersController < ApplicationController
   end
 
   def create
-    @recruiter = Recruiter.new
-    @recruiter.first_name = params[:first_name]
-    @recruiter.last_name = params[:last_name]
-    @recruiter.title = params[:title]
-    @recruiter.company_id = params[:company_id]
-    @recruiter.email = params[:email]
-    
+    @recruiter = Recruiter.new(params[:recruiter])
+
     if @recruiter.save
             redirect_to recruiters_url
           else
@@ -33,13 +28,8 @@ class RecruitersController < ApplicationController
 
   def update
     @recruiter = Recruiter.find_by_id(params[:id])
-    @recruiter.first_name = params[:first_name]
-    @recruiter.last_name = params[:last_name]
-    @recruiter.title = params[:title]
-    @recruiter.company_id = params[:company_id]
-    @recruiter.email = params[:email]
-    
-    if @recruiter.save
+
+    if @recruiter.update_attributes(params[:recruiter])
             redirect_to recruiters_url
           else
       render 'edit'

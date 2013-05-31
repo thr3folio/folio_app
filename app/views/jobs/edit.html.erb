@@ -1,36 +1,7 @@
 <h1>Editing Job #<%= @job.id %></h1>
 
+<%= render 'form' %>
 
-<%= form_tag(job_url(@job), method: 'put') do %>
+<%= link_to 'Show', @job %> |
+<%= link_to 'Back', jobs_path %>
 
-  <div>
-    <%= label_tag :title %><br />
-    <%= text_field_tag :title, @job.title %>
-  </div>
-
-  <div>
-    <%= label_tag :description %><br />
-    <%= text_field_tag :description, @job.description %>
-  </div>
-
-  <div>
-    <%= label_tag :location %><br />
-    <%= text_field_tag :location, @job.location %>
-  </div>
-
-  <div>
-    <%= label_tag :email %><br />
-    <%= text_field_tag :email, @job.email %>
-  </div>
-
-  <div>
-    <%= label_tag :url %><br />
-    <%= text_field_tag :url, @job.url %>
-  </div>
-
-  
-  <div>
-    <%= submit_tag "Update Job" %>
-  </div>
-
-<% end %>

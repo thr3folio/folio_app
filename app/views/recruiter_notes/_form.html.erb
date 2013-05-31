@@ -1,0 +1,23 @@
+<%= form_for @recruiter_note do |f| %>
+
+  <div>
+    <%= f.label :candidate_id %><br />
+    <%= f.collection_select :candidate_id, Candidate.all, :id, :full_name %>
+  </div>
+
+  <div>
+    <%= f.label :note_id %><br />
+    <%= f.collection_select :note_id, Note.all, :id, :description %>
+  </div>
+
+  <div>
+    <%= f.label :recruiter_id %><br />
+    <%= f.collection_select :recruiter_id, Recruiter.all, :id, :full_name %>
+  </div>
+
+
+  <div>
+    <%= f.submit %>
+  </div>
+
+<% end %>

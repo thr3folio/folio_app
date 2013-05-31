@@ -1,0 +1,23 @@
+<%= form_for @note do |f| %>
+
+  <div>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+
+  <div>
+    <%= f.label :date %><br />
+    <%= f.text_field :date %>
+  </div>
+
+  <div>
+    <%= f.label :job_id %><br />
+    <%= f.collection_select :job_id, Job.all, :id, :title %>
+  </div>
+
+
+  <div>
+    <%= f.submit %>
+  </div>
+
+<% end %>

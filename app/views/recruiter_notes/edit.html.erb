@@ -1,26 +1,6 @@
 <h1>Editing Recruiter Note #<%= @recruiter_note.id %></h1>
 
+<%= render 'form' %>
 
-<%= form_tag(recruiter_note_url(@recruiter_note), method: 'put') do %>
-
-  <div>
-    <%= label_tag :candidate_id %><br />
-    <%= number_field_tag :candidate_id, @recruiter_note.candidate_id %>
-  </div>
-
-  <div>
-    <%= label_tag :note_id %><br />
-    <%= number_field_tag :note_id, @recruiter_note.note_id %>
-  </div>
-
-  <div>
-    <%= label_tag :recruiter_id %><br />
-    <%= number_field_tag :recruiter_id, @recruiter_note.recruiter_id %>
-  </div>
-
-  
-  <div>
-    <%= submit_tag "Update Recruiter Note" %>
-  </div>
-
-<% end %>
+<%= link_to 'Show', @recruiter_note %> |
+<%= link_to 'Back', recruiter_notes_path %>

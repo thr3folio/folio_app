@@ -19,7 +19,7 @@
     <tr>
       <td><%= note.description %></td>
       <td><%= note.date %></td>
-      <td><%= note.job_id %></td>
+      <td><%= note.job.title %></td>
 
       <td><%= link_to 'Show', note_url(note) %></td>
       <td><%= link_to 'Edit', edit_note_url(note) %></td>

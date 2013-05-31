@@ -1,0 +1,33 @@
+<%= form_for @recruiter do |f| %>
+
+  <div>
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div>
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+
+  <div>
+    <%= f.label :company_id %><br />
+    <%= f.collection_select :company_id, Company.all, :id, :name %>
+  </div>
+
+  <div>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+
+
+  <div>
+    <%= f.submit %>
+  </div>
+
+<% end %>

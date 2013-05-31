@@ -1,0 +1,32 @@
+<%= form_for @job do |f| %>
+
+  <div>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+
+  <div>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+
+  <div>
+    <%= f.label :location %><br />
+    <%= f.text_field :location %>
+  </div>
+
+  <div>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+
+  <div>
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </div>
+
+  <div>
+    <%= f.submit %>
+  </div>
+
+<% end %>

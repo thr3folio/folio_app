@@ -13,13 +13,8 @@ class HiringManagersController < ApplicationController
   end
 
   def create
-    @hiring_manager = HiringManager.new
-    @hiring_manager.first_name = params[:first_name]
-    @hiring_manager.last_name = params[:last_name]
-    @hiring_manager.title = params[:title]
-    @hiring_manager.company_id = params[:company_id]
-    @hiring_manager.email = params[:email]
-    
+    @hiring_manager = HiringManager.new(params[:hiring_manager])
+
     if @hiring_manager.save
             redirect_to hiring_managers_url
           else
@@ -33,15 +28,10 @@ class HiringManagersController < ApplicationController
 
   def update
     @hiring_manager = HiringManager.find_by_id(params[:id])
-    @hiring_manager.first_name = params[:first_name]
-    @hiring_manager.last_name = params[:last_name]
-    @hiring_manager.title = params[:title]
-    @hiring_manager.company_id = params[:company_id]
-    @hiring_manager.email = params[:email]
-    
-    if @hiring_manager.save
-            redirect_to hiring_managers_url
-          else
+
+    if @hiring_manager.update_attributes(params[:hiring_manager])
+      redirect_to hiring_managers_url
+    else
       render 'edit'
     end
   end

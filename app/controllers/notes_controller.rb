@@ -13,10 +13,7 @@ class NotesController < ApplicationController
   end
 
   def create
-    @note = Note.new
-    @note.description = params[:description]
-    @note.date = params[:date]
-    @note.job_id = params[:job_id]
+    @note = Note.new(params[:note])
 
     if @note.save
             redirect_to notes_url
@@ -31,11 +28,8 @@ class NotesController < ApplicationController
 
   def update
     @note = Note.find_by_id(params[:id])
-    @note.description = params[:description]
-    @note.date = params[:date]
-    @note.job_id = params[:job_id]
 
-    if @note.save
+    if @note.update_attributes(params[:note])
             redirect_to notes_url
           else
       render 'edit'
@@ -45,6 +39,6 @@ class NotesController < ApplicationController
   def destroy
     @note = Note.find_by_id(params[:id])
     @note.destroy
-        redirect_to notes_url
-      end
+    redirect_to notes_url
+  end
 end

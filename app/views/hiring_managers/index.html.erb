@@ -22,9 +22,9 @@
       <td><%= hiring_manager.first_name %></td>
       <td><%= hiring_manager.last_name %></td>
       <td><%= hiring_manager.title %></td>
-      <td><%= hiring_manager.company_id %></td>
+      <td><%= hiring_manager.company.name %></td>
       <td><%= hiring_manager.email %></td>
-  
+
       <td><%= link_to 'Show', hiring_manager_url(hiring_manager) %></td>
       <td><%= link_to 'Edit', edit_hiring_manager_url(hiring_manager) %></td>
       <td><%= link_to 'Destroy', hiring_manager_url(hiring_manager), method: 'delete', data: { confirm: "Do you really want to delete this hiring_manager?" } %></td>

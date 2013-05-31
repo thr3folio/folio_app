@@ -13,13 +13,8 @@ class JobsController < ApplicationController
   end
 
   def create
-    @job = Job.new
-    @job.title = params[:title]
-    @job.description = params[:description]
-    @job.location = params[:location]
-    @job.email = params[:email]
-    @job.url = params[:url]
-    
+    @job = Job.new(params[:job])
+
     if @job.save
             redirect_to jobs_url
           else
@@ -33,15 +28,10 @@ class JobsController < ApplicationController
 
   def update
     @job = Job.find_by_id(params[:id])
-    @job.title = params[:title]
-    @job.description = params[:description]
-    @job.location = params[:location]
-    @job.email = params[:email]
-    @job.url = params[:url]
-    
-    if @job.save
-            redirect_to jobs_url
-          else
+
+    if @job.update_attributes(params[:job])
+      redirect_to jobs_url
+    else
       render 'edit'
     end
   end
@@ -49,6 +39,6 @@ class JobsController < ApplicationController
   def destroy
     @job = Job.find_by_id(params[:id])
     @job.destroy
-        redirect_to jobs_url
-      end
+    redirect_to jobs_url
+  end
 end
