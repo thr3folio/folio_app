@@ -5,18 +5,20 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
 Company.destroy_all
 
-company1 = Company.create(name: 'Google')
-company2 = Company.create(name: 'Amazon')
-company3 = Company.create(name: 'Groupon')
-company4 = Company.create(name: 'PerfectHire')
-company5 = Company.create(name: 'eSalon')
-company6 = Company.create(name: 'Greenhouse')
-company7 = Company.create(name: 'TED Conferences')
-company8 = Company.create(name: 'Microsoft Corporation')
-company9 = Company.create(name: 'Shazam')
-company10 = Company.create(name: 'MTV Networks')
+company1 = Company.create(name: "Google")
+company2 = Company.create(name: "Amazon")
+company3 = Company.create(name: "Groupon")
+company4 = Company.create(name: "PerfectHire")
+company5 = Company.create(name: "eSalon")
+company6 = Company.create(name: "Greenhouse")
+company7 = Company.create(name: "TED Conferences")
+company8 = Company.create(name: "Microsoft Corporation")
+company9 = Company.create(name: "Shazam")
+company10 = Company.create(name: "MTV Networks")
 
 puts "There are #{Company.count} rows in the companies table"
 
@@ -217,72 +219,61 @@ j10.url = "http://localhost:3000"
 j10.save
 
 
-puts "There are #{Job.count} rows in the jobs table."
+puts "There are #{Job.count} rows in the jobs table"
 
-Note.destroy_all
+CandidateJob.destroy_all
 
-n1 = Note.new
-n1.description = "This is a note for job1."
-n1.date = "01/04/2013"
-n1.job = j1
-n1.save
+cj1 = CandidateJob.new
+cj1.candidate = c1
+cj1.job = j1
+cj1.save
 
-n2 = Note.new
-n2.description = "This is another note for job2."
-n2.date = "02/25/2013"
-n2.job = j2
-n2.save
+cj2 = CandidateJob.new
+cj2.candidate = c2
+cj2.job = j2
+cj2.save
 
-n3 = Note.new
-n3.description = "This is a note for job3."
-n3.date = "07/15/2013"
-n3.job = j3
-n3.save
+cj3 = CandidateJob.new
+cj3.candidate = c3
+cj3.job = j3
+cj3.save
 
+cj4 = CandidateJob.new
+cj4.candidate = c4
+cj4.job = j4
+cj4.save
 
-n4 = Note.new
-n4.description = "This is another note for job4"
-n4.date = "01/04/2013"
-n4.job = j4
-n4.save
+cj5 = CandidateJob.new
+cj5.candidate = c5
+cj5.job = j5
+cj5.save
 
-n5 = Note.new
-n5.description = "This is another note for job5."
-n5.date = "01/04/2013"
-n5.job = j5
-n5.save
+cj6 = CandidateJob.new
+cj6.candidate = c6
+cj6.job = j6
+cj6.save
 
-n6 = Note.new
-n6.description = "This is another note for job6."
-n6.date = "01/04/2013"
-n6.job = j6
-n6.save
+cj7 = CandidateJob.new
+cj7.candidate = c7
+cj7.job = j7
+cj7.save
 
-n7 = Note.new
-n7.description = "This is another note for job7."
-n7.date = "01/04/2013"
-n7.job = j7
-n7.save
+cj8 = CandidateJob.new
+cj8.candidate = c8
+cj8.job = j8
+cj8.save
 
-n8 = Note.new
-n8.description = "This is another note for job8."
-n8.date = "01/04/2013"
-n8.job = j8
-n8.save
+cj9 = CandidateJob.new
+cj9.candidate = c9
+cj9.job = j9
+cj9.save
 
-n9 = Note.new
-n9.description = "This is another note for job9."
-n9.date = "01/04/2013"
-n9.job = j9
-n9.save
+cj10 = CandidateJob.new
+cj10.candidate = c10
+cj10.job = j10
+cj10.save
 
-n10 = Note.new
-n10.description = "This is another note for job10."
-n10.date = "01/04/2013"
-n10.job = j10
-n10.save
-
-puts "There are #{Note.count} rows in the notes table"
+puts "There are #{CandidateJob.count} rows in the candidate jobs table"
 
 Recruiter.destroy_all
 
@@ -366,7 +357,126 @@ r10.company = company10
 r10.email = "recruiter@mail.com"
 r10.save
 
-puts "There are #{Recruiter.count} rows in the recruiters table."
+puts "There are #{Recruiter.count} rows in the recruiters table"
+
+CandidateRecruiter.destroy_all
+
+cr1 = CandidateRecruiter.new
+cr1.candidate = c1
+cr1.recruiter = r1
+cr1.save
+
+cr2 = CandidateRecruiter.new
+cr2.candidate = c2
+cr2.recruiter = r2
+cr2.save
+
+cr3 = CandidateRecruiter.new
+cr3.candidate = c3
+cr3.recruiter = r3
+cr3.save
+
+cr4 = CandidateRecruiter.new
+cr4.candidate = c4
+cr4.recruiter = r4
+cr4.save
+
+cr5 = CandidateRecruiter.new
+cr5.candidate = c5
+cr5.recruiter = r5
+cr5.save
+
+cr6 = CandidateRecruiter.new
+cr6.candidate = c6
+cr6.recruiter = r6
+cr6.save
+
+cr7 = CandidateRecruiter.new
+cr7.candidate = c7
+cr7.recruiter = r7
+cr7.save
+
+cr8 = CandidateRecruiter.new
+cr8.candidate = c8
+cr8.recruiter = r8
+cr8.save
+
+cr9 = CandidateRecruiter.new
+cr9.candidate = c9
+cr9.recruiter = r9
+cr9.save
+
+cr10 = CandidateRecruiter.new
+cr10.candidate = c10
+cr10.recruiter = r10
+cr10.save
+
+puts "There are #{CandidateRecruiter.count} rows in the candidate recruiters table"
+
+Note.destroy_all
+
+n1 = Note.new
+n1.description = "This is a note for job1."
+n1.date = "01/04/2013"
+n1.job = j1
+n1.save
+
+n2 = Note.new
+n2.description = "This is another note for job2."
+n2.date = "02/25/2013"
+n2.job = j2
+n2.save
+
+n3 = Note.new
+n3.description = "This is a note for job3."
+n3.date = "07/15/2013"
+n3.job = j3
+n3.save
+
+
+n4 = Note.new
+n4.description = "This is another note for job4"
+n4.date = "01/04/2013"
+n4.job = j4
+n4.save
+
+n5 = Note.new
+n5.description = "This is another note for job5."
+n5.date = "01/04/2013"
+n5.job = j5
+n5.save
+
+n6 = Note.new
+n6.description = "This is another note for job6."
+n6.date = "01/04/2013"
+n6.job = j6
+n6.save
+
+n7 = Note.new
+n7.description = "This is another note for job7."
+n7.date = "01/04/2013"
+n7.job = j7
+n7.save
+
+n8 = Note.new
+n8.description = "This is another note for job8."
+n8.date = "01/04/2013"
+n8.job = j8
+n8.save
+
+n9 = Note.new
+n9.description = "This is another note for job9."
+n9.date = "01/04/2013"
+n9.job = j9
+n9.save
+
+n10 = Note.new
+n10.description = "This is another note for job10."
+n10.date = "01/04/2013"
+n10.job = j10
+n10.save
+
+puts "There are #{Note.count} rows in the notes table."
 
 HiringManager.destroy_all
 
@@ -514,7 +624,7 @@ hm_note10.note = n10
 hm_note10.hiring_manager = hm10
 hm_note10.save
 
-puts "There are #{HiringManagerNote.count} rows in the hiring_manger_notes table."
+puts "There are #{HiringManagerNote.count} rows in the hiring manger notes table"
 
 RecruiterNote.destroy_all
 
@@ -578,56 +688,142 @@ rm_note10.note = n10
 rm_note10.recruiter = r10
 rm_note10.save
 
-puts "There are #{RecruiterNote.count} rows in the recruiter_notes table."
-
-client_hashes = [
-  { :name => "Booking.com", :location => "Amsterdam, Netherlands", :industry => "Advertising" },
-  { :name => "Cynergy", :location => "Chicago, IL, USA", :industry => "Animation" },
-  { :name => "Real Eyes", :location => "London, United Kingdom", :industry => "Architecture" },
-  { :name => "Idean", :location => "Palo Alto, CA, USA", :industry => "Computer Animation" },
-  { :name => "Klout", :location => "San Francisco, CA, USA", :industry => "Desing" },
-  { :name => "OGK Creative", :location => "Delray Beach, FL, USA", :industry => "Digital Art" },
-  { :name => "Medium", :location => "San Francisco, CA, USA", :industry => "Graphic Desing" },
-  { :name => "Blue Fountain Media", :location => "New York, NY, USA", :industry => "Desing" },
-  { :name => "Meetup", :location => "New York, NY, USA", :industry => "Advertising" },
-  { :name => "X Studios", :location => "Maitland, FL, USA", :industry => "Animation" }
-]
-
-agency_hashes = [
-  { :name => "Artisan Creative", :location => "Los Angeles, CA, USA", :industry => "Advertising" },
-  { :name => "Dexigner", :location => "Chicago, IL, USA", :industry => "Animation" },
-  { :name => "Adrem Group", :location => "London, United Kingdom", :industry => "Architecture" },
-  { :name => "Redline", :location => "Chicago, IL, USA", :industry => "Computer Animation" },
-  { :name => "Jobfit", :location => "New York, NY, USA", :industry => "Desing" },
-  { :name => "The Loop", :location => "Victoria, Australia", :industry => "Digital Art" },
-  { :name => "3rd Eye", :location => "Auckland, New Zealand", :industry => "Graphic Desing" },
-  { :name => "CreativePlacement", :location => "New York, NY, USA", :industry => "Desing" },
-  { :name => "Artisan Talent", :location => "Chicago, IL, USA", :industry => "Advertising" },
-  { :name => "Seek", :location => "Melbourne, Australia", :industry => "Animation" }
-]
+puts "There are #{RecruiterNote.count} rows in the recruiter notes table"
 
 Client.destroy_all
+
+client1 = Client.create(:name => "Booking.com", :location => "Amsterdam, Netherlands", :industry => "Advertising" )
+client2 = Client.create(:name => "Cynergy", :location => "Chicago, IL, USA", :industry => "Animation" )
+client3 = Client.create(:name => "Real Eyes", :location => "London, United Kingdom", :industry => "Architecture" )
+client4 = Client.create(:name => "Idean", :location => "Palo Alto, CA, USA", :industry => "Computer Animation" )
+client5 = Client.create(:name => "Klout", :location => "San Francisco, CA, USA", :industry => "Desing" )
+client6 = Client.create(:name => "OGK Creative", :location => "Delray Beach, FL, USA", :industry => "Digital Art" )
+client7 = Client.create(:name => "Medium", :location => "San Francisco, CA, USA", :industry => "Graphic Desing" )
+client8 = Client.create(:name => "Blue Fountain Media", :location => "New York, NY, USA", :industry => "Desing" )
+client9 = Client.create(:name => "Meetup", :location => "New York, NY, USA", :industry => "Advertising" )
+client10 = Client.create(:name => "X Studios", :location => "Maitland, FL, USA", :industry => "Animation")
+
+puts "There are #{Client.count} rows in the clients table"
+
+ClientJob.destroy_all
+
+client_job1 = ClientJob.new
+client_job1.client = client1
+client_job1.job = j1
+client_job1.save
+
+client_job2 = ClientJob.new
+client_job2.client = client2
+client_job2.job = j2
+client_job2.save
+
+client_job3 = ClientJob.new
+client_job3.client = client3
+client_job3.job = j3
+client_job3.save
+
+client_job4 = ClientJob.new
+client_job4.client = client4
+client_job4.job = j4
+client_job4.save
+
+client_job5 = ClientJob.new
+client_job5.client = client5
+client_job5.job = j5
+client_job5.save
+
+client_job6 = ClientJob.new
+client_job6.client = client6
+client_job6.job = j6
+client_job6.save
+
+client_job7 = ClientJob.new
+client_job7.client = client7
+client_job7.job = j7
+client_job7.save
+
+client_job8 = ClientJob.new
+client_job8.client = client8
+client_job8.job = j8
+client_job8.save
+
+client_job9 = ClientJob.new
+client_job9.client = client9
+client_job9.job = j9
+client_job9.save
+
+client_job10 = ClientJob.new
+client_job10.client = client10
+client_job10.job = j10
+client_job10.save
+
+puts "There are #{ClientJob.count} rows in the client jobs table"
+
 Agency.destroy_all
+
+agency1 = Agency.create(:name => "Artisan Creative", :location => "Los Angeles, CA, USA", :industry => "Advertising" )
+agency2 = Agency.create(:name => "Dexigner", :location => "Chicago, IL, USA", :industry => "Animation" )
+agency3 = Agency.create(:name => "Adrem Group", :location => "London, United Kingdom", :industry => "Architecture" )
+agency4 = Agency.create(:name => "Redline", :location => "Chicago, IL, USA", :industry => "Computer Animation" )
+agency5 = Agency.create(:name => "Jobfit", :location => "New York, NY, USA", :industry => "Desing" )
+agency6 = Agency.create(:name => "The Loop", :location => "Victoria, Australia", :industry => "Digital Art" )
+agency7 = Agency.create(:name => "3rd Eye", :location => "Auckland, New Zealand", :industry => "Graphic Desing" )
+agency8 = Agency.create(:name => "CreativePlacement", :location => "New York, NY, USA", :industry => "Desing" )
+agency9 = Agency.create(:name => "Artisan Talent", :location => "Chicago, IL, USA", :industry => "Advertising" )
+agency10 = Agency.create(:name => "Seek", :location => "Melbourne, Australia", :industry => "Animation")
+
+puts "There are #{Agency.count} rows in the agencies table"
+
 AgencyClient.destroy_all
 
-(0...10).each do |n|
-  #Create client
-  c = Client.new
-  c.name = client_hashes[n][:name]
-  c.location = client_hashes[n][:location]
-  c.industry = client_hashes[n][:industry]
-  #Create agency
-  a = Agency.new
-  a.name = agency_hashes[n][:name]
-  a.location = agency_hashes[n][:location]
-  a.industry = agency_hashes[n][:industry]
-  #Create AgencyClient
-  ac = AgencyClient.new
-  ac.agency = a
-  ac.client = c
-  ac.save
-end
+a_client1 = AgencyClient.new
+a_client1.client = client1
+a_client1.agency = agency1
+a_client1.save
 
-puts "There are #{Client.count} rows in the clients table."
-puts "There are #{Agency.count} rows in the agencies table."
-puts "There are #{AgencyClient.count} rows in the agency_clients table."
+a_client2 = AgencyClient.new
+a_client2.client = client2
+a_client2.agency = agency2
+a_client2.save
+
+a_client3 = AgencyClient.new
+a_client3.client = client3
+a_client3.agency = agency3
+a_client3.save
+
+a_client4 = AgencyClient.new
+a_client4.client = client4
+a_client4.agency = agency4
+a_client4.save
+
+a_client5 = AgencyClient.new
+a_client5.client = client5
+a_client5.agency = agency5
+a_client5.save
+
+a_client6 = AgencyClient.new
+a_client6.client = client6
+a_client6.agency = agency6
+a_client6.save
+
+a_client7 = AgencyClient.new
+a_client7.client = client7
+a_client7.agency = agency7
+a_client7.save
+
+a_client8 = AgencyClient.new
+a_client8.client = client8
+a_client8.agency = agency8
+a_client8.save
+
+a_client9 = AgencyClient.new
+a_client9.client = client9
+a_client9.agency = agency9
+a_client9.save
+
+a_client10 = AgencyClient.new
+a_client10.client = client10
+a_client10.agency = agency10
+a_client10.save
+
+puts "There are #{AgencyClient.count} rows in the agency clients table"
