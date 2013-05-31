@@ -827,3 +827,195 @@ a_client10.agency = agency10
 a_client10.save
 
 puts "There are #{AgencyClient.count} rows in the agency clients table"
+
+ExternalJob.destroy_all
+
+ex_j1 = ExternalJob.new
+ex_j1.hiring_manager = hm1
+ex_j1.job = j1
+ex_j1.external_code = "1A"
+ex_j1.email = "p@p.com"
+ex_j1.telephone = "773-345-6789"
+ex_j1.save
+
+ex_j2 = ExternalJob.new
+ex_j2.hiring_manager = hm2
+ex_j2.job = j2
+ex_j2.external_code = "2B"
+ex_j2.email = "b@b.com"
+ex_j2.telephone = "773-345-0987"
+ex_j2.save
+
+ex_j3 = ExternalJob.new
+ex_j3.hiring_manager = hm3
+ex_j3.job = j3
+ex_j3.external_code = "3C"
+ex_j3.email = "c@c.com"
+ex_j3.telephone = "773-345-3645"
+ex_j3.save
+
+ex_j4 = ExternalJob.new
+ex_j4.hiring_manager = hm4
+ex_j4.job = j4
+ex_j4.external_code = "4D"
+ex_j4.email = "d@d.com"
+ex_j4.telephone = "773-345-2347"
+ex_j4.save
+
+ex_j5 = ExternalJob.new
+ex_j5.hiring_manager = hm5
+ex_j5.job = j5
+ex_j5.external_code = "5E"
+ex_j5.email = "e@e.com"
+ex_j5.telephone = "773-675-6789"
+ex_j5.save
+
+ex_j6 = ExternalJob.new
+ex_j6.hiring_manager = hm6
+ex_j6.job = j6
+ex_j6.external_code = "6F"
+ex_j6.email = "f@f.com"
+ex_j6.telephone = "773-345-1209"
+ex_j6.save
+
+ex_j7 = ExternalJob.new
+ex_j7.hiring_manager = hm7
+ex_j7.job = j7
+ex_j7.external_code = "7G"
+ex_j7.email = "g@g.com"
+ex_j7.telephone = "312-323-3127"
+ex_j7.save
+
+ex_j8 = ExternalJob.new
+ex_j8.hiring_manager = hm8
+ex_j8.job = j8
+ex_j8.external_code = "8H"
+ex_j8.email = "h@h.com"
+ex_j8.telephone = "773-345-0000"
+ex_j8.save
+
+ex_j9 = ExternalJob.new
+ex_j9.hiring_manager = hm9
+ex_j9.job = j9
+ex_j9.external_code = "9I"
+ex_j9.email = "i@i.com"
+ex_j9.telephone = "773-345-2222"
+ex_j9.save
+
+ex_j10 = ExternalJob.new
+ex_j10.hiring_manager = hm10
+ex_j10.job = j10
+ex_j10.external_code = "10J"
+ex_j10.email = "j@j.com"
+ex_j10.telephone = "773-345-1111"
+ex_j10.save
+
+puts "There are #{ExternalJob.count} rows in the external jobs table"
+
+HiringManagerJob.destroy_all
+
+hm_job1 = HiringManagerJob.new
+hm_job1.hiring_manager = hm1
+hm_job1.job = j1
+hm_job1.save
+
+hm_job2 = HiringManagerJob.new
+hm_job2.hiring_manager = hm2
+hm_job2.job = j2
+hm_job2.save
+
+hm_job3 = HiringManagerJob.new
+hm_job3.hiring_manager = hm3
+hm_job3.job = j3
+hm_job3.save
+
+hm_job4 = HiringManagerJob.new
+hm_job4.hiring_manager = hm4
+hm_job4.job = j4
+hm_job4.save
+
+hm_job5 = HiringManagerJob.new
+hm_job5.hiring_manager = hm5
+hm_job5.job = j5
+hm_job5.save
+
+hm_job6 = HiringManagerJob.new
+hm_job6.hiring_manager = hm6
+hm_job6.job = j6
+hm_job6.save
+
+hm_job7 = HiringManagerJob.new
+hm_job7.hiring_manager = hm7
+hm_job7.job = j7
+hm_job7.save
+
+hm_job8 = HiringManagerJob.new
+hm_job8.hiring_manager = hm8
+hm_job8.job = j8
+hm_job8.save
+
+hm_job9 = HiringManagerJob.new
+hm_job9.hiring_manager = hm9
+hm_job9.job = j9
+hm_job9.save
+
+hm_job10 = HiringManagerJob.new
+hm_job10.hiring_manager = hm10
+hm_job10.job = j10
+hm_job10.save
+
+puts "There are #{HiringManagerJob.count} rows in the hiring manager jobs table"
+
+JobRecruiter.destroy_all
+
+jr1 = JobRecruiter.new
+jr1.recruiter = r1
+jr1.job = j1
+jr1.save
+
+jr2 = JobRecruiter.new
+jr2.recruiter = r2
+jr2.job = j2
+jr2.save
+
+jr3 = JobRecruiter.new
+jr3.recruiter = r3
+jr3.job = j3
+jr3.save
+
+jr4 = JobRecruiter.new
+jr4.recruiter = r4
+jr4.job = j4
+jr4.save
+
+jr5 = JobRecruiter.new
+jr5.recruiter = r5
+jr5.job = j5
+jr5.save
+
+jr6 = JobRecruiter.new
+jr6.recruiter = r6
+jr6.job = j6
+jr6.save
+
+jr7 = JobRecruiter.new
+jr7.recruiter = r7
+jr7.job = j7
+jr7.save
+
+jr8 = JobRecruiter.new
+jr8.recruiter = r8
+jr8.job = j8
+jr8.save
+
+jr9 = JobRecruiter.new
+jr9.recruiter = r9
+jr9.job = j1
+jr9.save
+
+jr10 = JobRecruiter.new
+jr10.recruiter = r10
+jr10.job = j10
+jr10.save
+
+puts "There are #{JobRecruiter.count} rows in the job recruiters table"

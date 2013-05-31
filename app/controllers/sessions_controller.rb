@@ -10,6 +10,7 @@ class SessionsController < ApplicationController
       session[:user_id] = @user.id
       redirect_to @user, notice: 'Sign-in successful.'
     else
+      flash[:notice] = "Sign-in unsuccessful"
       render 'new'
     end
   end
