@@ -4,6 +4,7 @@ class HiringManager < ActiveRecord::Base
   has_many :hiring_manager_notes
   has_many :jobs
   belongs_to :company
+  belongs_to :user
 
   def full_name
     return "#{first_name} #{last_name}"

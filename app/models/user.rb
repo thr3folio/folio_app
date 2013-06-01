@@ -3,5 +3,9 @@ class User < ActiveRecord::Base
 
   has_secure_password
 
+  has_one :candidate
+  has_one :hiring_manager
+  has_one :recruiter
+
   validates :email, presence: true, uniqueness: true
 end
