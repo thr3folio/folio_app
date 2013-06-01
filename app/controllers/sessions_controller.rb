@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  before_filter :require_signed_in_user, except: [:new, :create]
+
   def new
     @user = User.new
   end

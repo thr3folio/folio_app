@@ -4,10 +4,10 @@
       <ul>
         <% @jobs.each do |job| %>
         <li>Job title: <%= job.title %> </li>
-        <li>Date: </li>
-        <li>Company: <%= job.company.name %> </li>
-        <li>Location: </li>
-        <li>Salary Range: </li>
+        <li>Date: <%= job.due_date %></li>
+        <li>Company:<%= job.clients.name %> </li>
+        <li>Location: <%= job.location %> </li>
+        <li>Salary Range: <%= job.salary %> </li>
         <% end %>
       </ul>
     </div><!--/.job-item -->

@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  before_filter :require_signed_in_user
   protect_from_forgery
 
   helper_method :signed_in?
@@ -14,5 +15,11 @@ class ApplicationController < ActionController::Base
 
   def recruiter?
     true
+  end
+
+  def require_signed_in_user
+    unless signed_in?
+      redirect_to signin_url, notice: "Must be signed in for that."
+    end
   end
 end
