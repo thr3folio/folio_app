@@ -2,12 +2,6 @@ class JobsController < ApplicationController
   before_filter :require_signed_in_user
   before_filter :authorize_user, only: [:edit, :update, :destroy]
 
-  def require_signed_in_user
-    unless signed_in?
-      redirect_to signin_url, notice: "Must be signed in for that."
-    end
-  end
-
   def index
     @jobs = []
     if recruiter?
