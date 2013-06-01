@@ -1,11 +1,36 @@
 class JobsController < ApplicationController
+  before_filter :require_signed_in_user
+  before_filter :authorize_user, only: [:edit, :update, :destroy]
+
+  def require_signed_in_user
+    unless signed_in?
+      redirect_to signin_url, notice: "Must be signed in for that."
+    end
+  end
 
   def index
-    @jobs = Job.all
+    @jobs = []
+    if recruiter?
+      recruiter_jobs = JobRecruiter.where(:recruiter_id => '1')
+      recruiter_jobs.each do |recruiter_job|
+        @jobs << recruiter_job.job
+      end
+    else
+      @jobs = Job.all
+    end
   end
 
   def show
-    @job = Job.find_by_id(params[:id])
+    if recruiter?
+      @jobs = []
+      recruiter_jobs = JobRecruiter.where(:recruiter_id => '1')
+      recruiter_jobs.each do |recruiter_job|
+        @jobs << recruiter_job.job
+      end
+      render 'jobs/recruiter/show'
+    else
+      @job = Job.find_by_id(params[:id])
+    end
   end
 
   def new
@@ -16,8 +41,12 @@ class JobsController < ApplicationController
     @job = Job.new(params[:job])
 
     if @job.save
-            redirect_to jobs_url
-          else
+      if recruiter? && signed_in?
+      # create job_recruiters entry
+      JobRecruiter.create(@job,session[:user_id],)
+      end
+      redirect_to jobs_url
+    else
       render 'new'
     end
   end
