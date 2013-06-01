@@ -4,6 +4,9 @@ class ClientJobsController < ApplicationController
   def index
     @client_jobs = ClientJob.all
 
+    # @client = Client.find_by_id(params["format"].to_i)
+    # @client_jobs = @client.jobs
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @client_jobs }

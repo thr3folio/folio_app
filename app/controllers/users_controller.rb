@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
 
-  before_filter :authorize_user, only: [:show, :edit, :update, :destroy]
+  before_filter :authorize_user, only: [:index, :show, :edit, :update, :destroy]
 
   def authorize_user
     @user = User.find(params[:id])

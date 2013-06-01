@@ -1,30 +1,18 @@
-<h1>Candidate jobs</h1>
 
-<p><%= link_to 'Add a New Candidate Job', new_candidate_job_url %></p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Candidate</th>
-      <th>Job</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<h2><%= @job.title %> </h2>
+<h4> Internal Job ID #<%= @job.id %> External Job ID #<%= @job.external_job.id %></h4>
 
+<<<<<<< HEAD
   <tbody>
   <% @candidate_jobs.each do |candidate_job| %>
     <tr>
       <td><%= candidate_job.candidate.user.full_name %></td>
       <td><%= candidate_job.job.try(:title) %></td>
+=======
+>>>>>>> Changed candidate_jobs index
 
-      <td><%= link_to 'Show', candidate_job_url(candidate_job) %></td>
-      <td><%= link_to 'Edit', edit_candidate_job_url(candidate_job) %></td>
-      <td><%= link_to 'Destroy', candidate_job_url(candidate_job), method: 'delete', data: { confirm: "Do you really want to delete this candidate_job?" } %></td>
+<h2>List of Candidates</h2>
 
-    </tr>
-  <% end %>
-  </tbody>
-</table>
+<%= render 'candidates/candidate_list', candidates: @candidate_jobs %>
 
