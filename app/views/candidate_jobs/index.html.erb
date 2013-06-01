@@ -16,7 +16,7 @@
   <tbody>
   <% @candidate_jobs.each do |candidate_job| %>
     <tr>
-      <td><%= candidate_job.candidate.try(:full_name) %></td>
+      <td><%= candidate_job.candidate.user.full_name %></td>
       <td><%= candidate_job.job.try(:title) %></td>
 
       <td><%= link_to 'Show', candidate_job_url(candidate_job) %></td>

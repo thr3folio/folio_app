@@ -8,4 +8,8 @@ class User < ActiveRecord::Base
   has_one :recruiter
 
   validates :email, presence: true, uniqueness: true
+
+  def full_name
+    return "#{first_name} #{last_name}"
+  end
 end

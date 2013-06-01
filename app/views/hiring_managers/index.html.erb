@@ -19,11 +19,11 @@
   <tbody>
   <% @hiring_managers.each do |hiring_manager| %>
     <tr>
-      <td><%= hiring_manager.first_name %></td>
-      <td><%= hiring_manager.last_name %></td>
+      <td><%= hiring_manager.user.first_name %></td>
+      <td><%= hiring_manager.user.last_name %></td>
       <td><%= hiring_manager.title %></td>
       <td><%= hiring_manager.company.name %></td>
-      <td><%= hiring_manager.email %></td>
+      <td><%= hiring_manager.user.email %></td>
 
       <td><%= link_to 'Show', hiring_manager_url(hiring_manager) %></td>
       <td><%= link_to 'Edit', edit_hiring_manager_url(hiring_manager) %></td>

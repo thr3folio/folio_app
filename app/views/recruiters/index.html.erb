@@ -19,12 +19,12 @@
   <tbody>
   <% @recruiters.each do |recruiter| %>
     <tr>
-      <td><%= recruiter.first_name %></td>
-      <td><%= recruiter.last_name %></td>
+      <td><%= recruiter.user.first_name %></td>
+      <td><%= recruiter.user.last_name %></td>
       <td><%= recruiter.title %></td>
       <td><%= recruiter.company_id %></td>
-      <td><%= recruiter.email %></td>
-  
+      <td><%= recruiter.user.email %></td>
+
       <td><%= link_to 'Show', recruiter_url(recruiter) %></td>
       <td><%= link_to 'Edit', edit_recruiter_url(recruiter) %></td>
       <td><%= link_to 'Destroy', recruiter_url(recruiter), method: 'delete', data: { confirm: "Do you really want to delete this recruiter?" } %></td>

@@ -27,77 +27,77 @@ User.destroy_all
 user1 = User.new
 user1.first_name = "William"
 user1.last_name = "Admas"
-user1.email = "recruiter@mail.com"
+user1.email = "recruiter1@mail.com"
 user1.password = "test"
 user1.save
 
 user2 = User.new
 user2.first_name = "William"
 user2.last_name = "Wallace"
-user2.email = "recruiter@mail.com"
+user2.email = "recruiter2@mail.com"
 user2.password = "test"
 user2.save
 
 user3 = User.new
 user3.first_name = "Nerlens"
 user3.last_name = "Noel"
-user3.email = "recruiter@mail.com"
+user3.email = "recruiter3@mail.com"
 user3.password = "test"
 user3.save
 
 user4 = User.new
 user4.first_name = "The"
 user4.last_name = "Special One"
-user4.email = "recruiter@mail.com"
+user4.email = "recruiter4@mail.com"
 user4.password = "test"
 user4.save
 
 user5 = User.new
 user5.first_name = "Joe"
 user5.last_name = "Clark"
-user5.email = "recruiter@mail.com"
+user5.email = "recruiter5@mail.com"
 user5.password = "test"
 user5.save
 
 user6 = User.new
 user6.first_name = "Bill"
 user6.last_name = "Smith"
-user6.email = "recruiter@mail.com"
+user6.email = "recruiter6@mail.com"
 user6.password = "test"
 user6.save
 
 user7 = User.new
 user7.first_name = "Laura"
 user7.last_name = "Bell"
-user7.email = "recruiter@mail.com"
+user7.email = "recruiter7@mail.com"
 user7.password = "test"
 user7.save
 
 user8 = User.new
 user8.first_name = "Sue"
 user8.last_name = "Turner"
-user8.email = "recruiter@mail.com"
+user8.email = "recruiter8@mail.com"
 user8.password = "test"
 user8.save
 
 user9 = User.new
 user9.first_name = "Sam"
 user9.last_name = "Diamond"
-user9.email = "recruiter@mail.com"
+user9.email = "recruiter9@mail.com"
 user9.password = "test"
 user9.save
 
 user10 = User.new
 user10.first_name = "Lisa"
 user10.last_name = "James"
-user10.email = "recruiter@mail.com"
+user10.email = "recruiter10@mail.com"
 user10.password = "test"
 user10.save
 
 user11 = User.new
 user11.first_name = "Jonathan"
 user11.last_name = "Kaplan"
-user11.email = "jonkap1@mail.com"
+user11.email = "jonkap@mail.com"
 user11.password = "test"
 user11.save
 
@@ -164,73 +164,74 @@ user20.email = "gc@mail.com"
 user20.password = "test"
 user20.save
 
+
 user21 = User.new
 user21.first_name = "Pat"
 user21.last_name = "Riley"
-user21.email = "recruiter@mail.com"
+user21.email = "recruiter11@mail.com"
 user21.password = "test"
 user21.save
 
 user22 = User.new
 user22.first_name = "George"
 user22.last_name = "Hill"
-user22.email = "recruiter@mail.com"
+user22.email = "recruiter12@mail.com"
 user22.password = "test"
 user22.save
 
 user23 = User.new
 user23.first_name = "Larry"
 user23.last_name = "Bird"
-user23.email = "recruiter@mail.com"
+user23.email = "recruiter13@mail.com"
 user23.password = "test"
 user23.save
 
 user24 = User.new
 user24.first_name = "Michael"
 user24.last_name = "Jordan"
-user24.email = "recruiter@mail.com"
+user24.email = "recruiter14@mail.com"
 user24.password = "test"
 user24.save
 
 user25 = User.new
 user25.first_name = "LeBron"
 user25.last_name = "James"
-user25.email = "recruiter@mail.com"
+user25.email = "recruiter15@mail.com"
 user25.password = "test"
 user25.save
 
 user26 = User.new
 user26.first_name = "Kevin"
 user26.last_name = "Durant"
-user26.email = "recruiter@mail.com"
+user26.email = "recruiter16@mail.com"
 user26.password = "test"
 user26.save
 
 user27 = User.new
 user27.first_name = "Derrick"
 user27.last_name = "Rose"
-user27.email = "recruiter@mail.com"
+user27.email = "recruiter17@mail.com"
 user27.password = "test"
 user27.save
 
 user28 = User.new
 user28.first_name = "Dwight"
 user28.last_name = "Howard"
-user28.email = "recruiter@mail.com"
+user28.email = "recruiter18@mail.com"
 user28.password = "test"
 user28.save
 
 user29 = User.new
 user29.first_name = "Joakim"
 user29.last_name = "Noah"
-user29.email = "recruiter@mail.com"
+user29.email = "recruiter19@mail.com"
 user29.password = "test"
 user29.save
 
 user30 = User.new
 user30.first_name = "Kobe"
 user30.last_name = "Bryant"
-user30.email = "recruiter@mail.com"
+user30.email = "recruiter20@mail.com"
 user30.password = "test"
 user30.save
 
@@ -732,7 +733,7 @@ hm9.save
 hm10 = HiringManager.new
 hm10.title = "Assistant HR clerk"
 hm10.company = company10
-hm.user = user10
+hm10.user = user10
 hm10.save
 
 puts "There are #{HiringManager.count} rows in the hiring managers table"

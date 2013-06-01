@@ -19,8 +19,8 @@
   <tbody>
   <% @candidates.each do |candidate| %>
     <tr>
-      <td><%= candidate.first_name %></td>
-      <td><%= candidate.last_name %></td>
+      <td><%= candidate.user.first_name %></td>
+      <td><%= candidate.user.last_name %></td>
       <td><%= candidate.title %></td>
       <td><%= candidate.industry %></td>
       <td><%= candidate.years_experience %></td>
