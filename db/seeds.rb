@@ -22,116 +22,310 @@ company10 = Company.create(name: "MTV Networks")
 
 puts "There are #{Company.count} rows in the companies table"
 
+User.destroy_all
+
+user1 = User.new
+user1.first_name = "William"
+user1.last_name = "Admas"
+user1.email = "recruiter@mail.com"
+user1.password = "test"
+user1.save
+
+user2 = User.new
+user2.first_name = "William"
+user2.last_name = "Wallace"
+user2.email = "recruiter@mail.com"
+user2.password = "test"
+user2.save
+
+user3 = User.new
+user3.first_name = "Nerlens"
+user3.last_name = "Noel"
+user3.email = "recruiter@mail.com"
+user3.password = "test"
+user3.save
+
+user4 = User.new
+user4.first_name = "The"
+user4.last_name = "Special One"
+user4.email = "recruiter@mail.com"
+user4.password = "test"
+user4.save
+
+user5 = User.new
+user5.first_name = "Joe"
+user5.last_name = "Clark"
+user5.email = "recruiter@mail.com"
+user5.password = "test"
+user5.save
+
+user6 = User.new
+user6.first_name = "Bill"
+user6.last_name = "Smith"
+user6.email = "recruiter@mail.com"
+user6.password = "test"
+user6.save
+
+user7 = User.new
+user7.first_name = "Laura"
+user7.last_name = "Bell"
+user7.email = "recruiter@mail.com"
+user7.password = "test"
+user7.save
+
+user8 = User.new
+user8.first_name = "Sue"
+user8.last_name = "Turner"
+user8.email = "recruiter@mail.com"
+user8.password = "test"
+user8.save
+
+user9 = User.new
+user9.first_name = "Sam"
+user9.last_name = "Diamond"
+user9.email = "recruiter@mail.com"
+user9.password = "test"
+user9.save
+
+user10 = User.new
+user10.first_name = "Lisa"
+user10.last_name = "James"
+user10.email = "recruiter@mail.com"
+user10.password = "test"
+user10.save
+
+user11 = User.new
+user11.first_name = "Jonathan"
+user11.last_name = "Kaplan"
+user11.email = "jonkap1@mail.com"
+user11.password = "test"
+user11.save
+
+user12 = User.new
+user12.first_name = "Branko"
+user12.last_name = "Cvetkovic"
+user12.email = "jaggoda@mail.com"
+user12.password = "test"
+user12.save
+
+user13 = User.new
+user13.first_name = "Conor"
+user13.last_name = "Bryce"
+user13.email = "conorbryce@mail.com"
+user13.password = "test"
+user13.save
+
+user14 = User.new
+user14.first_name = "David"
+user14.last_name = "McLeod"
+user14.email = "davidmcleod@mail.com"
+user14.password = "test"
+user14.save
+
+user15 = User.new
+user15.first_name = "Brenna"
+user15.last_name = "Kaplan"
+user15.email = "bk@mail.com"
+user15.password = "test"
+user15.save
+
+user16 = User.new
+user16.first_name = "Juliana"
+user16.last_name = "Cuervo"
+user16.email = "jc@mail.com"
+user16.password = "test"
+user16.save
+
+user17 = User.new
+user17.first_name = "Michael"
+user17.last_name = "Romeo"
+user17.email = "mr@mail.com"
+user17.password = "test"
+user17.save
+
+user18 = User.new
+user18.first_name = "Levi"
+user18.last_name = "Price "
+user18.email = "lp@mail.com"
+user18.password = "test"
+user18.save
+
+user19 = User.new
+user19.first_name = "Clint"
+user19.last_name = "Reid"
+user19.email = "cr@mail.com"
+user19.password = "test"
+user19.save
+
+user20 = User.new
+user20.first_name = "Gabriel"
+user20.last_name = "Campbell"
+user20.email = "gc@mail.com"
+user20.password = "test"
+user20.save
+
+user21 = User.new
+user21.first_name = "Pat"
+user21.last_name = "Riley"
+user21.email = "recruiter@mail.com"
+user21.password = "test"
+user21.save
+
+user22 = User.new
+user22.first_name = "George"
+user22.last_name = "Hill"
+user22.email = "recruiter@mail.com"
+user22.password = "test"
+user22.save
+
+user23 = User.new
+user23.first_name = "Larry"
+user23.last_name = "Bird"
+user23.email = "recruiter@mail.com"
+user23.password = "test"
+user23.save
+
+user24 = User.new
+user24.first_name = "Michael"
+user24.last_name = "Jordan"
+user24.email = "recruiter@mail.com"
+user24.password = "test"
+user24.save
+
+user25 = User.new
+user25.first_name = "LeBron"
+user25.last_name = "James"
+user25.email = "recruiter@mail.com"
+user25.password = "test"
+user25.save
+
+user26 = User.new
+user26.first_name = "Kevin"
+user26.last_name = "Durant"
+user26.email = "recruiter@mail.com"
+user26.password = "test"
+user26.save
+
+user27 = User.new
+user27.first_name = "Derrick"
+user27.last_name = "Rose"
+user27.email = "recruiter@mail.com"
+user27.password = "test"
+user27.save
+
+user28 = User.new
+user28.first_name = "Dwight"
+user28.last_name = "Howard"
+user28.email = "recruiter@mail.com"
+user28.password = "test"
+user28.save
+
+user29 = User.new
+user29.first_name = "Joakim"
+user29.last_name = "Noah"
+user29.email = "recruiter@mail.com"
+user29.password = "test"
+user29.save
+
+user30 = User.new
+user30.first_name = "Kobe"
+user30.last_name = "Bryant"
+user30.email = "recruiter@mail.com"
+user30.password = "test"
+user30.save
+
+puts "There are #{User.count} rows in the users table."
+
 Candidate.destroy_all
 
 c1 = Candidate.new
-c1.first_name = "Jonathan"
-c1.last_name = "Kaplan"
 c1.title = "Render Farm Manager"
 c1.industry = "Animation"
 c1.years_experience = "7"
-c1.email = "jonkap1@mail.com"
 c1.bio = "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
 c1.company = company1
+c1.user = user11
 c1.save
 
 c2 = Candidate.new
-c2.first_name = "Branko"
-c2.last_name = "Cvetkovic"
 c2.title = "Student"
 c2.industry = "Architecture"
 c2.years_experience = "5"
-c2.email = "jaggoda@mail.com"
 c2.bio = "I am currently a senior at the Savannah College of Art and Design seeking my B.F.A. in graphic design."
 c2.company = company2
+c2.user = user12
 c2.save
 
 c3 = Candidate.new
-c3.first_name = "Conor"
-c3.last_name = "Bryce"
 c3.title = "Senior Designer"
 c3.industry = "Digital Art"
 c3.years_experience = "8"
-c3.email = "conorbryce@mail.com"
 c3.bio = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 c3.company = company3
+c3.user = user13
 c3.save
 
 c4 = Candidate.new
-c4.first_name = "David"
-c4.last_name = "McLeod"
 c4.title = "Graphic Designer/Illustrator"
 c4.industry = "Digital Art"
 c4.years_experience = "4"
-c4.email = "davidmcleod@mail.com"
 c4.bio = "I believe successful design is not just about making pretty pictures or displaying software effects."
 c4.company = company4
+c4.user = user14
 c4.save
 
 c5 = Candidate.new
-c5.first_name = "Brenna"
-c5.last_name = "Kaplan"
 c5.title = "Graphic Designer, Copywriter"
 c5.industry = "Copywriting, Graphic Design"
 c5.years_experience = "1"
-c5.email = "bk@mail.com"
 c5.bio = "I am currently a senior at the Savannah College of Art and Design seeking my B.F.A. in graphic design. I enjoy collaborating with others, taking on new challenges, and trying to find my own design style. When I'm not talking about my passion for graphic design, I'm probably babbling about my love for pad thai, dogs, or any number of outdoor activities."
 c5.company = company5
+c5.user = user15
 c5.save
 
 c6 = Candidate.new
-c6.first_name = "Juliana"
-c6.last_name = "Cuervo"
 c6.title = "Illustrator, Animation Student"
 c6.industry = "Animation, Drawing, Illustration"
 c6.years_experience = "2"
-c6.email = "jc@mail.com"
 c6.bio = "Im an illustrator and Animation Student from Medellín - Colombia, obsessed with crafts, bookbinding, popcorn and banana cheesecake."
 c6.company = company6
+c6.user = user16
 c6.save
 
 c7 = Candidate.new
-c7.first_name = "Michael"
-c7.last_name = "Romeo"
 c7.title = "Graphic Designer/Illustrator"
 c7.industry = "Graphic Design, Packaging, Typography"
 c7.years_experience = "9"
-c7.email = "mr@mail.com"
 c7.bio = "I believe successful design is not just about making pretty pictures or displaying software effects. It's about problem-solving and focusing on the target audience. It requires listening, communicating with clients, research and concept development in order to generate the relevant solution. I also believe sense of humor and the willingness to offer a hand go a long way."
 c7.company = company7
+c7.user = user17
 c7.save
 
 c8 = Candidate.new
-c8.first_name = "Levi"
-c8.last_name = "Price "
 c8.title = "Student/Entrepreneur"
 c8.industry = "Industrial Design, Product Design"
 c8.years_experience = "2"
-c8.email = "lp@mail.com"
 c8.bio = "Hi! I'm a second year Industrial Design student looking for an internship spring/summer 2013. I love working with my hands. I also love doing all of my own photography and graphic design."
 c8.company = company8
+c8.user = user18
 c8.save
 
 c9 = Candidate.new
-c9.first_name = "Clint"
-c9.last_name = "Reid"
 c9.title = "Graphic Designer/Illustrator"
 c9.industry = "Character Design, Illustration"
 c9.years_experience = "6"
-c9.email = "cr@mail.com"
 c9.bio = "My name is Clint. I live in Durango, Co. I'm a designer, an illustrator, a coffee drinker, a bicycle rider, an over-analyzer, a beard grower, a music lover, an enthusiastic uncle, a worrier, a lister-of-things. I draw under the alias 'Tillman Project'. Do stuff, make stuff!"
 c9.company = company9
+c9.user = user19
 c9.save
 
 c10 = Candidate.new
-c10.first_name = "Gabriel"
-c10.last_name = "Campbell"
 c10.title = "Senior Experience Designer, Lead"
 c10.industry = "Interaction Design, Storyboarding, UI/UX"
 c10.years_experience = "4"
-c10.email = "gc@mail.com"
 c10.bio = "I've been filling up sketch books and pressing coffee like a mad man who spends a lot of drawing in sketch books and drinking coffee. I'm currently focusing on illustration, designing, and screen printing in Durango, CO. If you haven't visited the mountains of Colorado, you should...they are awesome, in a mountain…."
 c10.company = company10
+c10.user = user20
 c10.save
 
 puts "There are #{Candidate.count} rows in the candidates table"
@@ -144,6 +338,8 @@ j1.description ="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla 
 j1.location = "Neverland"
 j1.email = "job@mail.com"
 j1.url = "http://localhost:3000"
+j1.salary = "$75,000"
+j1.due_date = Time.now + (7 * 24 * 60 * 60)
 j1.save
 
 j2 = Job.new
@@ -152,6 +348,8 @@ j2.description ="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla 
 j2.location = "Anywhere"
 j2.email = "job@mail.com"
 j2.url = "http://localhost:3000"
+j2.salary = "$80,000"
+j2.due_date = Time.now + (7 * 24 * 60 * 60)
 j2.save
 
 j3 = Job.new
@@ -160,6 +358,8 @@ j3.description ="Some long description"
 j3.location = "Near you"
 j3.email = "job@mail.com"
 j3.url = "http://localhost:3000"
+j3.salary = "$60,000"
+j3.due_date = Time.now + (7 * 24 * 60 * 60)
 j3.save
 
 j4 = Job.new
@@ -168,6 +368,8 @@ j4.description ="Rock star developer needed."
 j4.location = "Ouroboros"
 j4.email = "job@mail.com"
 j4.url = "http://localhost:3000"
+j4.salary = "$ 85,000"
+j4.due_date = Time.now + (7 * 24 * 60 * 60)
 j4.save
 
 j5 = Job.new
@@ -176,6 +378,8 @@ j5.description ="All-rounder needed."
 j5.location = "Shangri-La Studios"
 j5.email = "job@mail.com"
 j5.url = "http://localhost:3000"
+j5.salary = "$80,000"
+j5.due_date = Time.now + (7 * 24 * 60 * 60)
 j5.save
 
 j6 = Job.new
@@ -184,6 +388,8 @@ j6.description ="EM Publish GmbH is an iOS game developer and publisher. We are 
 j6.location = "Anywhere"
 j6.email = "job@mail.com"
 j6.url = "http://localhost:3000"
+j6.salary = "$85,000"
+j6.due_date = Time.now + (7 * 24 * 60 * 60)
 j6.save
 
 j7 = Job.new
@@ -192,6 +398,8 @@ j7.description ="We're looking for a passionate Sound Designer with a music back
 j7.location = "Bruton Stroube Studios"
 j7.email = "job@mail.com"
 j7.url = "http://localhost:3000"
+j7.salary = "$80,000"
+j7.due_date = Time.now + (7 * 24 * 60 * 60)
 j7.save
 
 j8 = Job.new
@@ -200,6 +408,8 @@ j8.description ="Are you interested in creating digital products that are used b
 j8.location = "Nascent Digital"
 j8.email = "job@mail.com"
 j8.url = "http://localhost:3000"
+j8.salary = "$90,000"
+j8.due_date = Time.now + (7 * 24 * 60 * 60)
 j8.save
 
 j9 = Job.new
@@ -208,6 +418,8 @@ j9.description ="BIR Training Center is a career training and international lang
 j9.location = "BIR Training Center"
 j9.email = "job@mail.com"
 j9.url = "http://localhost:3000"
+j9.salary = "$85,000"
+j9.due_date = Time.now + (7 * 24 * 60 * 60)
 j9.save
 
 j10 = Job.new
@@ -216,6 +428,9 @@ j10.description ="We are looking to hire YOU, because you are a talented experie
 j10.location = "Citrix"
 j10.email = "job@mail.com"
 j10.url = "http://localhost:3000"
+j10.salary = "$85,000"
+j10.due_date = Time.now + (7 * 24 * 60 * 60)
+
 j10.save
 
 
@@ -278,83 +493,63 @@ puts "There are #{CandidateJob.count} rows in the candidate jobs table"
 Recruiter.destroy_all
 
 r1 = Recruiter.new
-r1.first_name = "Pat"
-r1.last_name = "Riley"
 r1.title = "Senior Recruiter"
 r1.company = company1
-r1.email = "recruiter@mail.com"
+r1.user = user21
 r1.save
 
 r2 = Recruiter.new
-r2.first_name = "George"
-r2.last_name = "Hill"
 r2.title = "Jnr Recruiter"
 r2.company = company2
-r2.email = "recruiter@mail.com"
+r2.user = user22
 r2.save
 
 r3 = Recruiter.new
-r3.first_name = "Larry"
-r3.last_name = "Bird"
 r3.title = "Freelance Recruiter"
 r3.company = company3
-r3.email = "recruiter@mail.com"
+r3.user = user23
 r3.save
 
 r4 = Recruiter.new
-r4.first_name = "Michael"
-r4.last_name = "Jordan"
 r4.title = "Freelance Recruiter"
 r4.company = company4
-r4.email = "recruiter@mail.com"
+r4.user = user24
 r4.save
 
 r5 = Recruiter.new
-r5.first_name = "LeBron"
-r5.last_name = "James"
 r5.title = "Freelance Recruiter"
 r5.company = company5
-r5.email = "recruiter@mail.com"
+r5.user = user25
 r5.save
 
 r6 = Recruiter.new
-r6.first_name = "Kevin"
-r6.last_name = "Durant"
 r6.title = "Freelance Recruiter"
 r6.company = company6
-r6.email = "recruiter@mail.com"
+r6.user = user26
 r6.save
 
 r7 = Recruiter.new
-r7.first_name = "Derric"
-r7.last_name = "Rose"
 r7.title = "Freelance Recruiter"
 r7.company = company7
-r7.email = "recruiter@mail.com"
+r7.user = user27
 r7.save
 
 r8 = Recruiter.new
-r8.first_name = "Dwight"
-r8.last_name = "Howard"
 r8.title = "Freelance Recruiter"
 r8.company = company8
-r8.email = "recruiter@mail.com"
+r8.user = user28
 r8.save
 
 r9 = Recruiter.new
-r9.first_name = "Joakim"
-r9.last_name = "Noah"
 r9.title = "Freelance Recruiter"
 r9.company = company9
-r9.email = "recruiter@mail.com"
+r9.user = user29
 r9.save
 
 r10 = Recruiter.new
-r10.first_name = "Kobe"
-r10.last_name = "Bryant"
 r10.title = "Freelance Recruiter"
 r10.company = company10
-r10.email = "recruiter@mail.com"
+r10.user = user30
 r10.save
 
 puts "There are #{Recruiter.count} rows in the recruiters table"
@@ -481,83 +676,63 @@ puts "There are #{Note.count} rows in the notes table."
 HiringManager.destroy_all
 
 hm1 = HiringManager.new
-hm1.first_name = "William"
-hm1.last_name = "Adams"
 hm1.title = "Hiring Manager"
 hm1.company = company1
-hm1.email = "recruiter@mail.com"
+hm1.user = user1
 hm1.save
 
 hm2 = HiringManager.new
-hm2.first_name = "William"
-hm2.last_name = "Wallace"
 hm2.title = "Jnr HR Manager"
 hm2.company = company2
-hm2.email = "recruiter@mail.com"
+hm2.user = user2
 hm2.save
 
 hm3 = HiringManager.new
-hm3.first_name = "Nerlens"
-hm3.last_name = "Noel"
 hm3.title = "Executive HR Manager"
 hm3.company = company3
-hm3.email = "recruiter@mail.com"
+hm3.user = user3
 hm3.save
 
 hm4 = HiringManager.new
-hm4.first_name = "The"
-hm4.last_name = "Special One"
 hm4.title = "Assistant HR clerk"
 hm4.company = company4
-hm4.email = "recruiter@mail.com"
+hm4.user = user4
 hm4.save
 
 hm5 = HiringManager.new
-hm5.first_name = "Joe"
-hm5.last_name = "Clark"
 hm5.title = "Assistant HR clerk"
 hm5.company = company5
-hm5.email = "recruiter@mail.com"
+hm5.user = user5
 hm5.save
 
 hm6 = HiringManager.new
-hm6.first_name = "Bill"
-hm6.last_name = "Smith"
 hm6.title = "Assistant HR clerk"
 hm6.company = company6
-hm6.email = "recruiter@mail.com"
+hm6.user = user6
 hm6.save
 
 hm7 = HiringManager.new
-hm7.first_name = "Laura"
-hm7.last_name = "Bell"
 hm7.title = "Assistant HR clerk"
 hm7.company = company7
-hm7.email = "recruiter@mail.com"
+hm7.user = user7
 hm7.save
 
 hm8 = HiringManager.new
-hm8.first_name = "Sue"
-hm8.last_name = "Turner"
 hm8.title = "Assistant HR clerk"
 hm8.company = company8
-hm8.email = "recruiter@mail.com"
+hm8.user = user8
 hm8.save
 
 hm9 = HiringManager.new
-hm9.first_name = "Sam"
-hm9.last_name = "Diamond"
 hm9.title = "Assistant HR clerk"
 hm9.company = company9
-hm9.email = "recruiter@mail.com"
+hm9.user = user9
 hm9.save
 
 hm10 = HiringManager.new
-hm10.first_name = "Lisa"
-hm10.last_name = "James"
 hm10.title = "Assistant HR clerk"
 hm10.company = company10
-hm10.email = "recruiter@mail.com"
+hm.user = user10
 hm10.save
 
 puts "There are #{HiringManager.count} rows in the hiring managers table"
