@@ -11,4 +11,8 @@ class ApplicationController < ActionController::Base
   def current_user
     return User.find_by_id(session[:user_id])
   end
+
+  def recruiter?
+    true
+  end
 end

@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="span3">
+    <div class="job-item">
+      <ul>
+        <% @jobs.each do |job| %>
+        <li>Job title: <%= job.title %> </li>
+        <li>Date: </li>
+        <li>Company: <%= job.company.name %> </li>
+        <li>Location: </li>
+        <li>Salary Range: </li>
+        <% end %>
+      </ul>
+    </div><!--/.job-item -->
+  </div><!--/.span3 -->
+  <div class="span9">
+    <div class="row">
+      <div class="span7">
+        <h1>Job Title:   ID#23/HR23-120</h1>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ...</p>
+      </div>
+      <div class="span2">
+        <h4># of candidates:</h4>
+        <h2>23</h2>
+        <a href="#">View candidates</a>
+      </div>
+    </div><!--/.row -->
+    <div class="row">
+    <a href="#">Edit</a> | <a href="#">Delete</a> | <a href="#">Show More?</a>
+    </div>
+  </div><!--/.span9 -->
+</div><!--/.row -->
