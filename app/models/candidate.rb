@@ -6,6 +6,7 @@ class Candidate < ActiveRecord::Base
   has_many :candidate_jobs
   has_many :recruiter_notes
   has_many :hiring_manager_notes
+  has_many :jobs, :through => :candidate_job
 
   validates :title, presence: :true
   validates :industry, presence: :true

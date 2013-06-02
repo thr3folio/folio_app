@@ -10,7 +10,7 @@
 
   <div>
     <%= f.label :candidate_id %><br />
-    <%= f.collection_select :candidate_id, Candidate.all.user, :id, :first_name %>
+    <%= f.collection_select :candidate_id, Candidate.all , :id, :full_name %>
   </div>
 
   <div>

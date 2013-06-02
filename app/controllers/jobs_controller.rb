@@ -4,7 +4,7 @@ class JobsController < ApplicationController
 
   def index
     @jobs = []
-    if recruiter?
+    if recruiter? && params[:view] != "list"
       recruiter_jobs = JobRecruiter.where(:recruiter_id => '1')
       recruiter_jobs.each do |recruiter_job|
         @jobs << recruiter_job.job

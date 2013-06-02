@@ -13,11 +13,11 @@
 
   <div class="field">
     <%= f.label :job_id %><br />
-    <%= f.number_field :job_id %>
+    <%= f.collection_select :job_id, Job.all , :id, :title %>
   </div>
   <div class="field">
     <%= f.label :recruiter_id %><br />
-    <%= f.number_field :recruiter_id %>
+    <%= f.collection_select :recruiter_id, Recruiter.all , :id, :full_name %>
   </div>
   <div class="actions">
     <%= f.submit %>

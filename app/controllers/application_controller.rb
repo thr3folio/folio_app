@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
   end
 
   def recruiter?
-    false
+    true
   end
 
   def require_signed_in_user
