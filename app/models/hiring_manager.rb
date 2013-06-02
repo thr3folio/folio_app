@@ -8,4 +8,8 @@ class HiringManager < ActiveRecord::Base
 
   validates :title, presence: :true
   validates :company, presence: :true
+
+  def full_name
+    self.user.full_name
+  end
 end

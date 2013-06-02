@@ -11,4 +11,8 @@ class Candidate < ActiveRecord::Base
   validates :industry, presence: :true
   validates :bio, presence: :true
   validates :company, presence: :true
+
+  def full_name
+    self.user.full_name
+  end
 end

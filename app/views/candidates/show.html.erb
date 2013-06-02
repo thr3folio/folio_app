@@ -16,11 +16,6 @@
 </p>
 
 <p>
-  <b>Email:</b>
-  <%= @candidate.email %>
-</p>
-
-<p>
   <b>Bio:</b>
   <%= @candidate.bio %>
 </p>
@@ -33,14 +28,14 @@
 <p>
   <b>Notes by recruiter(s):</b>
   <% @candidate.recruiter_notes.each do |recruiter_note| %>
-  <p> <%= "#{recruiter_note.recruiter.full_name} said: \"#{recruiter_note.note.description}\" in connection with the "%><strong><%= "#{recruiter_note.note.job.title} " %></strong>position.</p>
+  <p> <%= "#{recruiter_note.recruiter.user.full_name} said: \"#{recruiter_note.note.description}\" in connection with the "%><strong><%= "#{recruiter_note.note.job.title} " %></strong>position.</p>
   <% end %>
 </p>
 
 <p>
   <b>Notes by hiring managers(s):</b>
   <% @candidate.hiring_manager_notes.each do |hiring_manager_note| %>
-  <p> <%= "#{hiring_manager_note.hiring_manager.full_name} at #{hiring_manager_note.hiring_manager.company.name} said: \"#{hiring_manager_note.note.description}\"" %></p>
+  <p> <%= "#{hiring_manager_note.hiring_manager.user.full_name} at #{hiring_manager_note.hiring_manager.company.name} said: \"#{hiring_manager_note.note.description}\"" %></p>
   <% end %>
 </p>
 
