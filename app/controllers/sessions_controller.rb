@@ -10,6 +10,7 @@ class SessionsController < ApplicationController
 
     if @user.present? && @user.authenticate(params[:password])
       session[:user_id] = @user.id
+      session[:email] = @user.email
       redirect_to @user, notice: 'Sign-in successful.'
     else
       flash[:notice] = "Sign-in unsuccessful"

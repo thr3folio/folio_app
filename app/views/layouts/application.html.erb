@@ -45,7 +45,7 @@
 <div class="container">
 
   <% if session[:user_id].present? %>
-    <p>Welcome back, <%= User.find(session[:user_id]).email %>.</p>
+    <p>Welcome back, <%= session[:email] %>.</p>
   <% end %>
 
     <% if notice.present? %>
