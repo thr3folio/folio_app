@@ -9,16 +9,16 @@
 
 Company.destroy_all
 
-company1 = Company.create(name: "Google")
-company2 = Company.create(name: "Amazon")
-company3 = Company.create(name: "Groupon")
-company4 = Company.create(name: "PerfectHire")
-company5 = Company.create(name: "eSalon")
-company6 = Company.create(name: "Greenhouse")
-company7 = Company.create(name: "TED Conferences")
-company8 = Company.create(name: "Microsoft Corporation")
-company9 = Company.create(name: "Shazam")
-company10 = Company.create(name: "MTV Networks")
+company1 = Company.create(name: "Google", location: "Mountain View, California", industry: "Internet,Computer software,Telecoms equipment")
+company2 = Company.create(name: "Amazon", location: "Seattle", industry: "Internet, online retailing")
+company3 = Company.create(name: "Groupon", location: "Chicago, Illinois, U.S.", industry: "eCommerce")
+company4 = Company.create(name: "PerfectHire", location: "Unknown", industry: "Career Management")
+company5 = Company.create(name: "eSalon", location: "Unknown", industry: "Beauty")
+company6 = Company.create(name: "Greenhouse", location: "Earth", industry: "Bio-resource, Enviroment")
+company7 = Company.create(name: "TED Conferences", location: "NYC, NY", industry: "Ideation, IP")
+company8 = Company.create(name: "Microsoft Corporation", location: "Redmond, Washington", industry: "")
+company9 = Company.create(name: "Shazam", location: "London, U.K", industry: "Music Identification service")
+company10 = Company.create(name: "MTV Networks", location: "NYC, NY", industry: "Television")
 
 puts "There are #{Company.count} rows in the companies table"
 
@@ -26,7 +26,7 @@ User.destroy_all
 
 user1 = User.new
 user1.first_name = "William"
-user1.last_name = "Admas"
+user1.last_name = "Adams"
 user1.email = "recruiter1@mail.com"
 user1.password = "test"
 user1.save
