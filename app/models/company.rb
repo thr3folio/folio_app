@@ -4,4 +4,6 @@ class Company < ActiveRecord::Base
   has_many :candidates
   has_many :recruiters
   has_many :hiring_managers
+
+  validates :name, presences: true
 end

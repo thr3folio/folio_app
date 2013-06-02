@@ -1,5 +1,5 @@
 class Candidate < ActiveRecord::Base
-  attr_accessible :first_name, :last_name, :title, :industry, :years_experience, :email, :bio, :company_id
+  attr_accessible :title, :industry, :years_experience, :bio, :company_id
   belongs_to :company
   belongs_to :user
   has_many :candidate_recruiters
@@ -7,4 +7,8 @@ class Candidate < ActiveRecord::Base
   has_many :recruiter_notes
   has_many :hiring_manager_notes
 
+  validates :title, presence: true
+  validates :industry, presence: true
+  validates :bio, presence: true
+  validates :company, presence: true
 end

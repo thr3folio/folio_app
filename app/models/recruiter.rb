@@ -1,5 +1,6 @@
 class Recruiter < ActiveRecord::Base
-  attr_accessible :first_name, :last_name, :title, :company_id, :email
+  attr_accessible :title, :company_id
+
   has_many :recruiter_notes
   has_many :candidate_recruiters
   has_many :job_recruiters
@@ -7,4 +8,6 @@ class Recruiter < ActiveRecord::Base
   belongs_to :company
   belongs_to :user
 
+  validates :title, presence: true
+  validates :company, presence: true
 end
