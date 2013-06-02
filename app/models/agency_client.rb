@@ -3,6 +3,6 @@ class AgencyClient < ActiveRecord::Base
   belongs_to :agency
   belongs_to :client
 
-  validates :agency, presence: true
-  validates :client, presence: true
+  validates :agency, presence: :true
+  validates :client, presence: :true
 end

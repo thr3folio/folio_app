@@ -3,6 +3,6 @@ class HiringManagerJob < ActiveRecord::Base
   belongs_to :hiring_manager
   belongs_to :job
 
-  validates :hiring_manager, presence: true
-  validates :job, presence: true
+  validates :hiring_manager, presence: :true
+  validates :job, presence: :true
 end

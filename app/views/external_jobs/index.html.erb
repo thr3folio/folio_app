@@ -15,7 +15,7 @@
 <% @external_jobs.each do |external_job| %>
   <tr>
     <td><%= external_job.description %></td>
-    <td><%= external_job.hiring_manager.try(:first_name) %></td>
+    <td><%= external_job.hiring_manager.user.try(:first_name) %></td>
     <td><%= external_job.job.title %></td>
     <td><%= external_job.email %></td>
     <td><%= external_job.telephone %></td>

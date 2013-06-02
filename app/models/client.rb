@@ -5,7 +5,7 @@ class Client < ActiveRecord::Base
   has_many :agency_clients
   has_many :jobs, :through => :client_jobs
 
-  validates :industry, presence: true
-  validates :location, presence: true
-  validates :name, presence: true
+  validates :industry, presence: :true
+  validates :location, presence: :true
+  validates :name, presence: :true
 end

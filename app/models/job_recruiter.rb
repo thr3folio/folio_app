@@ -3,6 +3,6 @@ class JobRecruiter < ActiveRecord::Base
   belongs_to :job
   belongs_to :recruiter
 
-  validates :job, presence: true
-  validates :recruiter, presence: true
+  validates :job, presence: :true
+  validates :recruiter, presence: :true
 end

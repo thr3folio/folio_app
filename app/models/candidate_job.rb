@@ -5,6 +5,6 @@ class CandidateJob < ActiveRecord::Base
   belongs_to :job
 
   has_many :candidates, :through => :candidate_job
-  validates :candidate, presence: true
-  validates :job, presence: true
+  validates :candidate, presence: :true
+  validates :job, presence: :true
 end

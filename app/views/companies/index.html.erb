@@ -6,6 +6,8 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Industry</th>
+      <th>Location</th>
       <th></th>
       <th></th>
       <th></th>
@@ -16,7 +18,9 @@
   <% @companies.each do |company| %>
     <tr>
       <td><%= company.name %></td>
-  
+      <td><%= company.industry %></td>
+      <td><%= company.location %></td>
+
       <td><%= link_to 'Show', company_url(company) %></td>
       <td><%= link_to 'Edit', edit_company_url(company) %></td>
       <td><%= link_to 'Destroy', company_url(company), method: 'delete', data: { confirm: "Do you really want to delete this company?" } %></td>

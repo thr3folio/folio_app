@@ -13,9 +13,8 @@ class CompaniesController < ApplicationController
   end
 
   def create
-    @company = Company.new
-    @company.name = params[:name]
-    
+    @company = Company.new(params[:company])
+
     if @company.save
             redirect_to companies_url
           else
@@ -29,11 +28,10 @@ class CompaniesController < ApplicationController
 
   def update
     @company = Company.find_by_id(params[:id])
-    @company.name = params[:name]
-    
-    if @company.save
-            redirect_to companies_url
-          else
+
+    if @company.update_attributes(params[:company])
+      redirect_to companies_url
+    else
       render 'edit'
     end
   end

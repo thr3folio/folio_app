@@ -4,6 +4,6 @@ class CandidateRecruiter < ActiveRecord::Base
   belongs_to :recruiter
   belongs_to :candidate
 
-  validates :candidate, presence: true
-  validates :recruiter, presence: true
+  validates :candidate, presence: :true
+  validates :recruiter, presence: :true
 end

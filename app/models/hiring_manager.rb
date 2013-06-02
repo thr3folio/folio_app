@@ -6,6 +6,6 @@ class HiringManager < ActiveRecord::Base
   belongs_to :company
   belongs_to :user
 
-  validates :title, presence: true
-  validates :company, presence: true
+  validates :title, presence: :true
+  validates :company, presence: :true
 end

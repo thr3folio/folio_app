@@ -3,6 +3,6 @@ class ClientJob < ActiveRecord::Base
   belongs_to :client
   belongs_to :job
 
-  validates :client, presences: true
-  validates :job, presences: true
+  validates :client, presence: :true
+  validates :job, presence: :true
 end

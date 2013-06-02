@@ -17,9 +17,9 @@
   <tbody>
   <% @recruiter_notes.each do |recruiter_note| %>
     <tr>
-      <td><%= recruiter_note.candidate.full_name %></td>
+      <td><%= recruiter_note.candidate.user.full_name %></td>
       <td><%= recruiter_note.note.description %></td>
-      <td><%= recruiter_note.recruiter.full_name %></td>
+      <td><%= recruiter_note.recruiter.user.full_name %></td>
 
       <td><%= link_to 'Show', recruiter_note_url(recruiter_note) %></td>
       <td><%= link_to 'Edit', edit_recruiter_note_url(recruiter_note) %></td>

@@ -7,8 +7,8 @@ class Candidate < ActiveRecord::Base
   has_many :recruiter_notes
   has_many :hiring_manager_notes
 
-  validates :title, presence: true
-  validates :industry, presence: true
-  validates :bio, presence: true
-  validates :company, presence: true
+  validates :title, presence: :true
+  validates :industry, presence: :true
+  validates :bio, presence: :true
+  validates :company, presence: :true
 end
