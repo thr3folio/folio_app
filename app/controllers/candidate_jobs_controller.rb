@@ -1,7 +1,7 @@
 class CandidateJobsController < ApplicationController
 
   def index
-    @job = Job.find_by_id(params["format"].to_i)
+    @job = Job.find_by_id(params["job_id"].to_i)
     @candidate_jobs = @job.candidates
   end
 

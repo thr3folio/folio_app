@@ -25,7 +25,7 @@
       <td><%= job.location %></td>
       <td><%= job.email %></td>
       <td><%= job.url %></td>
-      <td><%= link_to job.candidates.size, candidate_jobs_url(job) %></td>
+      <td><%= link_to job.candidates.size, candidate_jobs_url({job_id: job.id}) %></td>
 
       <td><%= link_to 'Show', job_url(job) %></td>
       <td><%= link_to 'Edit', edit_job_url(job) %></td>
