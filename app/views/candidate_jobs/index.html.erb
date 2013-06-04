@@ -1,8 +1,8 @@
-<h2><%= @job.title %> </h2>
-<h2><%= @job.client_jobs.first.client.name %> </h2>
-<h4> Internal Job ID #<%= @job.id %> External Job ID #<%= @job.external_job.id %></h4>
+<h1><%= @job.title %> </h1>
+<h4><%= @job.client_jobs.first.client.name %> </h4>
+<h4> Internal Job ID #<%= @job.id %> External Job ID #<%= @job.external_job.external_code %></h4>
 
-<h2>List of Candidates</h2>
+<h4>List of Candidates</h4>
 
 <%= render 'candidates/candidate_list', candidates: @candidate_jobs %>
 

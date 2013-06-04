@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th>External code</th>
     <th>Hiring manager</th>
     <th>Description</th>
     <th>Internal Job Title</th>
@@ -15,6 +16,7 @@
 
 <% @external_jobs.each do |external_job| %>
   <tr>
+    <td><%= external_job.external_code %></td>
     <td><%= external_job.hiring_manager.user.full_name %></td>
     <td><%= external_job.description %></td>
     <td><%= external_job.job.title %></td>
