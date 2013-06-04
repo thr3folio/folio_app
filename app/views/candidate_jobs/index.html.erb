@@ -1,6 +1,14 @@
-<h1><%= @job.title %> </h1>
-<h4><%= @job.client_jobs.first.client.name %> </h4>
-<h4> Internal Job ID #<%= @job.id %> External Job ID #<%= @job.external_job.external_code %></h4>
+<b>Client:</b>
+  <%= @job.client_jobs.first.client.name %>|
+
+<b>Job:</b>
+  <%= @job.title %>|
+
+<b>Internal Job ID:</b>
+ <%= @job.id %>|
+
+<b>External Job ID:</b>
+ <%= @job.external_job.external_code %>
 
 <h4>List of Candidates</h4>
 
