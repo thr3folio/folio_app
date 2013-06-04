@@ -22,6 +22,22 @@ company10 = Company.create(name: "MTV Networks", location: "NYC, NY", industry: 
 
 puts "There are #{Company.count} rows in the companies table"
 
+
+Agency.destroy_all
+
+agency1 = Agency.create(:name => "Artisan Creative", :location => "Los Angeles, CA, USA", :industry => "Advertising" )
+agency2 = Agency.create(:name => "Dexigner", :location => "Chicago, IL, USA", :industry => "Animation" )
+agency3 = Agency.create(:name => "Adrem Group", :location => "London, United Kingdom", :industry => "Architecture" )
+agency4 = Agency.create(:name => "Redline", :location => "Chicago, IL, USA", :industry => "Computer Animation" )
+agency5 = Agency.create(:name => "Jobfit", :location => "New York, NY, USA", :industry => "Desing" )
+agency6 = Agency.create(:name => "The Loop", :location => "Victoria, Australia", :industry => "Digital Art" )
+agency7 = Agency.create(:name => "3rd Eye", :location => "Auckland, New Zealand", :industry => "Graphic Desing" )
+agency8 = Agency.create(:name => "CreativePlacement", :location => "New York, NY, USA", :industry => "Desing" )
+agency9 = Agency.create(:name => "Artisan Talent", :location => "Chicago, IL, USA", :industry => "Advertising" )
+agency10 = Agency.create(:name => "Seek", :location => "Melbourne, Australia", :industry => "Animation")
+
+puts "There are #{Agency.count} rows in the agencies table"
+
 User.destroy_all
 
 user1 = User.new
@@ -70,6 +86,7 @@ user7 = User.new
 user7.first_name = "Laura"
 user7.last_name = "Bell"
 user7.email = "recruiter7@mail.com"
+
 user7.password = "test"
 user7.save
 
@@ -495,61 +512,61 @@ Recruiter.destroy_all
 
 r1 = Recruiter.new
 r1.title = "Senior Recruiter"
-r1.company = company1
+r1.agency = agency1
 r1.user = user21
 r1.save
 
 r2 = Recruiter.new
 r2.title = "Jnr Recruiter"
-r2.company = company2
+r2.agency = agency2
 r2.user = user22
 r2.save
 
 r3 = Recruiter.new
 r3.title = "Freelance Recruiter"
-r3.company = company3
+r3.agency = agency3
 r3.user = user23
 r3.save
 
 r4 = Recruiter.new
 r4.title = "Freelance Recruiter"
-r4.company = company4
+r4.agency = agency4
 r4.user = user24
 r4.save
 
 r5 = Recruiter.new
 r5.title = "Freelance Recruiter"
-r5.company = company5
+r5.agency = agency5
 r5.user = user25
 r5.save
 
 r6 = Recruiter.new
 r6.title = "Freelance Recruiter"
-r6.company = company6
+r6.agency = agency6
 r6.user = user26
 r6.save
 
 r7 = Recruiter.new
 r7.title = "Freelance Recruiter"
-r7.company = company7
+r7.agency = agency7
 r7.user = user27
 r7.save
 
 r8 = Recruiter.new
 r8.title = "Freelance Recruiter"
-r8.company = company8
+r8.agency = agency8
 r8.user = user28
 r8.save
 
 r9 = Recruiter.new
 r9.title = "Freelance Recruiter"
-r9.company = company9
+r9.agency = agency9
 r9.user = user29
 r9.save
 
 r10 = Recruiter.new
 r10.title = "Freelance Recruiter"
-r10.company = company10
+r10.agency = agency10
 r10.user = user30
 r10.save
 
@@ -935,21 +952,6 @@ client_job10.save
 
 puts "There are #{ClientJob.count} rows in the client jobs table"
 
-Agency.destroy_all
-
-agency1 = Agency.create(:name => "Artisan Creative", :location => "Los Angeles, CA, USA", :industry => "Advertising" )
-agency2 = Agency.create(:name => "Dexigner", :location => "Chicago, IL, USA", :industry => "Animation" )
-agency3 = Agency.create(:name => "Adrem Group", :location => "London, United Kingdom", :industry => "Architecture" )
-agency4 = Agency.create(:name => "Redline", :location => "Chicago, IL, USA", :industry => "Computer Animation" )
-agency5 = Agency.create(:name => "Jobfit", :location => "New York, NY, USA", :industry => "Desing" )
-agency6 = Agency.create(:name => "The Loop", :location => "Victoria, Australia", :industry => "Digital Art" )
-agency7 = Agency.create(:name => "3rd Eye", :location => "Auckland, New Zealand", :industry => "Graphic Desing" )
-agency8 = Agency.create(:name => "CreativePlacement", :location => "New York, NY, USA", :industry => "Desing" )
-agency9 = Agency.create(:name => "Artisan Talent", :location => "Chicago, IL, USA", :industry => "Advertising" )
-agency10 = Agency.create(:name => "Seek", :location => "Melbourne, Australia", :industry => "Animation")
-
-puts "There are #{Agency.count} rows in the agencies table"
-
 AgencyClient.destroy_all
 
 a_client1 = AgencyClient.new
@@ -1009,6 +1011,7 @@ ExternalJob.destroy_all
 ex_j1 = ExternalJob.new
 ex_j1.hiring_manager = hm1
 ex_j1.job = j1
+ex_j1.description = "Client's description for the job internally."
 ex_j1.external_code = "1A"
 ex_j1.email = "p@p.com"
 ex_j1.telephone = "773-345-6789"
@@ -1017,6 +1020,7 @@ ex_j1.save
 ex_j2 = ExternalJob.new
 ex_j2.hiring_manager = hm2
 ex_j2.job = j2
+ex_j2.description = "Client's description for the job internally."
 ex_j2.external_code = "2B"
 ex_j2.email = "b@b.com"
 ex_j2.telephone = "773-345-0987"
@@ -1025,6 +1029,7 @@ ex_j2.save
 ex_j3 = ExternalJob.new
 ex_j3.hiring_manager = hm3
 ex_j3.job = j3
+ex_j3.description = "Client's description for the job internally."
 ex_j3.external_code = "3C"
 ex_j3.email = "c@c.com"
 ex_j3.telephone = "773-345-3645"
@@ -1033,6 +1038,7 @@ ex_j3.save
 ex_j4 = ExternalJob.new
 ex_j4.hiring_manager = hm4
 ex_j4.job = j4
+ex_j4.description = "Client's description for the job internally."
 ex_j4.external_code = "4D"
 ex_j4.email = "d@d.com"
 ex_j4.telephone = "773-345-2347"
@@ -1041,6 +1047,7 @@ ex_j4.save
 ex_j5 = ExternalJob.new
 ex_j5.hiring_manager = hm5
 ex_j5.job = j5
+ex_j5.description = "Client's description for the job internally."
 ex_j5.external_code = "5E"
 ex_j5.email = "e@e.com"
 ex_j5.telephone = "773-675-6789"
@@ -1049,6 +1056,7 @@ ex_j5.save
 ex_j6 = ExternalJob.new
 ex_j6.hiring_manager = hm6
 ex_j6.job = j6
+ex_j6.description = "Client's description for the job internally."
 ex_j6.external_code = "6F"
 ex_j6.email = "f@f.com"
 ex_j6.telephone = "773-345-1209"
@@ -1057,6 +1065,7 @@ ex_j6.save
 ex_j7 = ExternalJob.new
 ex_j7.hiring_manager = hm7
 ex_j7.job = j7
+ex_j7.description = "Client's description for the job internally."
 ex_j7.external_code = "7G"
 ex_j7.email = "g@g.com"
 ex_j7.telephone = "312-323-3127"
@@ -1065,6 +1074,7 @@ ex_j7.save
 ex_j8 = ExternalJob.new
 ex_j8.hiring_manager = hm8
 ex_j8.job = j8
+ex_j8.description = "Client's description for the job internally."
 ex_j8.external_code = "8H"
 ex_j8.email = "h@h.com"
 ex_j8.telephone = "773-345-0000"
@@ -1073,6 +1083,7 @@ ex_j8.save
 ex_j9 = ExternalJob.new
 ex_j9.hiring_manager = hm9
 ex_j9.job = j9
+ex_j9.description = "Client's description for the job internally."
 ex_j9.external_code = "9I"
 ex_j9.email = "i@i.com"
 ex_j9.telephone = "773-345-2222"
@@ -1081,6 +1092,7 @@ ex_j9.save
 ex_j10 = ExternalJob.new
 ex_j10.hiring_manager = hm10
 ex_j10.job = j10
+ex_j10.description = "Client's description for the job internally."
 ex_j10.external_code = "10J"
 ex_j10.email = "j@j.com"
 ex_j10.telephone = "773-345-1111"
