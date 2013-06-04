@@ -10,6 +10,11 @@
 <b>External Job ID:</b>
  <%= @job.external_job.external_code %>
 
+<p>
+  <b>Hiring Manager:</b>
+    <%= @job.external_job.hiring_manager.user.full_name %>
+</p>
+
 <h4>List of Candidates</h4>
 
 <%= render 'candidates/candidate_list', candidates: @candidate_jobs %>
