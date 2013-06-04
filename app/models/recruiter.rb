@@ -5,6 +5,7 @@ class Recruiter < ActiveRecord::Base
   has_many :candidate_recruiters
   has_many :job_recruiters
   has_many :agency_recruiters
+  has_many :jobs, :through => :job_recruiters
   belongs_to :company
   belongs_to :user
 

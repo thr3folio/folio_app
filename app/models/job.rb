@@ -7,6 +7,7 @@ class Job < ActiveRecord::Base
   has_one :external_job
   has_many :candidates, :through => :candidate_jobs
   has_many :clients, :through => :client_jobs
+  has_many :recruiters, :through => :job_recruiters
 
   validates :title, presence: :true
   validates :description, presence: :true
