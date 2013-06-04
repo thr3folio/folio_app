@@ -11,8 +11,8 @@
 
 <% @job_recruiters.each do |job_recruiter| %>
   <tr>
-    <td><%= job_recruiter.job_id %></td>
-    <td><%= job_recruiter.recruiter_id %></td>
+    <td><%= job_recruiter.job.title %></td>
+    <td><%= job_recruiter.recruiter.user.full_name %></td>
     <td><%= link_to 'Show', job_recruiter %></td>
     <td><%= link_to 'Edit', edit_job_recruiter_path(job_recruiter) %></td>
     <td><%= link_to 'Destroy', job_recruiter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
