@@ -262,6 +262,8 @@ c1.industry = "Animation"
 c1.years_experience = "7"
 c1.bio = "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
 c1.company = company1
+c1.skills = "Industrial Design"
+c1.salary = "$75,000"
 c1.user = user11
 c1.save
 
@@ -271,6 +273,8 @@ c2.industry = "Architecture"
 c2.years_experience = "5"
 c2.bio = "I am currently a senior at the Savannah College of Art and Design seeking my B.F.A. in graphic design."
 c2.company = company2
+c2.skills = "Design Strategy"
+c2.salary = "$80,000"
 c2.user = user12
 c2.save
 
@@ -280,6 +284,8 @@ c3.industry = "Digital Art"
 c3.years_experience = "8"
 c3.bio = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 c3.company = company3
+c3.skills = "Photoshop"
+c3.salary = "$95,000"
 c3.user = user13
 c3.save
 
@@ -289,6 +295,8 @@ c4.industry = "Digital Art"
 c4.years_experience = "4"
 c4.bio = "I believe successful design is not just about making pretty pictures or displaying software effects."
 c4.company = company4
+c4.skills = "Web Design"
+c4.salary = "$65,000"
 c4.user = user14
 c4.save
 
@@ -298,6 +306,8 @@ c5.industry = "Copywriting, Graphic Design"
 c5.years_experience = "1"
 c5.bio = "I am currently a senior at the Savannah College of Art and Design seeking my B.F.A. in graphic design. I enjoy collaborating with others, taking on new challenges, and trying to find my own design style. When I'm not talking about my passion for graphic design, I'm probably babbling about my love for pad thai, dogs, or any number of outdoor activities."
 c5.company = company5
+c5.skills = "Interaction Design"
+c5.salary = "$100,000"
 c5.user = user15
 c5.save
 
@@ -307,6 +317,8 @@ c6.industry = "Animation, Drawing, Illustration"
 c6.years_experience = "2"
 c6.bio = "Im an illustrator and Animation Student from Medellín - Colombia, obsessed with crafts, bookbinding, popcorn and banana cheesecake."
 c6.company = company6
+c6.skills = "Adobe Creative Suite"
+c6.salary = "$85,000"
 c6.user = user16
 c6.save
 
@@ -316,6 +328,8 @@ c7.industry = "Graphic Design, Packaging, Typography"
 c7.years_experience = "9"
 c7.bio = "I believe successful design is not just about making pretty pictures or displaying software effects. It's about problem-solving and focusing on the target audience. It requires listening, communicating with clients, research and concept development in order to generate the relevant solution. I also believe sense of humor and the willingness to offer a hand go a long way."
 c7.company = company7
+c7.skills = "Graphic Design"
+c7.salary = "$80,000"
 c7.user = user17
 c7.save
 
@@ -325,6 +339,8 @@ c8.industry = "Industrial Design, Product Design"
 c8.years_experience = "2"
 c8.bio = "Hi! I'm a second year Industrial Design student looking for an internship spring/summer 2013. I love working with my hands. I also love doing all of my own photography and graphic design."
 c8.company = company8
+c8.skills = "InDesign"
+c8.salary = "$65,000"
 c8.user = user18
 c8.save
 
@@ -334,6 +350,8 @@ c9.industry = "Character Design, Illustration"
 c9.years_experience = "6"
 c9.bio = "My name is Clint. I live in Durango, Co. I'm a designer, an illustrator, a coffee drinker, a bicycle rider, an over-analyzer, a beard grower, a music lover, an enthusiastic uncle, a worrier, a lister-of-things. I draw under the alias 'Tillman Project'. Do stuff, make stuff!"
 c9.company = company9
+c9.skills = "Advertising"
+c9.salary = "$75,000"
 c9.user = user19
 c9.save
 
@@ -343,6 +361,8 @@ c10.industry = "Interaction Design, Storyboarding, UI/UX"
 c10.years_experience = "4"
 c10.bio = "I've been filling up sketch books and pressing coffee like a mad man who spends a lot of drawing in sketch books and drinking coffee. I'm currently focusing on illustration, designing, and screen printing in Durango, CO. If you haven't visited the mountains of Colorado, you should...they are awesome, in a mountain…."
 c10.company = company10
+c10.skills = "Creative Direction"
+c10.salary = "$95,000"
 c10.user = user20
 c10.save
 
