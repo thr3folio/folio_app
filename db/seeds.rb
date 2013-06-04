@@ -461,12 +461,12 @@ cj4.save
 
 cj5 = CandidateJob.new
 cj5.candidate = c5
-cj5.job = j5
+cj5.job = j4
 cj5.save
 
 cj6 = CandidateJob.new
 cj6.candidate = c6
-cj6.job = j6
+cj6.job = j4
 cj6.save
 
 cj7 = CandidateJob.new

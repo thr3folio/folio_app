@@ -1,36 +1,6 @@
-<h1>Candidates</h1>
+<h1>List of Candidates</h1>
 
 <p><%= link_to 'Add a New Candidate', new_candidate_url %></p>
 
-<table>
-  <thead>
-    <tr>
-      <th>First name</th>
-      <th>Last name</th>
-      <th>Title</th>
-      <th>Industry</th>
-      <th>Years experience</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-  <% @candidates.each do |candidate| %>
-    <tr>
-      <td><%= candidate.user.first_name %></td>
-      <td><%= candidate.user.last_name %></td>
-      <td><%= candidate.title %></td>
-      <td><%= candidate.industry %></td>
-      <td><%= candidate.years_experience %></td>
-
-      <td><%= link_to 'Show', candidate_url(candidate) %></td>
-      <td><%= link_to 'Edit', edit_candidate_url(candidate) %></td>
-      <td><%= link_to 'Destroy', candidate_url(candidate), method: 'delete', data: { confirm: "Do you really want to delete this candidate?" } %></td>
-
-    </tr>
-  <% end %>
-  </tbody>
-</table>
+<%= render 'candidate_list', candidates: @candidates %>
 

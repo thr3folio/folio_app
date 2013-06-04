@@ -29,7 +29,6 @@
             <li><%= link_to "Clients", clients_url %></li>
             <li><%= link_to "Jobs", "#{jobs_url}?view=list" %></li>
             <li><%= link_to "Notes", notes_url %></li>
-            <li><%= link_to "Candidate Jobs", candidate_jobs_url %></li>
             <% if signed_in? %>
             <li><%= link_to "Sign Out", signout_url, method: 'delete' %></li>
             <% else %>
