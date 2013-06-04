@@ -21,9 +21,9 @@
       <td><%= candidate.industry %></td>
       <td><%= candidate.years_experience %></td>
 
-      <td><%= link_to 'Show', candidate_url(candidate) %></td>
+      <td><%= link_to 'View', candidate_url(candidate) %></td>
       <td><%= link_to 'Edit', edit_candidate_url(candidate) %></td>
-      <td><%= link_to 'Destroy', candidate_url(candidate), method: 'delete', data: { confirm: "Do you really want to delete this candidate?" } %></td>
+      <td><%= link_to 'Delete', candidate_url(candidate), method: 'delete', data: { confirm: "Do you really want to delete this candidate?" } %></td>
 
     </tr>
   <% end %>
