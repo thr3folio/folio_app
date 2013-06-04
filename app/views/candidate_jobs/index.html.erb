@@ -2,18 +2,6 @@
 <h2><%= @job.client_jobs.first.client.name %> </h2>
 <h4> Internal Job ID #<%= @job.id %> External Job ID #<%= @job.external_job.id %></h4>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  <tbody>
-  <% @candidate_jobs.each do |candidate_job| %>
-    <tr>
-      <td><%= candidate_job.candidate.user.full_name %></td>
-      <td><%= candidate_job.job.try(:title) %></td>
-=======
->>>>>>> Changed candidate_jobs index
-
-=======
->>>>>>> Fixed link to candidate jobs. Removed link to candidate jobs from navigation
 <h2>List of Candidates</h2>
 
 <%= render 'candidates/candidate_list', candidates: @candidate_jobs %>
