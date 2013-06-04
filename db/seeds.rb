@@ -672,52 +672,148 @@ n2.save
 
 n3 = Note.new
 n3.description = "This is a note for job3."
-n3.date = "07/15/2013"
+n3.date = "07/15/2012"
 n3.job = j3
 n3.save
 
 
 n4 = Note.new
 n4.description = "This is another note for job4"
-n4.date = "01/04/2013"
+n4.date = "03/15/2013"
 n4.job = j4
 n4.save
 
 n5 = Note.new
 n5.description = "This is another note for job5."
-n5.date = "01/04/2013"
+n5.date = "04/14/2013"
 n5.job = j5
 n5.save
 
 n6 = Note.new
 n6.description = "This is another note for job6."
-n6.date = "01/04/2013"
+n6.date = "05/14/2013"
 n6.job = j6
 n6.save
 
 n7 = Note.new
 n7.description = "This is another note for job7."
-n7.date = "01/04/2013"
+n7.date = "06/02/2013"
 n7.job = j7
 n7.save
 
 n8 = Note.new
 n8.description = "This is another note for job8."
-n8.date = "01/04/2013"
+n8.date = "01/14/2012"
 n8.job = j8
 n8.save
 
 n9 = Note.new
 n9.description = "This is another note for job9."
-n9.date = "01/04/2013"
+n9.date = "03/24/2013"
 n9.job = j9
 n9.save
 
 n10 = Note.new
 n10.description = "This is another note for job10."
-n10.date = "01/04/2013"
+n10.date = "01/26/2013"
 n10.job = j10
 n10.save
+
+n11 = Note.new
+n11.description = "This is another note for job1."
+n11.date = "02/20/2013"
+n11.job = j1
+n11.save
+
+n12 = Note.new
+n12.description = "This is another note for job2."
+n12.date = "02/14/2013"
+n12.job = j2
+n12.save
+
+n13 = Note.new
+n13.description = "This is another note for job3."
+n13.date = "03/01/2013"
+n13.job = j3
+n13.save
+
+n14 = Note.new
+n14.description = "This is another note for job4."
+n14.date = "04/01/2013"
+n14.job = j4
+n14.save
+
+n15 = Note.new
+n15.description = "This is another note for job5."
+n15.date = "05/01/2013"
+n15.job = j5
+n15.save
+
+n16 = Note.new
+n16.description = "This is another note for job6."
+n16.date = "06/01/2013"
+n16.job = j6
+n16.save
+
+n17 = Note.new
+n17.description = "This is another note for job7."
+n17.date = "04/14/2013"
+n17.job = j7
+n17.save
+
+n18 = Note.new
+n18.description = "This is another note for job8."
+n18.date = "05/12/2013"
+n18.job = j8
+n18.save
+
+n19 = Note.new
+n19.description = "This is another note for job9."
+n19.date = "06/01/2013"
+n19.job = j9
+n19.save
+
+n20 = Note.new
+n20.description = "This is another note for job10."
+n20.date = "03/10/2013"
+n20.job = j10
+n20.save
+
+n21 = Note.new
+n21.description = "This is another note for job1."
+n21.date = "01/01/2013"
+n21.job = j1
+n21.save
+
+n22 = Note.new
+n22.description = "This is another note for job2."
+n22.date = "01/01/2012"
+n22.job = j2
+n22.save
+
+n23 = Note.new
+n23.description = "This is another note for job4."
+n23.date = "02/01/2013"
+n23.job = j4
+n23.save
+
+n24 = Note.new
+n24.description = "This is another note for job1."
+n24.date = "03/21/2013"
+n24.job = j1
+n24.save
+
+n25 = Note.new
+n25.description = "This is another note for job2."
+n25.date = "01/11/2013"
+n25.job = j2
+n25.save
+
+n26 = Note.new
+n26.description = "This is another note for job4."
+n26.date = "02/12/2013"
+n26.job = j4
+n26.save
 
 puts "There are #{Note.count} rows in the notes table."
 
@@ -847,69 +943,105 @@ hm_note10.note = n10
 hm_note10.hiring_manager = hm10
 hm_note10.save
 
+hm_note11 = HiringManagerNote.new
+hm_note11.candidate = c1
+hm_note11.note = n21
+hm_note11.hiring_manager = hm1
+hm_note11.save
+
+hm_note12 = HiringManagerNote.new
+hm_note12.candidate = c4
+hm_note12.note = n22
+hm_note12.hiring_manager = hm4
+hm_note12.save
+
+hm_note13 = HiringManagerNote.new
+hm_note13.candidate = c4
+hm_note13.note = n23
+hm_note13.hiring_manager = hm1
+hm_note13.save
+
 puts "There are #{HiringManagerNote.count} rows in the hiring manger notes table"
 
 RecruiterNote.destroy_all
 
 rm_note1 = RecruiterNote.new
 rm_note1.candidate = c1
-rm_note1.note = n1
+rm_note1.note = n11
 rm_note1.recruiter = r1
 rm_note1.save
 
 rm_note2 = RecruiterNote.new
 rm_note2.candidate = c2
-rm_note2.note = n2
+rm_note2.note = n12
 rm_note2.recruiter = r2
 rm_note2.save
 
 rm_note3 = RecruiterNote.new
 rm_note3.candidate = c3
-rm_note3.note = n3
+rm_note3.note = n13
 rm_note3.recruiter = r3
 rm_note3.save
 
 rm_note4 = RecruiterNote.new
 rm_note4.candidate = c4
-rm_note4.note = n4
+rm_note4.note = n14
 rm_note4.recruiter = r4
 rm_note4.save
 
 rm_note5 = RecruiterNote.new
 rm_note5.candidate = c5
-rm_note5.note = n5
+rm_note5.note = n15
 rm_note5.recruiter = r5
 rm_note5.save
 
 rm_note6 = RecruiterNote.new
 rm_note6.candidate = c6
-rm_note6.note = n6
+rm_note6.note = n16
 rm_note6.recruiter = r6
 rm_note6.save
 
 rm_note7 = RecruiterNote.new
 rm_note7.candidate = c7
-rm_note7.note = n7
+rm_note7.note = n17
 rm_note7.recruiter = r7
 rm_note7.save
 
 rm_note8 = RecruiterNote.new
 rm_note8.candidate = c8
-rm_note8.note = n8
+rm_note8.note = n18
 rm_note8.recruiter = r8
 rm_note8.save
 
 rm_note9 = RecruiterNote.new
 rm_note9.candidate = c9
-rm_note9.note = n9
+rm_note9.note = n19
 rm_note9.recruiter = r9
 rm_note9.save
 
 rm_note10 = RecruiterNote.new
 rm_note10.candidate = c10
-rm_note10.note = n10
+rm_note10.note = n20
 rm_note10.recruiter = r10
 rm_note10.save
+
+rm_note11 = RecruiterNote.new
+rm_note11.candidate = c1
+rm_note11.note = n24
+rm_note11.recruiter = r1
+rm_note11.save
+
+rm_note12 = RecruiterNote.new
+rm_note12.candidate = c4
+rm_note12.note = n25
+rm_note12.recruiter = r4
+rm_note12.save
+
+rm_note13 = RecruiterNote.new
+rm_note13.candidate = c4
+rm_note13.note = n26
+rm_note13.recruiter = r3
+rm_note13.save
 
 puts "There are #{RecruiterNote.count} rows in the recruiter notes table"
 
