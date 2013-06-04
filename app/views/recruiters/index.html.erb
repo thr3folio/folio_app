@@ -8,7 +8,7 @@
       <th>First name</th>
       <th>Last name</th>
       <th>Title</th>
-      <th>Company</th>
+      <th>Agency</th>
       <th>Email</th>
       <th></th>
       <th></th>
@@ -22,7 +22,7 @@
       <td><%= recruiter.user.first_name %></td>
       <td><%= recruiter.user.last_name %></td>
       <td><%= recruiter.title %></td>
-      <td><%= recruiter.company_id %></td>
+      <td><%= recruiter.agency.name %></td>
       <td><%= recruiter.user.email %></td>
 
       <td><%= link_to 'Show', recruiter_url(recruiter) %></td>

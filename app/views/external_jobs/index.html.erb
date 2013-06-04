@@ -2,9 +2,10 @@
 
 <table>
   <tr>
-    <th>Description</th>
     <th>Hiring manager</th>
-    <th>Job</th>
+    <th>Description</th>
+    <th>Internal Job Title</th>
+    <th>Internal Job Code</th>
     <th>Email</th>
     <th>Telephone</th>
     <th></th>
@@ -14,9 +15,10 @@
 
 <% @external_jobs.each do |external_job| %>
   <tr>
+    <td><%= external_job.hiring_manager.user.full_name %></td>
     <td><%= external_job.description %></td>
-    <td><%= external_job.hiring_manager.user.try(:first_name) %></td>
     <td><%= external_job.job.title %></td>
+    <td><%= external_job.job.id %></td>
     <td><%= external_job.email %></td>
     <td><%= external_job.telephone %></td>
     <td><%= link_to 'Show', external_job %></td>
