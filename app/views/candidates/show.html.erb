@@ -44,19 +44,55 @@
   <%= @candidate.company.name %>
 </p>
 
-<p>
-  <b>Notes by recruiter(s):</b>
+<h5>Notes by recruiter(s):</h5>
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Name</th>
+      <th>Comments</th>
+      <th>Job Title</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
   <% @candidate.recruiter_notes.each do |recruiter_note| %>
-  <p> <%= "#{recruiter_note.recruiter.user.full_name} said: \"#{recruiter_note.note.description}\" in connection with the "%><strong><%= "#{recruiter_note.note.job.title} " %></strong>position.</p>
+    <tr>
+      <td><%= recruiter_note.note.date %></td>
+      <td><%= recruiter_note.recruiter.user.full_name %></td>
+      <td><%= recruiter_note.note.description %></td>
+      <td><%= recruiter_note.note.job.title %></td>
+    </tr>
   <% end %>
-</p>
+  </tbody>
+</table>
 
-<p>
-  <b>Notes by hiring managers(s):</b>
+<h5>Notes by Hiring Manager(s):</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Name</th>
+      <th>Comments</th>
+      <th>Job Title</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
   <% @candidate.hiring_manager_notes.each do |hiring_manager_note| %>
-  <p> <%= "#{hiring_manager_note.hiring_manager.user.full_name} at #{hiring_manager_note.hiring_manager.company.name} said: \"#{hiring_manager_note.note.description}\"" %></p>
-  <% end %>
-</p>
-
-
-
+      <tr>
+        <td><%= hiring_manager_note.note.date %></td>
+        <td><%= hiring_manager_note.hiring_manager.user.full_name %></td>
+        <td><%= hiring_manager_note.note.description %></td>
+        <td><%= hiring_manager_note.note.job.title %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
