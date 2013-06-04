@@ -16,7 +16,7 @@ company4 = Company.create(name: "PerfectHire", location: "Unknown", industry: "C
 company5 = Company.create(name: "eSalon", location: "Unknown", industry: "Beauty")
 company6 = Company.create(name: "Greenhouse", location: "Earth", industry: "Bio-resource, Enviroment")
 company7 = Company.create(name: "TED Conferences", location: "NYC, NY", industry: "Ideation, IP")
-company8 = Company.create(name: "Microsoft Corporation", location: "Redmond, Washington", industry: "")
+company8 = Company.create(name: "Microsoft Corporation", location: "Redmond, Washington", industry: "Television")
 company9 = Company.create(name: "Shazam", location: "London, U.K", industry: "Music Identification service")
 company10 = Company.create(name: "MTV Networks", location: "NYC, NY", industry: "Television")
 
