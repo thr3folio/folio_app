@@ -1,4 +1,4 @@
-class HiringManagerAttributes < ActiveRecord::Base
+class HiringManagerAttribute < ActiveRecord::Base
   attr_accessible :title, :company_id
   belongs_to :hiring_manager
   belongs_to :client

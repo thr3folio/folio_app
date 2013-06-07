@@ -1,4 +1,4 @@
-class CandidateAttributes < ActiveRecord::Base
+class CandidateAttribute < ActiveRecord::Base
   attr_accessible :title, :industry, :years_experience, :bio, :company_id
   belongs_to :candidate
   belongs_to :company

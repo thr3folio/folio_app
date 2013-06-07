@@ -1,4 +1,4 @@
-class RecruiterAttributes < ActiveRecord::Base
+class RecruiterAttribute < ActiveRecord::Base
   attr_accessible :title, :agency_id, :user_id
   belongs_to :recruiter
   has_many :recruiter_notes

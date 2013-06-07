@@ -45,6 +45,7 @@ user1.first_name = "William"
 user1.last_name = "Adams"
 user1.email = "recruiter1@mail.com"
 user1.password = "test"
+user1.type = "HiringManager"
 user1.save
 
 user2 = User.new
@@ -52,6 +53,7 @@ user2.first_name = "William"
 user2.last_name = "Wallace"
 user2.email = "recruiter2@mail.com"
 user2.password = "test"
+user2.type = "HiringManager"
 user2.save
 
 user3 = User.new
@@ -59,6 +61,7 @@ user3.first_name = "Nerlens"
 user3.last_name = "Noel"
 user3.email = "recruiter3@mail.com"
 user3.password = "test"
+user3.type = "HiringManager"
 user3.save
 
 user4 = User.new
@@ -66,6 +69,7 @@ user4.first_name = "The"
 user4.last_name = "Special One"
 user4.email = "recruiter4@mail.com"
 user4.password = "test"
+user4.type = "HiringManager"
 user4.save
 
 user5 = User.new
@@ -73,6 +77,7 @@ user5.first_name = "Joe"
 user5.last_name = "Clark"
 user5.email = "recruiter5@mail.com"
 user5.password = "test"
+user5.type = "HiringManager"
 user5.save
 
 user6 = User.new
@@ -80,13 +85,14 @@ user6.first_name = "Bill"
 user6.last_name = "Smith"
 user6.email = "recruiter6@mail.com"
 user6.password = "test"
+user6.type = "HiringManager"
 user6.save
 
 user7 = User.new
 user7.first_name = "Laura"
 user7.last_name = "Bell"
 user7.email = "recruiter7@mail.com"
-
+user7.type = "HiringManager"
 user7.password = "test"
 user7.save
 
@@ -95,6 +101,7 @@ user8.first_name = "Sue"
 user8.last_name = "Turner"
 user8.email = "recruiter8@mail.com"
 user8.password = "test"
+user8.type = "HiringManager"
 user8.save
 
 user9 = User.new
@@ -102,6 +109,7 @@ user9.first_name = "Sam"
 user9.last_name = "Diamond"
 user9.email = "recruiter9@mail.com"
 user9.password = "test"
+user9.type = "HiringManager"
 user9.save
 
 user10 = User.new
@@ -109,6 +117,7 @@ user10.first_name = "Lisa"
 user10.last_name = "James"
 user10.email = "recruiter10@mail.com"
 user10.password = "test"
+user10.type = "HiringManager"
 user10.save
 
 user11 = User.new
@@ -116,6 +125,7 @@ user11.first_name = "Jonathan"
 user11.last_name = "Kaplan"
 user11.email = "jonkap@mail.com"
 user11.password = "test"
+user11.type = "Candidate"
 user11.save
 
 user12 = User.new
@@ -123,6 +133,7 @@ user12.first_name = "Branko"
 user12.last_name = "Cvetkovic"
 user12.email = "jaggoda@mail.com"
 user12.password = "test"
+user12.type = "Candidate"
 user12.save
 
 user13 = User.new
@@ -130,6 +141,7 @@ user13.first_name = "Conor"
 user13.last_name = "Bryce"
 user13.email = "conorbryce@mail.com"
 user13.password = "test"
+user13.type = "Candidate"
 user13.save
 
 user14 = User.new
@@ -137,6 +149,7 @@ user14.first_name = "David"
 user14.last_name = "McLeod"
 user14.email = "davidmcleod@mail.com"
 user14.password = "test"
+user14.type = "Candidate"
 user14.save
 
 user15 = User.new
@@ -144,6 +157,7 @@ user15.first_name = "Brenna"
 user15.last_name = "Kaplan"
 user15.email = "bk@mail.com"
 user15.password = "test"
+user15.type = "Candidate"
 user15.save
 
 user16 = User.new
@@ -151,6 +165,7 @@ user16.first_name = "Juliana"
 user16.last_name = "Cuervo"
 user16.email = "jc@mail.com"
 user16.password = "test"
+user16.type = "Candidate"
 user16.save
 
 user17 = User.new
@@ -158,6 +173,7 @@ user17.first_name = "Michael"
 user17.last_name = "Romeo"
 user17.email = "mr@mail.com"
 user17.password = "test"
+user17.type = "Candidate"
 user17.save
 
 user18 = User.new
@@ -165,6 +181,7 @@ user18.first_name = "Levi"
 user18.last_name = "Price "
 user18.email = "lp@mail.com"
 user18.password = "test"
+user18.type = "Candidate"
 user18.save
 
 user19 = User.new
@@ -172,6 +189,7 @@ user19.first_name = "Clint"
 user19.last_name = "Reid"
 user19.email = "cr@mail.com"
 user19.password = "test"
+user19.type = "Candidate"
 user19.save
 
 user20 = User.new
@@ -179,6 +197,7 @@ user20.first_name = "Gabriel"
 user20.last_name = "Campbell"
 user20.email = "gc@mail.com"
 user20.password = "test"
+user20.type = "Candidate"
 user20.save
 
 
@@ -187,6 +206,7 @@ user21.first_name = "Pat"
 user21.last_name = "Riley"
 user21.email = "recruiter11@mail.com"
 user21.password = "test"
+user21.type = "Recruiter"
 user21.save
 
 user22 = User.new
@@ -194,6 +214,7 @@ user22.first_name = "George"
 user22.last_name = "Hill"
 user22.email = "recruiter12@mail.com"
 user22.password = "test"
+user22.type = "Recruiter"
 user22.save
 
 user23 = User.new
@@ -201,6 +222,7 @@ user23.first_name = "Larry"
 user23.last_name = "Bird"
 user23.email = "recruiter13@mail.com"
 user23.password = "test"
+user23.type = "Recruiter"
 user23.save
 
 user24 = User.new
@@ -208,6 +230,7 @@ user24.first_name = "Michael"
 user24.last_name = "Jordan"
 user24.email = "recruiter14@mail.com"
 user24.password = "test"
+user24.type = "Recruiter"
 user24.save
 
 user25 = User.new
@@ -215,6 +238,7 @@ user25.first_name = "LeBron"
 user25.last_name = "James"
 user25.email = "recruiter15@mail.com"
 user25.password = "test"
+user25.type = "Recruiter"
 user25.save
 
 user26 = User.new
@@ -222,6 +246,7 @@ user26.first_name = "Kevin"
 user26.last_name = "Durant"
 user26.email = "recruiter16@mail.com"
 user26.password = "test"
+user26.type = "Recruiter"
 user26.save
 
 user27 = User.new
@@ -229,6 +254,7 @@ user27.first_name = "Derrick"
 user27.last_name = "Rose"
 user27.email = "recruiter17@mail.com"
 user27.password = "test"
+user27.type = "Recruiter"
 user27.save
 
 user28 = User.new
@@ -236,6 +262,7 @@ user28.first_name = "Dwight"
 user28.last_name = "Howard"
 user28.email = "recruiter18@mail.com"
 user28.password = "test"
+user28.type = "Recruiter"
 user28.save
 
 user29 = User.new
@@ -243,6 +270,7 @@ user29.first_name = "Joakim"
 user29.last_name = "Noah"
 user29.email = "recruiter19@mail.com"
 user29.password = "test"
+user29.type = "Recruiter"
 user29.save
 
 user30 = User.new
@@ -250,13 +278,14 @@ user30.first_name = "Kobe"
 user30.last_name = "Bryant"
 user30.email = "recruiter20@mail.com"
 user30.password = "test"
+user30.type = "Recruiter"
 user30.save
 
 puts "There are #{User.count} rows in the users table."
 
-Candidate.destroy_all
+CandidateAttribute.destroy_all
 
-c1 = Candidate.new
+c1 = CandidateAttribute.new
 c1.title = "Render Farm Manager"
 c1.industry = "Animation"
 c1.years_experience = "7"
@@ -265,10 +294,10 @@ c1.company = company1
 c1.skills = "Industrial Design"
 c1.salary = "$75,000"
 c1.location = "Los Angeles, CA, USA"
-c1.user = user11
+c1.candidate_id = user11.id
 c1.save
 
-c2 = Candidate.new
+c2 = CandidateAttribute.new
 c2.title = "Student"
 c2.industry = "Architecture"
 c2.years_experience = "5"
@@ -276,11 +305,11 @@ c2.bio = "I am currently a senior at the Savannah College of Art and Design seek
 c2.company = company2
 c2.skills = "Design Strategy"
 c2.salary = "$80,000"
-c2.user = user12
+c2.candidate_id = user12.id
 c2.location = "Durango, CO, USA"
 c2.save
 
-c3 = Candidate.new
+c3 = CandidateAttribute.new
 c3.title = "Senior Designer"
 c3.industry = "Digital Art"
 c3.years_experience = "8"
@@ -288,11 +317,11 @@ c3.bio = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 c3.company = company3
 c3.skills = "Photoshop"
 c3.salary = "$95,000"
-c3.user = user13
+c3.candidate_id = user13.id
 c3.location = "Nashville, TN, USA"
 c3.save
 
-c4 = Candidate.new
+c4 = CandidateAttribute.new
 c4.title = "Graphic Designer/Illustrator"
 c4.industry = "Digital Art"
 c4.years_experience = "4"
@@ -300,11 +329,11 @@ c4.bio = "I believe successful design is not just about making pretty pictures o
 c4.company = company4
 c4.skills = "Web Design"
 c4.salary = "$65,000"
-c4.user = user14
+c4.candidate_id = user14.id
 c4.location = "New York, NY, USA"
 c4.save
 
-c5 = Candidate.new
+c5 = CandidateAttribute.new
 c5.title = "Graphic Designer, Copywriter"
 c5.industry = "Copywriting, Graphic Design"
 c5.years_experience = "1"
@@ -312,11 +341,11 @@ c5.bio = "I am currently a senior at the Savannah College of Art and Design seek
 c5.company = company5
 c5.skills = "Interaction Design"
 c5.salary = "$100,000"
-c5.user = user15
+c5.candidate_id = user15.id
 c5.location = "New York, NY, USA"
 c5.save
 
-c6 = Candidate.new
+c6 = CandidateAttribute.new
 c6.title = "Illustrator, Animation Student"
 c6.industry = "Animation, Drawing, Illustration"
 c6.years_experience = "2"
@@ -324,11 +353,11 @@ c6.bio = "Im an illustrator and Animation Student from Medellín - Colombia, obs
 c6.company = company6
 c6.skills = "Adobe Creative Suite"
 c6.salary = "$85,000"
-c6.user = user16
+c6.candidate_id = user16.id
 c6.location = "San Francisco, CA, USA"
 c6.save
 
-c7 = Candidate.new
+c7 = CandidateAttribute.new
 c7.title = "Graphic Designer/Illustrator"
 c7.industry = "Graphic Design, Packaging, Typography"
 c7.years_experience = "9"
@@ -336,11 +365,11 @@ c7.bio = "I believe successful design is not just about making pretty pictures o
 c7.company = company7
 c7.skills = "Graphic Design"
 c7.salary = "$80,000"
-c7.user = user17
+c7.candidate_id = user17.id
 c7.location = "Salt Lake City, UT, USA"
 c7.save
 
-c8 = Candidate.new
+c8 = CandidateAttribute.new
 c8.title = "Student/Entrepreneur"
 c8.industry = "Industrial Design, Product Design"
 c8.years_experience = "2"
@@ -348,11 +377,11 @@ c8.bio = "Hi! I'm a second year Industrial Design student looking for an interns
 c8.company = company8
 c8.skills = "InDesign"
 c8.salary = "$65,000"
-c8.user = user18
+c8.candidate_id = user18.id
 c8.location = "New York, NY, USA"
 c8.save
 
-c9 = Candidate.new
+c9 = CandidateAttribute.new
 c9.title = "Graphic Designer/Illustrator"
 c9.industry = "Character Design, Illustration"
 c9.years_experience = "6"
@@ -360,11 +389,11 @@ c9.bio = "My name is Clint. I live in Durango, Co. I'm a designer, an illustrato
 c9.company = company9
 c9.skills = "Advertising"
 c9.salary = "$75,000"
-c9.user = user19
+c9.candidate_id = user19.id
 c9.location = "Miami, FL, USA"
 c9.save
 
-c10 = Candidate.new
+c10 = CandidateAttribute.new
 c10.title = "Senior Experience Designer, Lead"
 c10.industry = "Interaction Design, Storyboarding, UI/UX"
 c10.years_experience = "4"
@@ -372,11 +401,11 @@ c10.bio = "I've been filling up sketch books and pressing coffee like a mad man 
 c10.company = company10
 c10.skills = "Creative Direction"
 c10.salary = "$95,000"
-c10.user = user20
+c10.candidate_id = user20.id
 c10.location = "Nashville, TN, USA"
 c10.save
 
-puts "There are #{Candidate.count} rows in the candidates table"
+puts "There are #{CandidateAttribute.count} rows in the candidates table"
 
 Job.destroy_all
 
@@ -487,171 +516,171 @@ puts "There are #{Job.count} rows in the jobs table"
 CandidateJob.destroy_all
 
 cj1 = CandidateJob.new
-cj1.candidate = c1
+cj1.candidate_id = user11.id
 cj1.job = j1
 cj1.save
 
 cj2 = CandidateJob.new
-cj2.candidate = c2
+cj2.candidate_id = user12.id
 cj2.job = j2
 cj2.save
 
 cj3 = CandidateJob.new
-cj3.candidate = c3
+cj3.candidate_id = user13.id
 cj3.job = j3
 cj3.save
 
 cj4 = CandidateJob.new
-cj4.candidate = c4
+cj4.candidate_id = user14.id
 cj4.job = j4
 cj4.save
 
 cj5 = CandidateJob.new
-cj5.candidate = c5
+cj5.candidate_id = user15.id
 cj5.job = j4
 cj5.save
 
 cj6 = CandidateJob.new
-cj6.candidate = c6
+cj6.candidate_id = user16.id
 cj6.job = j4
 cj6.save
 
 cj7 = CandidateJob.new
-cj7.candidate = c7
+cj7.candidate_id = user17.id
 cj7.job = j7
 cj7.save
 
 cj8 = CandidateJob.new
-cj8.candidate = c8
+cj8.candidate_id = user18.id
 cj8.job = j8
 cj8.save
 
 cj9 = CandidateJob.new
-cj9.candidate = c9
+cj9.candidate_id = user19.id
 cj9.job = j9
 cj9.save
 
 cj10 = CandidateJob.new
-cj10.candidate = c10
+cj10.candidate_id = user20.id
 cj10.job = j10
 cj10.save
 
 puts "There are #{CandidateJob.count} rows in the candidate jobs table"
 
-Recruiter.destroy_all
+RecruiterAttribute.destroy_all
 
-r1 = Recruiter.new
+r1 = RecruiterAttribute.new
 r1.title = "Senior Recruiter"
 r1.agency = agency1
-r1.user = user21
+r1.recruiter_id = user21.id
 r1.save
 
-r2 = Recruiter.new
+r2 = RecruiterAttribute.new
 r2.title = "Jnr Recruiter"
 r2.agency = agency2
-r2.user = user22
+r2.recruiter_id = user22.id
 r2.save
 
-r3 = Recruiter.new
+r3 = RecruiterAttribute.new
 r3.title = "Freelance Recruiter"
 r3.agency = agency3
-r3.user = user23
+r3.recruiter_id = user23.id
 r3.save
 
-r4 = Recruiter.new
+r4 = RecruiterAttribute.new
 r4.title = "Freelance Recruiter"
 r4.agency = agency4
-r4.user = user24
+r4.recruiter_id = user24.id
 r4.save
 
-r5 = Recruiter.new
+r5 = RecruiterAttribute.new
 r5.title = "Freelance Recruiter"
 r5.agency = agency5
-r5.user = user25
+r5.recruiter_id = user25.id
 r5.save
 
-r6 = Recruiter.new
+r6 = RecruiterAttribute.new
 r6.title = "Freelance Recruiter"
 r6.agency = agency6
-r6.user = user26
+r6.recruiter_id = user26.id
 r6.save
 
-r7 = Recruiter.new
+r7 = RecruiterAttribute.new
 r7.title = "Freelance Recruiter"
 r7.agency = agency7
-r7.user = user27
+r7.recruiter_id = user27.id
 r7.save
 
-r8 = Recruiter.new
+r8 = RecruiterAttribute.new
 r8.title = "Freelance Recruiter"
 r8.agency = agency8
-r8.user = user28
+r8.recruiter_id = user28.id
 r8.save
 
-r9 = Recruiter.new
+r9 = RecruiterAttribute.new
 r9.title = "Freelance Recruiter"
 r9.agency = agency9
-r9.user = user29
+r9.recruiter_id = user29.id
 r9.save
 
-r10 = Recruiter.new
+r10 = RecruiterAttribute.new
 r10.title = "Freelance Recruiter"
 r10.agency = agency10
-r10.user = user30
+r10.recruiter_id = user30.id
 r10.save
 
-puts "There are #{Recruiter.count} rows in the recruiters table"
+puts "There are #{RecruiterAttribute.count} rows in the recruiters table"
 
 CandidateRecruiter.destroy_all
 
 cr1 = CandidateRecruiter.new
-cr1.candidate = c1
-cr1.recruiter = r1
+cr1.candidate_id = user11.id
+cr1.recruiter_id = user21.id
 cr1.save
 
 cr2 = CandidateRecruiter.new
-cr2.candidate = c2
-cr2.recruiter = r2
+cr2.candidate_id = user12.id
+cr2.recruiter_id = user22.id
 cr2.save
 
 cr3 = CandidateRecruiter.new
-cr3.candidate = c3
-cr3.recruiter = r3
+cr3.candidate_id = user13.id
+cr3.recruiter_id = user23.id
 cr3.save
 
 cr4 = CandidateRecruiter.new
-cr4.candidate = c4
-cr4.recruiter = r4
+cr4.candidate_id = user14.id
+cr4.recruiter_id = user24.id
 cr4.save
 
 cr5 = CandidateRecruiter.new
-cr5.candidate = c5
-cr5.recruiter = r5
+cr5.candidate_id = user15.id
+cr5.recruiter_id = user25.id
 cr5.save
 
 cr6 = CandidateRecruiter.new
-cr6.candidate = c6
-cr6.recruiter = r6
+cr6.candidate_id = user16.id
+cr6.recruiter_id = user26.id
 cr6.save
 
 cr7 = CandidateRecruiter.new
-cr7.candidate = c7
-cr7.recruiter = r7
+cr7.candidate_id = user17.id
+cr7.recruiter_id = user27.id
 cr7.save
 
 cr8 = CandidateRecruiter.new
-cr8.candidate = c8
-cr8.recruiter = r8
+cr8.candidate_id = user18.id
+cr8.recruiter_id = user28.id
 cr8.save
 
 cr9 = CandidateRecruiter.new
-cr9.candidate = c9
-cr9.recruiter = r9
+cr9.candidate_id = user19.id
+cr9.recruiter_id = user29.id
 cr9.save
 
 cr10 = CandidateRecruiter.new
-cr10.candidate = c10
-cr10.recruiter = r10
+cr10.candidate_id = user20.id
+cr10.recruiter_id = user30.id
 cr10.save
 
 puts "There are #{CandidateRecruiter.count} rows in the candidate recruiters table"
@@ -819,146 +848,146 @@ puts "There are #{Note.count} rows in the notes table."
 
 HiringManager.destroy_all
 
-hm1 = HiringManager.new
+hm1 = HiringManagerAttribute.new
 hm1.title = "Hiring Manager"
 hm1.company = company1
-hm1.user = user1
+hm1.hiring_manager_id = user1.id
 hm1.save
 
-hm2 = HiringManager.new
+hm2 = HiringManagerAttribute.new
 hm2.title = "Jnr HR Manager"
 hm2.company = company2
-hm2.user = user2
+hm2.hiring_manager_id = user2.id
 hm2.save
 
-hm3 = HiringManager.new
+hm3 = HiringManagerAttribute.new
 hm3.title = "Executive HR Manager"
 hm3.company = company3
-hm3.user = user3
+hm3.hiring_manager_id = user3.id
 hm3.save
 
-hm4 = HiringManager.new
+hm4 = HiringManagerAttribute.new
 hm4.title = "Assistant HR clerk"
 hm4.company = company4
-hm4.user = user4
+hm4.hiring_manager_id = user4.id
 hm4.save
 
-hm5 = HiringManager.new
+hm5 = HiringManagerAttribute.new
 hm5.title = "Assistant HR clerk"
 hm5.company = company5
-hm5.user = user5
+hm5.hiring_manager_id = user5.id
 hm5.save
 
-hm6 = HiringManager.new
+hm6 = HiringManagerAttribute.new
 hm6.title = "Assistant HR clerk"
 hm6.company = company6
-hm6.user = user6
+hm6.hiring_manager_id = user6.id
 hm6.save
 
-hm7 = HiringManager.new
+hm7 = HiringManagerAttribute.new
 hm7.title = "Assistant HR clerk"
 hm7.company = company7
-hm7.user = user7
+hm7.hiring_manager_id = user7.id
 hm7.save
 
-hm8 = HiringManager.new
+hm8 = HiringManagerAttribute.new
 hm8.title = "Assistant HR clerk"
 hm8.company = company8
-hm8.user = user8
+hm8.hiring_manager_id = user8.id
 hm8.save
 
-hm9 = HiringManager.new
+hm9 = HiringManagerAttribute.new
 hm9.title = "Assistant HR clerk"
 hm9.company = company9
-hm9.user = user9
+hm9.hiring_manager_id = user9.id
 hm9.save
 
-hm10 = HiringManager.new
+hm10 = HiringManagerAttribute.new
 hm10.title = "Assistant HR clerk"
 hm10.company = company10
-hm10.user = user10
+hm10.hiring_manager_id = user10.id
 hm10.save
 
-puts "There are #{HiringManager.count} rows in the hiring managers table"
+puts "There are #{HiringManagerAttribute.count} rows in the hiring managers attribute table"
 
 HiringManagerNote.destroy_all
 
 hm_note1 = HiringManagerNote.new
-hm_note1.candidate = c1
+hm_note1.candidate_id = user11.id
 hm_note1.note = n1
-hm_note1.hiring_manager = hm1
+hm_note1.hiring_manager_id = user1.id
 hm_note1.save
 
 hm_note2 = HiringManagerNote.new
-hm_note2.candidate = c2
+hm_note2.candidate_id = user12.id
 hm_note2.note = n2
-hm_note2.hiring_manager = hm2
+hm_note2.hiring_manager_id = user2.id
 hm_note2.save
 
 hm_note3 = HiringManagerNote.new
-hm_note3.candidate = c3
+hm_note3.candidate_id = user13.id
 hm_note3.note = n3
-hm_note3.hiring_manager = hm3
+hm_note3.hiring_manager_id = user3.id
 hm_note3.save
 
 hm_note4 = HiringManagerNote.new
-hm_note4.candidate = c4
+hm_note4.candidate_id = user14.id
 hm_note4.note = n4
-hm_note4.hiring_manager = hm4
+hm_note4.hiring_manager_id = user4.id
 hm_note4.save
 
 hm_note5 = HiringManagerNote.new
-hm_note5.candidate = c5
+hm_note5.candidate_id = user15.id
 hm_note5.note = n5
-hm_note5.hiring_manager = hm5
+hm_note5.hiring_manager_id = user5.id
 hm_note5.save
 
 hm_note6 = HiringManagerNote.new
-hm_note6.candidate = c6
+hm_note6.candidate_id = user16.id
 hm_note6.note = n6
-hm_note6.hiring_manager = hm6
+hm_note6.hiring_manager_id = user6.id
 hm_note6.save
 
 hm_note7 = HiringManagerNote.new
-hm_note7.candidate = c7
+hm_note7.candidate_id = user17.id
 hm_note7.note = n7
-hm_note7.hiring_manager = hm7
+hm_note7.hiring_manager_id = user7.id
 hm_note7.save
 
 hm_note8 = HiringManagerNote.new
-hm_note8.candidate = c8
+hm_note8.candidate_id = user18.id
 hm_note8.note = n8
-hm_note8.hiring_manager = hm8
+hm_note8.hiring_manager_id = user8.id
 hm_note8.save
 
 hm_note9 = HiringManagerNote.new
-hm_note9.candidate = c9
+hm_note9.candidate_id = user19.id
 hm_note9.note = n9
-hm_note9.hiring_manager = hm9
+hm_note9.hiring_manager_id = user9.id
 hm_note9.save
 
 hm_note10 = HiringManagerNote.new
-hm_note10.candidate = c10
+hm_note10.candidate_id = user20.id
 hm_note10.note = n10
-hm_note10.hiring_manager = hm10
+hm_note10.hiring_manager_id = user10.id
 hm_note10.save
 
 hm_note11 = HiringManagerNote.new
-hm_note11.candidate = c1
+hm_note11.candidate_id = user1.id
 hm_note11.note = n21
-hm_note11.hiring_manager = hm1
+hm_note11.hiring_manager_id = user1.id
 hm_note11.save
 
 hm_note12 = HiringManagerNote.new
-hm_note12.candidate = c4
+hm_note12.candidate_id = user14.id
 hm_note12.note = n22
-hm_note12.hiring_manager = hm4
+hm_note12.hiring_manager_id = user4.id
 hm_note12.save
 
 hm_note13 = HiringManagerNote.new
-hm_note13.candidate = c4
+hm_note13.candidate_id = user14.id
 hm_note13.note = n23
-hm_note13.hiring_manager = hm1
+hm_note13.hiring_manager_id = user1.id
 hm_note13.save
 
 puts "There are #{HiringManagerNote.count} rows in the hiring manger notes table"
@@ -966,81 +995,81 @@ puts "There are #{HiringManagerNote.count} rows in the hiring manger notes table
 RecruiterNote.destroy_all
 
 rm_note1 = RecruiterNote.new
-rm_note1.candidate = c1
+rm_note1.candidate_id = user11.id
 rm_note1.note = n11
-rm_note1.recruiter = r1
+rm_note1.recruiter_id = user21.id
 rm_note1.save
 
 rm_note2 = RecruiterNote.new
-rm_note2.candidate = c2
+rm_note2.candidate_id = user12.id
 rm_note2.note = n12
-rm_note2.recruiter = r2
+rm_note2.recruiter_id = user22.id
 rm_note2.save
 
 rm_note3 = RecruiterNote.new
-rm_note3.candidate = c3
+rm_note3.candidate_id = user13.id
 rm_note3.note = n13
-rm_note3.recruiter = r3
+rm_note3.recruiter_id = user23.id
 rm_note3.save
 
 rm_note4 = RecruiterNote.new
-rm_note4.candidate = c4
+rm_note4.candidate_id = user14.id
 rm_note4.note = n14
-rm_note4.recruiter = r4
+rm_note4.recruiter_id = user24.id
 rm_note4.save
 
 rm_note5 = RecruiterNote.new
-rm_note5.candidate = c5
+rm_note5.candidate_id = user15.id
 rm_note5.note = n15
-rm_note5.recruiter = r5
+rm_note5.recruiter_id = user25.id
 rm_note5.save
 
 rm_note6 = RecruiterNote.new
-rm_note6.candidate = c6
+rm_note6.candidate_id = user16.id
 rm_note6.note = n16
-rm_note6.recruiter = r6
+rm_note6.recruiter_id = user26.id
 rm_note6.save
 
 rm_note7 = RecruiterNote.new
-rm_note7.candidate = c7
+rm_note7.candidate_id = user17.id
 rm_note7.note = n17
-rm_note7.recruiter = r7
+rm_note7.recruiter_id = user27.id
 rm_note7.save
 
 rm_note8 = RecruiterNote.new
-rm_note8.candidate = c8
+rm_note8.candidate_id = user18.id
 rm_note8.note = n18
-rm_note8.recruiter = r8
+rm_note8.recruiter_id = user28.id
 rm_note8.save
 
 rm_note9 = RecruiterNote.new
-rm_note9.candidate = c9
+rm_note9.candidate_id = user19.id
 rm_note9.note = n19
-rm_note9.recruiter = r9
+rm_note9.recruiter_id = user29.id
 rm_note9.save
 
 rm_note10 = RecruiterNote.new
-rm_note10.candidate = c10
+rm_note10.candidate_id = user20.id
 rm_note10.note = n20
-rm_note10.recruiter = r10
+rm_note10.recruiter_id = user30.id
 rm_note10.save
 
 rm_note11 = RecruiterNote.new
-rm_note11.candidate = c1
+rm_note11.candidate_id = user11.id
 rm_note11.note = n24
-rm_note11.recruiter = r1
+rm_note11.recruiter_id = user21.id
 rm_note11.save
 
 rm_note12 = RecruiterNote.new
-rm_note12.candidate = c4
+rm_note12.candidate_id = user14.id
 rm_note12.note = n25
-rm_note12.recruiter = r4
+rm_note12.recruiter_id = user24.id
 rm_note12.save
 
 rm_note13 = RecruiterNote.new
-rm_note13.candidate = c4
+rm_note13.candidate_id = user14.id
 rm_note13.note = n26
-rm_note13.recruiter = r3
+rm_note13.recruiter_id = user23.id
 rm_note13.save
 
 puts "There are #{RecruiterNote.count} rows in the recruiter notes table"
@@ -1171,7 +1200,7 @@ puts "There are #{AgencyClient.count} rows in the agency clients table"
 ExternalJob.destroy_all
 
 ex_j1 = ExternalJob.new
-ex_j1.hiring_manager = hm1
+ex_j1.hiring_manager_id = user1.id
 ex_j1.job = j1
 ex_j1.description = "Client's description for the job internally."
 ex_j1.external_code = "1A"
@@ -1180,7 +1209,7 @@ ex_j1.telephone = "773-345-6789"
 ex_j1.save
 
 ex_j2 = ExternalJob.new
-ex_j2.hiring_manager = hm2
+ex_j2.hiring_manager_id = user2.id
 ex_j2.job = j2
 ex_j2.description = "Client's description for the job internally."
 ex_j2.external_code = "2B"
@@ -1189,7 +1218,7 @@ ex_j2.telephone = "773-345-0987"
 ex_j2.save
 
 ex_j3 = ExternalJob.new
-ex_j3.hiring_manager = hm3
+ex_j3.hiring_manager_id = user3.id
 ex_j3.job = j3
 ex_j3.description = "Client's description for the job internally."
 ex_j3.external_code = "3C"
@@ -1197,8 +1226,8 @@ ex_j3.email = "c@c.com"
 ex_j3.telephone = "773-345-3645"
 ex_j3.save
 
-ex_j4 = ExternalJob.new
-ex_j4.hiring_manager = hm4
+ex_j4 = ExternalJob.new.id
+ex_j4.hiring_manager_id = user4.id
 ex_j4.job = j4
 ex_j4.description = "Client's description for the job internally."
 ex_j4.external_code = "4D"
@@ -1207,7 +1236,7 @@ ex_j4.telephone = "773-345-2347"
 ex_j4.save
 
 ex_j5 = ExternalJob.new
-ex_j5.hiring_manager = hm5
+ex_j5.hiring_manager_id = user5.id
 ex_j5.job = j5
 ex_j5.description = "Client's description for the job internally."
 ex_j5.external_code = "5E"
@@ -1216,7 +1245,7 @@ ex_j5.telephone = "773-675-6789"
 ex_j5.save
 
 ex_j6 = ExternalJob.new
-ex_j6.hiring_manager = hm6
+ex_j6.hiring_manager_id = user6.id
 ex_j6.job = j6
 ex_j6.description = "Client's description for the job internally."
 ex_j6.external_code = "6F"
@@ -1225,7 +1254,7 @@ ex_j6.telephone = "773-345-1209"
 ex_j6.save
 
 ex_j7 = ExternalJob.new
-ex_j7.hiring_manager = hm7
+ex_j7.hiring_manager_id = user7.id
 ex_j7.job = j7
 ex_j7.description = "Client's description for the job internally."
 ex_j7.external_code = "7G"
@@ -1234,7 +1263,7 @@ ex_j7.telephone = "312-323-3127"
 ex_j7.save
 
 ex_j8 = ExternalJob.new
-ex_j8.hiring_manager = hm8
+ex_j8.hiring_manager_id = user8.id
 ex_j8.job = j8
 ex_j8.description = "Client's description for the job internally."
 ex_j8.external_code = "8H"
@@ -1243,7 +1272,7 @@ ex_j8.telephone = "773-345-0000"
 ex_j8.save
 
 ex_j9 = ExternalJob.new
-ex_j9.hiring_manager = hm9
+ex_j9.hiring_manager_id = user9.id
 ex_j9.job = j9
 ex_j9.description = "Client's description for the job internally."
 ex_j9.external_code = "9I"
@@ -1252,7 +1281,7 @@ ex_j9.telephone = "773-345-2222"
 ex_j9.save
 
 ex_j10 = ExternalJob.new
-ex_j10.hiring_manager = hm10
+ex_j10.hiring_manager_id = user10.id
 ex_j10.job = j10
 ex_j10.description = "Client's description for the job internally."
 ex_j10.external_code = "10J"
@@ -1265,52 +1294,52 @@ puts "There are #{ExternalJob.count} rows in the external jobs table"
 HiringManagerJob.destroy_all
 
 hm_job1 = HiringManagerJob.new
-hm_job1.hiring_manager = hm1
+hm_job1.hiring_manager_id = user1.id
 hm_job1.job = j1
 hm_job1.save
 
 hm_job2 = HiringManagerJob.new
-hm_job2.hiring_manager = hm2
+hm_job2.hiring_manager_id = user2.id
 hm_job2.job = j2
 hm_job2.save
 
 hm_job3 = HiringManagerJob.new
-hm_job3.hiring_manager = hm3
+hm_job3.hiring_manager_id = user3.id
 hm_job3.job = j3
 hm_job3.save
 
 hm_job4 = HiringManagerJob.new
-hm_job4.hiring_manager = hm4
+hm_job4.hiring_manager_id = user4.id
 hm_job4.job = j4
 hm_job4.save
 
 hm_job5 = HiringManagerJob.new
-hm_job5.hiring_manager = hm5
+hm_job5.hiring_manager_id = user5.id
 hm_job5.job = j5
 hm_job5.save
 
 hm_job6 = HiringManagerJob.new
-hm_job6.hiring_manager = hm6
+hm_job6.hiring_manager_id = user6.id
 hm_job6.job = j6
 hm_job6.save
 
 hm_job7 = HiringManagerJob.new
-hm_job7.hiring_manager = hm7
+hm_job7.hiring_manager_id = user7.id
 hm_job7.job = j7
 hm_job7.save
 
 hm_job8 = HiringManagerJob.new
-hm_job8.hiring_manager = hm8
+hm_job8.hiring_manager_id = user8.id
 hm_job8.job = j8
 hm_job8.save
 
 hm_job9 = HiringManagerJob.new
-hm_job9.hiring_manager = hm9
+hm_job9.hiring_manager_id = user9.id
 hm_job9.job = j9
 hm_job9.save
 
 hm_job10 = HiringManagerJob.new
-hm_job10.hiring_manager = hm10
+hm_job10.hiring_manager_id = user10.id
 hm_job10.job = j10
 hm_job10.save
 
@@ -1319,52 +1348,52 @@ puts "There are #{HiringManagerJob.count} rows in the hiring manager jobs table"
 JobRecruiter.destroy_all
 
 jr1 = JobRecruiter.new
-jr1.recruiter = r1
+jr1.recruiter_id = user21.id
 jr1.job = j1
 jr1.save
 
 jr2 = JobRecruiter.new
-jr2.recruiter = r2
+jr2.recruiter_id = user22.id
 jr2.job = j2
 jr2.save
 
 jr3 = JobRecruiter.new
-jr3.recruiter = r3
+jr3.recruiter_id = user23.id
 jr3.job = j3
 jr3.save
 
 jr4 = JobRecruiter.new
-jr4.recruiter = r4
+jr4.recruiter_id = user24.id
 jr4.job = j4
 jr4.save
 
 jr5 = JobRecruiter.new
-jr5.recruiter = r5
+jr5.recruiter_id = user25.id
 jr5.job = j5
 jr5.save
 
 jr6 = JobRecruiter.new
-jr6.recruiter = r6
+jr6.recruiter_id = user26.id
 jr6.job = j6
 jr6.save
 
 jr7 = JobRecruiter.new
-jr7.recruiter = r7
+jr7.recruiter_id = user27.id
 jr7.job = j7
 jr7.save
 
 jr8 = JobRecruiter.new
-jr8.recruiter = r8
+jr8.recruiter_id = user28.id
 jr8.job = j8
 jr8.save
 
 jr9 = JobRecruiter.new
-jr9.recruiter = r9
+jr9.recruiter_id = user29.id
 jr9.job = j1
 jr9.save
 
 jr10 = JobRecruiter.new
-jr10.recruiter = r10
+jr10.recruiter_id = user30.id
 jr10.job = j10
 jr10.save
 
