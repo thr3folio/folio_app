@@ -1,5 +1,5 @@
 class RecruiterAttribute < ActiveRecord::Base
-  attr_accessible :title, :agency_id, :user_id
+  attr_accessible :title, :agency_id, :recruiter_id
   belongs_to :recruiter
   has_many :recruiter_notes
   has_many :candidate_recruiters
@@ -12,7 +12,7 @@ class RecruiterAttribute < ActiveRecord::Base
 
   validates :title, presence: :true
   validates :agency, presence: :true
-  validates :user, presence: :true
+  validates :recruiter, presence: :true
 
   def full_name
     self.user.full_name

@@ -1,5 +1,5 @@
 class CandidateAttribute < ActiveRecord::Base
-  attr_accessible :title, :industry, :years_experience, :bio, :company_id
+  attr_accessible :title, :industry, :years_experience, :bio, :company_id, :candidate_id
   belongs_to :candidate
   belongs_to :company
   belongs_to :user
@@ -13,6 +13,7 @@ class CandidateAttribute < ActiveRecord::Base
   validates :industry, presence: :true
   validates :bio, presence: :true
   validates :company, presence: :true
+  validates :candidate_id, presence: :true
 
   def full_name
     self.user.full_name

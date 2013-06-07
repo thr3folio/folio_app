@@ -405,7 +405,7 @@ c10.candidate_id = user20.id
 c10.location = "Nashville, TN, USA"
 c10.save
 
-puts "There are #{CandidateAttribute.count} rows in the candidates table"
+puts "There are #{CandidateAttribute.count} rows in the candidates attributes table"
 
 Job.destroy_all
 
@@ -629,7 +629,7 @@ r10.agency = agency10
 r10.recruiter_id = user30.id
 r10.save
 
-puts "There are #{RecruiterAttribute.count} rows in the recruiters table"
+puts "There are #{RecruiterAttribute.count} rows in the recruiter attributes table"
 
 CandidateRecruiter.destroy_all
 
@@ -846,7 +846,7 @@ n26.save
 
 puts "There are #{Note.count} rows in the notes table."
 
-HiringManager.destroy_all
+HiringManagerAttribute.destroy_all
 
 hm1 = HiringManagerAttribute.new
 hm1.title = "Hiring Manager"
@@ -908,7 +908,7 @@ hm10.company = company10
 hm10.hiring_manager_id = user10.id
 hm10.save
 
-puts "There are #{HiringManagerAttribute.count} rows in the hiring managers attribute table"
+puts "There are #{HiringManagerAttribute.count} rows in the hiring managers attributes table"
 
 HiringManagerNote.destroy_all
 
@@ -990,7 +990,7 @@ hm_note13.note = n23
 hm_note13.hiring_manager_id = user1.id
 hm_note13.save
 
-puts "There are #{HiringManagerNote.count} rows in the hiring manger notes table"
+puts "There are #{HiringManagerNote.count} rows in the hiring manager notes table"
 
 RecruiterNote.destroy_all
 
@@ -1226,7 +1226,7 @@ ex_j3.email = "c@c.com"
 ex_j3.telephone = "773-345-3645"
 ex_j3.save
 
-ex_j4 = ExternalJob.new.id
+ex_j4 = ExternalJob.new
 ex_j4.hiring_manager_id = user4.id
 ex_j4.job = j4
 ex_j4.description = "Client's description for the job internally."
@@ -1398,3 +1398,4 @@ jr10.job = j10
 jr10.save
 
 puts "There are #{JobRecruiter.count} rows in the job recruiters table"
+
