@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :email, :first_name, :last_name, :password, :password_confirmation
+  attr_accessible :email, :first_name, :last_name, :password, :password_confirmation, :type
   belongs_to  :candidate, :polymorphic => true
   has_secure_password
 
@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
 :with => /^([^\s]+)((?:[-a-z0-9]\.)[a-z]{2,})$/i
   validates :first_name, presence: :true
   validates :last_name, presence: :true
+  validates :type, presence: :true
 
   def full_name
     return "#{first_name} #{last_name}"

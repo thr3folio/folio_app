@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130607015202) do
+ActiveRecord::Schema.define(:version => 20130607015806) do
 
   create_table "agencies", :force => true do |t|
     t.string   "name"
@@ -28,17 +28,7 @@ ActiveRecord::Schema.define(:version => 20130607015202) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "candidate_jobs", :force => true do |t|
-    t.integer "candidate_id"
-    t.integer "job_id"
-  end
-
-  create_table "candidate_recruiters", :force => true do |t|
-    t.integer "candidate_id"
-    t.integer "recruiter_id"
-  end
-
-  create_table "candidates", :force => true do |t|
+  create_table "candidate_attributes", :force => true do |t|
     t.string  "title"
     t.string  "industry"
     t.integer "years_experience"
@@ -48,6 +38,16 @@ ActiveRecord::Schema.define(:version => 20130607015202) do
     t.string  "salary"
     t.integer "user_id"
     t.string  "location"
+  end
+
+  create_table "candidate_jobs", :force => true do |t|
+    t.integer "candidate_id"
+    t.integer "job_id"
+  end
+
+  create_table "candidate_recruiters", :force => true do |t|
+    t.integer "candidate_id"
+    t.integer "recruiter_id"
   end
 
   create_table "client_jobs", :force => true do |t|
@@ -82,6 +82,12 @@ ActiveRecord::Schema.define(:version => 20130607015202) do
     t.string   "telephone"
   end
 
+  create_table "hiring_manager_attributes", :force => true do |t|
+    t.string  "title"
+    t.integer "company_id"
+    t.integer "user_id"
+  end
+
   create_table "hiring_manager_jobs", :force => true do |t|
     t.integer "hiring_manager_id"
     t.integer "job_id"
@@ -91,12 +97,6 @@ ActiveRecord::Schema.define(:version => 20130607015202) do
     t.integer "candidate_id"
     t.integer "note_id"
     t.integer "hiring_manager_id"
-  end
-
-  create_table "hiring_managers", :force => true do |t|
-    t.string  "title"
-    t.integer "company_id"
-    t.integer "user_id"
   end
 
   create_table "job_recruiters", :force => true do |t|
@@ -122,16 +122,16 @@ ActiveRecord::Schema.define(:version => 20130607015202) do
     t.integer "job_id"
   end
 
+  create_table "recruiter_attributes", :force => true do |t|
+    t.string  "title"
+    t.integer "agency_id"
+    t.integer "user_id"
+  end
+
   create_table "recruiter_notes", :force => true do |t|
     t.integer "candidate_id"
     t.integer "note_id"
     t.integer "recruiter_id"
-  end
-
-  create_table "recruiters", :force => true do |t|
-    t.string  "title"
-    t.integer "agency_id"
-    t.integer "user_id"
   end
 
   create_table "users", :force => true do |t|
