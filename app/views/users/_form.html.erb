@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :user_type %><br />
-    <%= select_tag 'user_type', options_for_select([["Candidate", "1"], ["Hiring Manager", "2"], ["Recruiter", "3"]]), { :prompt => 'I am a...' } %>
+    <%= select_tag 'user[type]', options_for_select([["Candidate", "Candidate"], ["Hiring Manager", "HiringManager"], ["Recruiter", "Recruiter"]]), { :prompt => 'I am a...' } %>
     <%#= f.collection_select :user_type, user_type_options, :id, :full_name %>
   </div>
   <div class="field">
