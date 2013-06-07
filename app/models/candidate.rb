@@ -16,4 +16,8 @@ class Candidate < ActiveRecord::Base
   def full_name
     self.user.full_name
   end
+
+  def name_with_initial
+    "#{self.user.first_name.first}. #{self.last_name}"
+  end
 end

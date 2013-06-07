@@ -16,4 +16,8 @@ class User < ActiveRecord::Base
   def full_name
     return "#{first_name} #{last_name}"
   end
+
+  def name_with_initial
+    "#{first_name.first}. #{last_name}"
+  end
 end
