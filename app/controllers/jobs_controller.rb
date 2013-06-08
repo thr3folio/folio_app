@@ -1,7 +1,6 @@
 class JobsController < ApplicationController
   before_filter :require_signed_in_user
-  before_filter :authorize_user, only: [:edit, :update, :destroy]
-  before_filter :determine_type_of_user, only: [:index, :edit, :update, :destroy]
+  # before_filter :determine_type_of_user, only: [:index, :edit, :update, :destroy]
 
   def determine_type_of_user
     case current_user.type
@@ -18,8 +17,24 @@ class JobsController < ApplicationController
   end
 
   def index
-
-    # @jobs = []
+    @jobs = []
+    case current_user.type
+    when 'Candidate'
+      flash[:notice] = "You're a candidate."
+      redirect_to root_url
+    when 'HiringManager'
+      flash[:notice] = "You're a hiring manager."
+      redirect_to root_url
+    when 'Recruiter' && params[:view] == 'all'
+      flash[:notice] = "You're try to view all the jobs for the Agency."
+      redirect_to root_url
+    when 'Recruiter'
+      flash[:notice] = "You're a recruiter."
+      recruiter_jobs = JobRecruiter.where(:recruiter_id => session[:user_id])
+      recruiter_jobs.each do |recruiter_job|
+        @jobs << recruiter_job.job
+      end
+    end
     # if recruiter? && params[:view] != "list"
     #   recruiter_jobs = JobRecruiter.where(:recruiter_id => '1')
     #   recruiter_jobs.each do |recruiter_job|
@@ -31,15 +46,11 @@ class JobsController < ApplicationController
   end
 
   def show
-    if recruiter?
-      @jobs = []
-      recruiter_jobs = JobRecruiter.where(:recruiter_id => '1')
-      recruiter_jobs.each do |recruiter_job|
-        @jobs << recruiter_job.job
-      end
-      render 'jobs/recruiter/show'
-    else
-      @job = Job.find_by_id(params[:id])
+    @job = Job.find_by_id(params[:id])
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @client }
     end
   end
 
