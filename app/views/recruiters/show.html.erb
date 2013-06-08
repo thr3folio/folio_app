@@ -12,17 +12,17 @@
 
 <p>
   <b>Title:</b>
-  <%= @recruiter.title %>
+  <%= @recruiter.recruiter_attribute.try(:title) %>
 </p>
 
 <p>
   <b>Agency:</b>
-  <%= @recruiter.agency.name %>
+  <%= @recruiter.recruiter_attribute.try(:agency).try(:name) %>
 </p>
 
 <p>
   <b>Email:</b>
-  <%= @recruiter.user.email %>
+  <%= @recruiter.email %>
 </p>
 
 

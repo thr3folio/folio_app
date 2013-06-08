@@ -24,6 +24,11 @@ FolioApp::Application.routes.draw do
 
   resources :agencies
 
+  resources :candidate_attributes
+
+  resource :hiring_manager_attributes
+
+  resource :recruiters_attributes
 
   # Set Root route
   root to: 'Candidates#index'

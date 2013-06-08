@@ -3,6 +3,7 @@ class Agency < ActiveRecord::Base
   has_many :agency_clients
   has_many :agency_recruiters
 
+
   validates :industry, presence: :true
   validates :location, presence: :true
   validates :name, presence: :true

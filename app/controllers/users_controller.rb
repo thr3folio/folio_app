@@ -4,12 +4,14 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
 
-  before_filter :authorize_user, only: [:index, :show, :edit, :update, :destroy]
+  before_filter :authorize_user, only: [:show, :edit, :update, :destroy]
 
   def authorize_user
     @user = User.find(params[:id])
     if @user != current_user
-      redirect_to new_users_url status: :forbidden, text: "Not allowed"
+      reset_session
+      redirect_to edit_user_url, notice: "Action not allowed."
+      # redirect_to signin_url status: :forbidden, text: "Not allowed"
     end
   end
 

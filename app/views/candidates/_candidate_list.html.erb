@@ -15,11 +15,11 @@
   <tbody>
   <% candidates.each do |candidate| %>
     <tr>
-      <td><%= candidate.user.first_name %></td>
-      <td><%= candidate.user.last_name %></td>
-      <td><%= candidate.title %></td>
-      <td><%= candidate.industry %></td>
-      <td><%= candidate.years_experience %></td>
+      <td><%= candidate.first_name %></td>
+      <td><%= candidate.last_name %></td>
+      <td><%= candidate.try(:candidate_attribute).try(:title) %></td>
+      <td><%= candidate.try(:candidate_attribute).try(:industry) %></td>
+      <td><%= candidate.try(:candidate_attribute).try(:years_experience) %></td>
 
       <td><%= link_to 'View', candidate_url(candidate) %></td>
       <td><%= link_to 'Edit', edit_candidate_url(candidate) %></td>

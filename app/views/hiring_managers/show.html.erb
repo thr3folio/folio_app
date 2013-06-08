@@ -1,23 +1,23 @@
-<h1>Hiring Manager #<%= @hiring_manager.id %></h1>
+<h1>Hiring Manager #<%= @hiring_manager.try(:id) %></h1>
 
 <p>
   <b>First name:</b>
-  <%= @hiring_manager.user.first_name %>
+  <%= @hiring_manager.try(:first_name) %>
 </p>
 
 <p>
   <b>Last name:</b>
-  <%= @hiring_manager.user.last_name %>
+  <%= @hiring_manager.try(:last_name) %>
 </p>
 
 <p>
   <b>Title:</b>
-  <%= @hiring_manager.title %>
+  <%= @hiring_manager.try(:hiring_manager_attribute).try(:title) %>
 </p>
 
 <p>
   <b>Company:</b>
-  <%= @hiring_manager.company.name %>
+  <%= @hiring_manager.try(:hiring_manager_attribute).try(:company).try(:name) %>
 </p>
 
 

@@ -1,47 +1,47 @@
 
 <p>
   <b>Full name:</b>
-  <%= @candidate.user.full_name %>
+  <%= @candidate.try(:full_name) %>
 </p>
 
 <p>
   <b>Title:</b>
-  <%= @candidate.title %>
+  <%= @candidate.try(:candidate_attribute).try(:title) %>
 </p>
 
 <p>
   <b>Location:</b>
-  <%= @candidate.location %>
+  <%= @candidate.try(:candidate_attribute).try(:location) %>
 </p>
 
 <p>
   <b>Industry:</b>
-  <%= @candidate.industry %>
+  <%= @candidate.try(:candidate_attribute).try(:industry) %>
 </p>
 
 <p>
   <b>Years experience:</b>
-  <%= @candidate.years_experience %>
+  <%= @candidate.try(:candidate_attribute).try(:years_experience) %>
 </p>
 
 <p>
   <b>Bio:</b>
-  <%= @candidate.bio %>
+  <%= @candidate.try(:candidate_attribute).try(:bio) %>
 </p>
 
 <p>
   <b>Salary:</b>
-  <%= @candidate.salary %>
+  <%= @candidate.try(:candidate_attribute).try(:salary) %>
 </p>
 
 <p>
   <b>Skills:</b>
-  <%= @candidate.skills %>
+  <%= @candidate.try(:candidate_attribute).try(:skills) %>
 </p>
 
 <p>
   <b>Company:</b>
-  <%= @candidate.company.name %>
+  <%= @candidate.try(:candidate_attribute).try(:company).try(:name) %>
 </p>
 
 <h5>Notes by recruiter(s):</h5>
@@ -62,7 +62,7 @@
   <% @candidate.recruiter_notes.each do |recruiter_note| %>
     <tr>
       <td><%= recruiter_note.note.date %></td>
-      <td><%= recruiter_note.recruiter.user.full_name %></td>
+      <td><%= recruiter_note.recruiter.full_name %></td>
       <td><%= recruiter_note.note.description %></td>
       <td><%= recruiter_note.note.job.title %></td>
     </tr>
@@ -89,7 +89,7 @@
   <% @candidate.hiring_manager_notes.each do |hiring_manager_note| %>
       <tr>
         <td><%= hiring_manager_note.note.date %></td>
-        <td><%= hiring_manager_note.hiring_manager.user.full_name %></td>
+        <td><%= hiring_manager_note.hiring_manager.full_name %></td>
         <td><%= hiring_manager_note.note.description %></td>
         <td><%= hiring_manager_note.note.job.title %></td>
       </tr>

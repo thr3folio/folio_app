@@ -19,11 +19,11 @@
   <tbody>
   <% @recruiters.each do |recruiter| %>
     <tr>
-      <td><%= recruiter.user.first_name %></td>
-      <td><%= recruiter.user.last_name %></td>
-      <td><%= recruiter.title %></td>
-      <td><%= recruiter.agency.name %></td>
-      <td><%= recruiter.user.email %></td>
+      <td><%= recruiter.first_name %></td>
+      <td><%= recruiter.last_name %></td>
+      <td><%= recruiter.try(:recruiter_attribute).try(:title) %></td>
+      <td><%= recruiter.try(:recruiter_attribute).try(:agency).try(:name) %></td>
+      <td><%= recruiter.email %></td>
 
       <td><%= link_to 'Show', recruiter_url(recruiter) %></td>
       <td><%= link_to 'Edit', edit_recruiter_url(recruiter) %></td>
