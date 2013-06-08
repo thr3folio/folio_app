@@ -44,11 +44,15 @@ class JobsController < ApplicationController
   end
 
   def show
-    @job = Job.find_by_id(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @client }
+    if current_user.recruiter?
+      @jobs = []
+      recruiter_jobs = JobRecruiter.where(:recruiter_id => '1')
+      recruiter_jobs.each do |recruiter_job|
+        @jobs << recruiter_job.job
+      end
+      render 'jobs/recruiter/show'
+    else
+      @job = Job.find_by_id(params[:id])
     end
   end
 

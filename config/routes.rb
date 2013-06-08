@@ -3,6 +3,8 @@ FolioApp::Application.routes.draw do
   get '/signin' => 'Sessions#new', as: 'signin'
   post '/sessions' => 'Sessions#create', as: 'sessions'
   delete '/signout' => 'Sessions#destroy', as: 'signout'
+  post '/submit_jobs_for_candidate' => 'CandidateJobs#submit_jobs_for_candidate'
+
 
   resources :users
 

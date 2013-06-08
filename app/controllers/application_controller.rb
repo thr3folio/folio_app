@@ -17,7 +17,6 @@ class ApplicationController < ActionController::Base
   #   @_current_user ||= session[:current_user_id] && User.find(session[:current_user_id])
   # end
 
-
   def is_candidate?
     return current_user.candidate?
   end

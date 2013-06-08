@@ -21,6 +21,7 @@ class CandidateJobsController < ApplicationController
           else
       render 'new'
     end
+
   end
 
   def edit
@@ -42,4 +43,16 @@ class CandidateJobsController < ApplicationController
     @candidate_job.destroy
     redirect_to candidate_jobs_url
   end
+
+  def submit_jobs_for_candidate
+    params[:jobs_ids].each do |job_id|
+      cj = CandidateJobs.new
+      cj.job_id = job_id
+      cj.candidate_id = params[:candidate_id]
+      cj.save
+    end if params[:jobs_ids]
+    redirect_to candidate_url(params[:candidate_id]), notice: "Candidate Submitted For Selected Jobs"
+  end
 end
+
+

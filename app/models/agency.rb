@@ -1,13 +1,13 @@
 class Agency < ActiveRecord::Base
   attr_accessible :industry, :location, :name
   has_many :agency_clients
+  has_many :recruiters, :thorough => :recruiter_attributes
   has_many :clients, :through => :agency_clients
   has_many :agency_recruiters
   has_many :client_jobs
   has_many :jobs, :through => :client_jobs
-  # has_many :recruiters, :thorough => :recruiter_attributes
   has_many :recruiter_attributes
-
+  has_many :recruiters
 
   validates :industry, presence: :true
   validates :location, presence: :true
