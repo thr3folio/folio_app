@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @candidate_attribute.title %>
+</p>
+
+<p>
+  <b>Industry:</b>
+  <%= @candidate_attribute.industry %>
+</p>
+
+<p>
+  <b>Years experience:</b>
+  <%= @candidate_attribute.years_experience %>
+</p>
+
+<p>
+  <b>Bio:</b>
+  <%= @candidate_attribute.bio %>
+</p>
+
+<p>
+  <b>Company:</b>
+  <%= @candidate_attribute.company_id %>
+</p>
+
+<p>
+  <b>Skills:</b>
+  <%= @candidate_attribute.skills %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @candidate_attribute.location %>
+</p>
+
+<p>
+  <b>Candidate:</b>
+  <%= @candidate_attribute.candidate_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_candidate_attribute_path(@candidate_attribute) %> |
+<%= link_to 'Back', candidate_attributes_path %>

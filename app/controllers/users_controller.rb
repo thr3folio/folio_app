@@ -9,9 +9,8 @@ class UsersController < ApplicationController
   def authorize_user
     @user = User.find(params[:id])
     if @user != current_user
-      reset_session
-      redirect_to edit_user_url, notice: "Action not allowed."
-      # redirect_to signin_url status: :forbidden, text: "Not allowed"
+      flash[:error] = "You are not authorized to view that page."
+      redirect_to root_path
     end
   end
 

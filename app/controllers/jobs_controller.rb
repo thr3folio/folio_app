@@ -1,17 +1,33 @@
 class JobsController < ApplicationController
   before_filter :require_signed_in_user
   before_filter :authorize_user, only: [:edit, :update, :destroy]
+  before_filter :determine_type_of_user, only: [:index, :edit, :update, :destroy]
+
+  def determine_type_of_user
+    case current_user.type
+    when 'Candidate'
+      flash[:notice] = "You're a candidate."
+      redirect_to root_url
+    when 'HiringManager'
+      flash[:notice] = "You're a hiring manager."
+      redirect_to root_url
+    when 'Recruiter'
+      flash[:notice] = "You're a recruiter."
+      redirect_to root_url
+    end
+  end
 
   def index
-    @jobs = []
-    if recruiter? && params[:view] != "list"
-      recruiter_jobs = JobRecruiter.where(:recruiter_id => '1')
-      recruiter_jobs.each do |recruiter_job|
-        @jobs << recruiter_job.job
-      end
-    else
-      @jobs = Job.all
-    end
+
+    # @jobs = []
+    # if recruiter? && params[:view] != "list"
+    #   recruiter_jobs = JobRecruiter.where(:recruiter_id => '1')
+    #   recruiter_jobs.each do |recruiter_job|
+    #     @jobs << recruiter_job.job
+    #   end
+    # else
+    #   @jobs = Job.all
+    # end
   end
 
   def show

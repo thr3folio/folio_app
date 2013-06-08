@@ -21,4 +21,16 @@ class User < ActiveRecord::Base
   def name_with_initial
     "#{first_name.first}. #{last_name}"
   end
+
+  def is_candidate?
+    return self.type == "Candidate"
+  end
+
+  def is_hiring_manager?
+    return self.type == "HiringManager"
+  end
+
+  def is_recruiter?
+    return self.type == "Recruiter"
+  end
 end

@@ -1,0 +1,2 @@
+module CandidateAttributesHelper
+end

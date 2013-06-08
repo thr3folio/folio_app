@@ -17,8 +17,10 @@ class ApplicationController < ActionController::Base
   #   @_current_user ||= session[:current_user_id] && User.find(session[:current_user_id])
   # end
 
-  def recruiter?
-    true
+  def is_recruiter?
+    unless current_user.is_recruiter?
+      redirect_to signin_url, notice: "Who are you to doing this? :)"
+    end
   end
 
   def require_signed_in_user
@@ -26,4 +28,10 @@ class ApplicationController < ActionController::Base
       redirect_to signin_url, notice: "Must be signed in for that."
     end
   end
+
+  def is_admin?
+  unless current_user && current_user.is_admin?
+    render file: "#{Rails.root}/public/403.html", status: :forbidden
+  end
+end
 end
