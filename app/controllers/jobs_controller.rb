@@ -3,14 +3,14 @@ class JobsController < ApplicationController
   # before_filter :determine_type_of_user, only: [:index, :edit, :update, :destroy]
 
   def determine_type_of_user
-    case current_user.type
-    when 'Candidate'
+    case current_user
+    when current_user.is_candidate?
       flash[:notice] = "You're a candidate."
       redirect_to root_url
-    when 'HiringManager'
+    when current_user.is_hiring_manager?
       flash[:notice] = "You're a hiring manager."
       redirect_to root_url
-    when 'Recruiter'
+    when current_user.is_recruiter?
       flash[:notice] = "You're a recruiter."
       redirect_to root_url
     end
@@ -18,31 +18,29 @@ class JobsController < ApplicationController
 
   def index
     @jobs = []
-    case current_user.type
-    when 'Candidate'
+    case
+    when is_candidate?
       flash[:notice] = "You're a candidate."
       redirect_to root_url
-    when 'HiringManager'
+    when is_hiring_manager?
       flash[:notice] = "You're a hiring manager."
       redirect_to root_url
-    when 'Recruiter' && params[:view] == 'all'
-      flash[:notice] = "You're try to view all the jobs for the Agency."
-      redirect_to root_url
-    when 'Recruiter'
-      flash[:notice] = "You're a recruiter."
-      recruiter_jobs = JobRecruiter.where(:recruiter_id => session[:user_id])
-      recruiter_jobs.each do |recruiter_job|
-        @jobs << recruiter_job.job
+    when is_recruiter?
+      if params[:view] == 'all'
+        clients = current_user.recruiter_attribute.agency.clients
+        clients.each do |client|
+          client.jobs.each do |job|
+            @jobs << job
+          end
+        end
+      else
+        flash[:notice] = "You're a recruiter."
+        recruiter_jobs = JobRecruiter.where(:recruiter_id => session[:user_id])
+        recruiter_jobs.each do |recruiter_job|
+          @jobs << recruiter_job.job
+        end
       end
     end
-    # if recruiter? && params[:view] != "list"
-    #   recruiter_jobs = JobRecruiter.where(:recruiter_id => '1')
-    #   recruiter_jobs.each do |recruiter_job|
-    #     @jobs << recruiter_job.job
-    #   end
-    # else
-    #   @jobs = Job.all
-    # end
   end
 
   def show
@@ -62,7 +60,7 @@ class JobsController < ApplicationController
     @job = Job.new(params[:job])
 
     if @job.save
-      if recruiter? && signed_in?
+      if is_recruiter? && signed_in?
       # create job_recruiters entry
       JobRecruiter.create(@job,session[:user_id],)
       end

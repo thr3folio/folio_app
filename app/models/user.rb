@@ -22,15 +22,15 @@ class User < ActiveRecord::Base
     "#{first_name.first}. #{last_name}"
   end
 
-  def is_candidate?
+  def candidate?
     return self.type == "Candidate"
   end
 
-  def is_hiring_manager?
+  def hiring_manager?
     return self.type == "HiringManager"
   end
 
-  def is_recruiter?
+  def recruiter?
     return self.type == "Recruiter"
   end
 end

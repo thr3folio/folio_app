@@ -17,10 +17,17 @@ class ApplicationController < ActionController::Base
   #   @_current_user ||= session[:current_user_id] && User.find(session[:current_user_id])
   # end
 
+
+  def is_candidate?
+    return current_user.candidate?
+  end
+
+  def is_hiring_manager?
+    return current_user.hiring_manager?
+  end
+
   def is_recruiter?
-    unless current_user.is_recruiter?
-      redirect_to signin_url, notice: "Who are you to doing this? :)"
-    end
+    return current_user.recruiter?
   end
 
   def require_signed_in_user
