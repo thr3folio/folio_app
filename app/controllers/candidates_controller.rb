@@ -6,6 +6,10 @@ class CandidatesController < ApplicationController
 
   def show
     @candidate = Candidate.find_by_id(params[:id])
+    # @candidate_sorted_recruiter_notes = RecruiterNote.where("candidate_id = #{@candidate.id}").order('note_id')
+    # @notes = []
+    # @notes << @candidate.recruiter_notes
+    # @notes << @candidate.hiring_manager_notes
   end
 
   def new

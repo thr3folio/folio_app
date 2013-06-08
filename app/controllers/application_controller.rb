@@ -17,12 +17,6 @@ class ApplicationController < ActionController::Base
   #   @_current_user ||= session[:current_user_id] && User.find(session[:current_user_id])
   # end
 
-  def is_recruiter?
-    unless current_user.is_recruiter?
-      redirect_to signin_url, notice: "Who are you to doing this? :)"
-    end
-  end
-
   def require_signed_in_user
     unless signed_in?
       redirect_to signin_url, notice: "Must be signed in for that."
