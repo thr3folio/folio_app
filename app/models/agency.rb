@@ -1,7 +1,7 @@
 class Agency < ActiveRecord::Base
   attr_accessible :industry, :location, :name
   has_many :agency_clients
-  has_many :recruiters, :thorough => :recruiter_attributes
+  has_many :recruiters, :through => :recruiter_attributes
   has_many :clients, :through => :agency_clients
   has_many :agency_recruiters
   has_many :client_jobs
