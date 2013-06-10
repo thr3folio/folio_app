@@ -6,4 +6,5 @@ class CandidateJob < ActiveRecord::Base
 
   validates :candidate, presence: :true
   validates :job, presence: :true
+  validates_uniqueness_of :job_id, scope: :candidate_id
 end
