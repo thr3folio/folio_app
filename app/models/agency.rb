@@ -4,8 +4,6 @@ class Agency < ActiveRecord::Base
   has_many :recruiters, :through => :recruiter_attributes
   has_many :clients, :through => :agency_clients
   has_many :agency_recruiters
-  has_many :client_jobs
-  has_many :jobs, :through => :client_jobs
   has_many :recruiter_attributes
   has_many :recruiters
 

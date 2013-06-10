@@ -90,7 +90,7 @@
     <% current_user.jobs.each do |job| %>
     <div>
       <%= check_box_tag "job_ids[]", job.id %>
-      <%= job.client_jobs.first.client.name %> -
+      <%= job.client.name %> -
       <%= job.title %>
     </div>
   <% end %>

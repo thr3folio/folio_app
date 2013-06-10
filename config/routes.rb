@@ -5,24 +5,15 @@ FolioApp::Application.routes.draw do
   delete '/signout' => 'Sessions#destroy', as: 'signout'
   post '/submit_jobs_for_candidate' => 'CandidateJobs#submit_jobs_for_candidate'
 
-
   resources :users
-
 
   resources :job_recruiters
 
-
   resources :agency_clients
-
-
-  resources :client_jobs
-
 
   resources :external_jobs
 
-
   resources :clients
-
 
   resources :agencies
 

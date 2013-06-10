@@ -407,6 +407,22 @@ c10.save!
 
 puts "There are #{CandidateAttribute.count} rows in the candidates attributes table"
 
+Client.destroy_all
+
+client1 = Client.create!(:name => "Booking.com", :location => "Amsterdam, Netherlands", :industry => "Advertising" )
+client2 = Client.create!(:name => "Cynergy", :location => "Chicago, IL, USA", :industry => "Animation" )
+client3 = Client.create!(:name => "Real Eyes", :location => "London, United Kingdom", :industry => "Architecture" )
+client4 = Client.create!(:name => "Idean", :location => "Palo Alto, CA, USA", :industry => "Computer Animation" )
+client5 = Client.create!(:name => "Klout", :location => "San Francisco, CA, USA", :industry => "Desing" )
+client6 = Client.create!(:name => "OGK Creative", :location => "Delray Beach, FL, USA", :industry => "Digital Art" )
+client7 = Client.create!(:name => "Medium", :location => "San Francisco, CA, USA", :industry => "Graphic Desing" )
+client8 = Client.create!(:name => "Blue Fountain Media", :location => "New York, NY, USA", :industry => "Desing" )
+client9 = Client.create!(:name => "Meetup", :location => "New York, NY, USA", :industry => "Advertising" )
+client10 = Client.create!(:name => "X Studios", :location => "Maitland, FL, USA", :industry => "Animation")
+
+puts "There are #{Client.count} rows in the clients table"
+
+
 Job.destroy_all
 
 j1 = Job.new
@@ -417,6 +433,7 @@ j1.email = "job@mail.com"
 j1.url = "http://localhost:3000"
 j1.salary = "$75,000"
 j1.due_date = Time.now + (7 * 24 * 60 * 60)
+j1.client = client1
 j1.save!
 
 j2 = Job.new
@@ -427,6 +444,7 @@ j2.email = "job@mail.com"
 j2.url = "http://localhost:3000"
 j2.salary = "$80,000"
 j2.due_date = Time.now + (7 * 24 * 60 * 60)
+j2.client = client2
 j2.save!
 
 j3 = Job.new
@@ -437,6 +455,7 @@ j3.email = "job@mail.com"
 j3.url = "http://localhost:3000"
 j3.salary = "$60,000"
 j3.due_date = Time.now + (7 * 24 * 60 * 60)
+j3.client = client3
 j3.save!
 
 j4 = Job.new
@@ -447,6 +466,7 @@ j4.email = "job@mail.com"
 j4.url = "http://localhost:3000"
 j4.salary = "$ 85,000"
 j4.due_date = Time.now + (7 * 24 * 60 * 60)
+j4.client = client4
 j4.save!
 
 j5 = Job.new
@@ -457,6 +477,7 @@ j5.email = "job@mail.com"
 j5.url = "http://localhost:3000"
 j5.salary = "$80,000"
 j5.due_date = Time.now + (7 * 24 * 60 * 60)
+j5.client = client5
 j5.save!
 
 j6 = Job.new
@@ -467,6 +488,7 @@ j6.email = "job@mail.com"
 j6.url = "http://localhost:3000"
 j6.salary = "$85,000"
 j6.due_date = Time.now + (7 * 24 * 60 * 60)
+j6.client = client6
 j6.save!
 
 j7 = Job.new
@@ -477,6 +499,7 @@ j7.email = "job@mail.com"
 j7.url = "http://localhost:3000"
 j7.salary = "$80,000"
 j7.due_date = Time.now + (7 * 24 * 60 * 60)
+j7.client = client7
 j7.save!
 
 j8 = Job.new
@@ -487,6 +510,7 @@ j8.email = "job@mail.com"
 j8.url = "http://localhost:3000"
 j8.salary = "$90,000"
 j8.due_date = Time.now + (7 * 24 * 60 * 60)
+j8.client = client8
 j8.save!
 
 j9 = Job.new
@@ -497,6 +521,7 @@ j9.email = "job@mail.com"
 j9.url = "http://localhost:3000"
 j9.salary = "$85,000"
 j9.due_date = Time.now + (7 * 24 * 60 * 60)
+j9.client = client9
 j9.save!
 
 j10 = Job.new
@@ -507,7 +532,7 @@ j10.email = "job@mail.com"
 j10.url = "http://localhost:3000"
 j10.salary = "$85,000"
 j10.due_date = Time.now + (7 * 24 * 60 * 60)
-
+j10.client = client10
 j10.save!
 
 
@@ -1048,74 +1073,8 @@ rm_note13.save!
 
 puts "There are #{RecruiterNote.count} rows in the recruiter notes table"
 
-Client.destroy_all
 
-client1 = Client.create!(:name => "Booking.com", :location => "Amsterdam, Netherlands", :industry => "Advertising" )
-client2 = Client.create!(:name => "Cynergy", :location => "Chicago, IL, USA", :industry => "Animation" )
-client3 = Client.create!(:name => "Real Eyes", :location => "London, United Kingdom", :industry => "Architecture" )
-client4 = Client.create!(:name => "Idean", :location => "Palo Alto, CA, USA", :industry => "Computer Animation" )
-client5 = Client.create!(:name => "Klout", :location => "San Francisco, CA, USA", :industry => "Desing" )
-client6 = Client.create!(:name => "OGK Creative", :location => "Delray Beach, FL, USA", :industry => "Digital Art" )
-client7 = Client.create!(:name => "Medium", :location => "San Francisco, CA, USA", :industry => "Graphic Desing" )
-client8 = Client.create!(:name => "Blue Fountain Media", :location => "New York, NY, USA", :industry => "Desing" )
-client9 = Client.create!(:name => "Meetup", :location => "New York, NY, USA", :industry => "Advertising" )
-client10 = Client.create!(:name => "X Studios", :location => "Maitland, FL, USA", :industry => "Animation")
 
-puts "There are #{Client.count} rows in the clients table"
-
-ClientJob.destroy_all
-
-client_job1 = ClientJob.new
-client_job1.client = client1
-client_job1.job = j1
-client_job1.save!
-
-client_job2 = ClientJob.new
-client_job2.client = client2
-client_job2.job = j2
-client_job2.save!
-
-client_job3 = ClientJob.new
-client_job3.client = client3
-client_job3.job = j3
-client_job3.save!
-
-client_job4 = ClientJob.new
-client_job4.client = client4
-client_job4.job = j4
-client_job4.save!
-
-client_job5 = ClientJob.new
-client_job5.client = client5
-client_job5.job = j5
-client_job5.save!
-
-client_job6 = ClientJob.new
-client_job6.client = client6
-client_job6.job = j6
-client_job6.save!
-
-client_job7 = ClientJob.new
-client_job7.client = client7
-client_job7.job = j7
-client_job7.save!
-
-client_job8 = ClientJob.new
-client_job8.client = client8
-client_job8.job = j8
-client_job8.save!
-
-client_job9 = ClientJob.new
-client_job9.client = client9
-client_job9.job = j9
-client_job9.save!
-
-client_job10 = ClientJob.new
-client_job10.client = client10
-client_job10.job = j10
-client_job10.save!
-
-puts "There are #{ClientJob.count} rows in the client jobs table"
 
 AgencyClient.destroy_all
 

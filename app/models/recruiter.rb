@@ -13,7 +13,7 @@ class Recruiter < User
   validates :user, presence: :true
 
   def jobs
-    self.recruiter_attribute.agency.agency_clients.map(&:client).map(&:client_jobs).flatten.map(&:job)
+    self.recruiter_attribute.agency.agency_clients.map(&:client).map(&:jobs)
   end
 
 end
