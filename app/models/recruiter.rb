@@ -12,8 +12,5 @@ class Recruiter < User
   validates :agency, presence: :true
   validates :user, presence: :true
 
-  def jobs
-    self.recruiter_attribute.agency.agency_clients.map(&:client).map(&:jobs)
-  end
 
 end

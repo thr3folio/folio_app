@@ -5,7 +5,7 @@
         <% @jobs.each do |job| %>
         <li>Job title: <%= job.title %> </li>
         <li>Date: <%= job.due_date %></li>
-        <li>Company:<%= job.clients.name %> </li>
+        <li>Company:<%= job.client.name %> </li>
         <li>Location: <%= job.location %> </li>
         <li>Salary Range: <%= job.salary %> </li>
         <% end %>

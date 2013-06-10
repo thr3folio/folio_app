@@ -45,12 +45,12 @@ class CandidateJobsController < ApplicationController
   end
 
   def submit_jobs_for_candidate
-    params[:jobs_ids].each do |job_id|
-      cj = CandidateJobs.new
+    params[:job_ids].each do |job_id|
+      cj = CandidateJob.new
       cj.job_id = job_id
       cj.candidate_id = params[:candidate_id]
       cj.save
-    end if params[:jobs_ids]
+    end if params[:job_ids]
     redirect_to candidate_url(params[:candidate_id]), notice: "Candidate Submitted For Selected Jobs"
   end
 end

@@ -434,7 +434,30 @@ j1.url = "http://localhost:3000"
 j1.salary = "$75,000"
 j1.due_date = Time.now + (7 * 24 * 60 * 60)
 j1.client = client1
-j1.save!
+j1.save
+
+j1b = Job.new
+j1b.title = "Janitor"
+j1b.description ="Master of custodial arts."
+j1b.location = "Neverland"
+j1b.email = "job@mail.com"
+j1b.url = "http://localhost:3000"
+j1b.salary = "$45,000"
+j1b.due_date = Time.now + (7 * 24 * 60 * 60)
+j1b.client = client1
+j1b.save!
+
+j1c = Job.new
+j1c.title = "Graphic Designer"
+j1c.description ="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel diam sit amet felis commodo auctor ac id leo. Duis sagittis, turpis nec hendrerit pellentesque, sem tortor cursus diam, sit amet blandit lorem urna vel nisi. Nam sed sem a urna ornare accumsan."
+j1c.location = "Neverland"
+j1c.email = "job@mail.com"
+j1c.url = "http://localhost:3000"
+j1c.salary = "$175,000"
+j1c.due_date = Time.now + (7 * 24 * 60 * 60)
+j1c.client = client1
+j1c.save!
+
 
 j2 = Job.new
 j2.title = "Lorem ipsum dolor sit amet"
@@ -1141,6 +1164,24 @@ ex_j1.email = "p@p.com"
 ex_j1.telephone = "773-345-6789"
 ex_j1.save!
 
+ex_j1b = ExternalJob.new
+ex_j1b.hiring_manager_id = user1.id
+ex_j1b.job = j1b
+ex_j1b.description = "Client's description for the job internally."
+ex_j1b.external_code = "1A"
+ex_j1b.email = "p@p.com"
+ex_j1b.telephone = "773-345-6789"
+ex_j1b.save!
+
+ex_j1c = ExternalJob.new
+ex_j1c.hiring_manager_id = user1.id
+ex_j1c.job = j1c
+ex_j1c.description = "Client's description for the job internally."
+ex_j1c.external_code = "1A"
+ex_j1c.email = "p@p.com"
+ex_j1c.telephone = "773-345-6789"
+ex_j1c.save!
+
 ex_j2 = ExternalJob.new
 ex_j2.hiring_manager_id = user2.id
 ex_j2.job = j2
@@ -1284,6 +1325,17 @@ jr1 = JobRecruiter.new
 jr1.recruiter_id = user21.id
 jr1.job = j1
 jr1.save!
+
+jr1b = JobRecruiter.new
+jr1b.recruiter_id = user21.id
+jr1b.job = j1b
+jr1b.save!
+
+jr1c = JobRecruiter.new
+jr1c.recruiter_id = user21.id
+jr1c.job = j1c
+jr1c.save!
+
 
 jr2 = JobRecruiter.new
 jr2.recruiter_id = user22.id
